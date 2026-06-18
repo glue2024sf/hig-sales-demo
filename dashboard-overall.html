@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全体MTGダッシュボード | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">📊</div>
+    <div>
+      <div class="eyebrow">ダッシュボード</div>
+      <h1>全体ミーティング向けダッシュボード</h1>
+    </div>
+    <div class="actions">
+      <a class="btn" href="weekly-report.html">週次レポートを入力</a>
+      <a class="btn primary" href="#">PDFで出力</a>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">対象週: 2026-W25 (6/15-6/19)</span>
+    <span class="chip">チャンネル: 全て</span>
+    <span class="grow"></span>
+    <span class="muted">更新: 週次（各リーダー入力 → 最新分を表示）</span>
+  </div>
+
+  <!-- サマリ -->
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">今週 売上</div><div class="val">¥41.2<small>M</small></div><div class="delta up">▲ 前週比 +5.1%</div></div>
+    <div class="kpi"><div class="label">月次累計</div><div class="val">¥182<small>M</small></div><div class="delta flat">目標 ¥250M</div></div>
+    <div class="kpi"><div class="label">目標比</div><div class="val">73<small>%</small></div><div class="delta up">▲ 進捗 +3pt</div></div>
+    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ フォロー漏れ</div></div>
+  </div>
+
+  <!-- チャンネル主要動き -->
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">各チャンネルの主要動き（リーダー週次入力 → 最新分）<span class="sub"><a href="weekly-report.html">入力画面へ</a></span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チャンネル</th><th>今週のトピック</th><th>主要案件</th><th>ステータス</th><th>次アクション</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">営業</td><td>大型提案2件が交渉フェーズ入り</td><td>北日本フード / サンライズ製薬</td><td><span class="pill blue">進行中</span></td><td>役員同行を調整</td></tr>
+          <tr><td class="lk">物流・生産</td><td>アニマル飼料の在庫逼迫、補充前倒し</td><td>共立飼料 定期補充</td><td><span class="pill amber">注意</span></td><td>生産計画を再調整</td></tr>
+          <tr><td class="lk">商品企画</td><td>新製品サンプル配布開始</td><td>みどり動物病院ほか3件</td><td><span class="pill blue">進行中</span></td><td>追客フロー確立</td></tr>
+          <tr><td class="lk">生産消費企画</td><td>XA3出荷データ連携の検証完了</td><td>経営DB向け取込</td><td><span class="pill green">完了</span></td><td>週次自動取込へ</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 全社主要案件 -->
+  <div class="card">
+    <div class="hd">全社 主要案件ステータス</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>案件名</th><th>取引先</th><th class="num">金額</th><th>フェーズ</th><th>担当</th><th>期限</th></tr></thead>
+        <tbody>
+          <tr><td class="lk"><a href="opportunity.html">2026春提案</a></td><td>北日本フード</td><td class="num">¥24.0M</td><td><span class="pill amber">交渉/承認</span></td><td>松島チーム/佐藤</td><td>6/30</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">新製品導入</a></td><td>サンライズ製薬</td><td class="num">¥18.5M</td><td><span class="pill blue">見積提示</span></td><td>GTVチーム/鈴木</td><td>7/10</td></tr>
+          <tr><td class="lk"><a href="opportunity-animal.html">定期補充_2026-06</a></td><td>共立飼料</td><td class="num">¥9.2M</td><td><span class="pill green">受注</span></td><td>松島チーム/田中</td><td>—</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">設備更新提案</a></td><td>みどり動物病院</td><td class="num">¥6.8M</td><td><span class="pill blue">引合い</span></td><td>GTVチーム/高橋</td><td>7/20</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 狙い: <b>Excelの週次会議資料をSalesforceに集約</b>（ExcelとSFの並存を避ける）。チャンネル区分の名称・粒度はFB募集中。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

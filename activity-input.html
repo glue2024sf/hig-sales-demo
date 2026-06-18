@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>活動入力 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="act">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">📝</div>
+    <div>
+      <div class="eyebrow">活動</div>
+      <h1>活動を記録</h1>
+    </div>
+  </div>
+
+  <div class="demo-note">⚠️ 入力デモ（保存はされません）。大原則: <b>「見たい項目↑＝入力頻度↑」</b>。最小タップで記録完了を狙う設計です。</div>
+
+  <div class="grid g2">
+    <!-- 共通モーダル -->
+    <div class="card">
+      <div class="hd">活動を記録（共通モーダル）</div>
+      <div class="bd">
+        <div class="field">
+          <label><span class="req">★</span>種別</label>
+          <div class="seg">
+            <label><input type="radio" name="kind" checked> 訪問(対面)</label>
+            <label><input type="radio" name="kind"> オンラインMTG</label>
+            <label><input type="radio" name="kind"> 電話</label>
+            <label><input type="radio" name="kind"> メール</label>
+            <label><input type="radio" name="kind"> 提案</label>
+          </div>
+          <p class="help">「訪問件数」＝対面＋オンライン？電話含む？ → 論点メモ §2 で確定</p>
+        </div>
+        <div class="row2">
+          <div class="field"><label><span class="req">★</span>日付</label><input type="date" value="2026-06-19"></div>
+          <div class="field"><label>成果</label>
+            <select><option>進展</option><option>停滞</option><option>受注へ</option><option>失注へ</option></select>
+          </div>
+        </div>
+        <div class="field"><label><span class="req">★</span>関連先（取引先 or 商談）</label>
+          <input value="北日本フード_2026春提案" >
+        </div>
+        <div class="row2">
+          <div class="field"><label>フォロー区分</label>
+            <select><option>新規</option><option selected>既存フォロー</option></select>
+            <p class="help">「既存フォロー件数」集計用</p>
+          </div>
+          <div class="field"><label>提案フラグ</label>
+            <label class="seg" style="margin-top:4px"><input type="checkbox"> 提案を実施した</label>
+            <p class="help">「提案回数」集計用</p>
+          </div>
+        </div>
+        <div class="field"><label>メモ</label><textarea>価格条件を再確認。役員同行で最終提示の方向。</textarea></div>
+        <div class="field"><label>次回予定日</label><input type="date" value="2026-06-20"></div>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button class="btn">保存して連続登録</button>
+          <button class="btn primary">保存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右: 説明 -->
+    <div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="hd">KPI集計ルール（案 ※要確認）</div>
+        <div class="bd">
+          <table class="tbl">
+            <thead><tr><th>個人KPI</th><th>集計ルール</th></tr></thead>
+            <tbody>
+              <tr><td>訪問件数</td><td>種別=「訪問(対面)」（＋オンライン含むか要確認）</td></tr>
+              <tr><td>既存フォロー件数</td><td>フォロー区分=「既存フォロー」</td></tr>
+              <tr><td>提案回数</td><td>種別=「提案」or 提案フラグON</td></tr>
+            </tbody>
+          </table>
+          <p class="help">専用入力を作らず、<b>1モーダル＋分類項目</b>で3KPIを賄う（入力負荷最小化）。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="hd">📱 モバイル入力（訪問直後）※要確認</div>
+        <div class="bd">
+          <p>商談を開く → [活動を記録] → 種別=訪問・成果を選ぶ → 保存（<b>3タップ</b>）</p>
+          <p class="help">訪問直後にその場で記録 → リアルタイムフォローの前提。利用端末（PC/モバイル）は要確認。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

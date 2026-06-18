@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ホーム | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="home">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🏠</div>
+    <div>
+      <div class="eyebrow">ホーム</div>
+      <h1>おはようございます、倉島さん</h1>
+    </div>
+    <div class="actions">
+      <a class="btn" href="activity-input.html">活動を記録</a>
+      <a class="btn primary" href="opportunity.html">商談を新規</a>
+    </div>
+  </div>
+
+  <div class="demo-note">⚠️ これはレビュー用デモ画面です。数値・社名はすべてダミーです。気になった箇所はスクショに赤字でフィードバックをお願いします。</div>
+
+  <!-- サマリ -->
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">今月 売上（全社）</div><div class="val">¥182.4<small>M</small></div><div class="delta up">▲ 同月比 +8.2%</div></div>
+    <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">73<small>%</small></div><div class="delta flat">目標 ¥250M</div></div>
+    <div class="kpi"><div class="label">進行中パイプライン</div><div class="val">¥412<small>M</small></div><div class="delta up">▲ 32件</div></div>
+    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ フォロー漏れ含む</div></div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <!-- 売上全体 -->
+    <div class="card">
+      <div class="hd">売上全体（事業部別 / 当月）<span class="sub">単位: 百万円</span></div>
+      <div class="bd">
+        <div class="bar"><span class="name">P&amp;P</span><span class="track"><span class="fill" style="width:82%"></span></span><span class="v">¥88M</span></div>
+        <div class="bar"><span class="name">アニマル</span><span class="track"><span class="fill a" style="width:64%"></span></span><span class="v">¥61M</span></div>
+        <div class="bar"><span class="name">メディカル</span><span class="track"><span class="fill g" style="width:34%"></span></span><span class="v">¥33M</span></div>
+        <div class="legend"><span><i style="background:var(--blue)"></i>P&amp;P</span><span><i style="background:#f5a623"></i>アニマル</span><span><i style="background:var(--green)"></i>メディカル</span></div>
+      </div>
+    </div>
+    <!-- ネクストアクション -->
+    <div class="card">
+      <div class="hd">今日のネクストアクション</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tr><td><span class="pill red">期限切れ</span></td><td class="lk">山田畜産 — 見積フォロー</td><td class="muted">6/16期限</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">サンライズ製薬 — 提案訪問</td><td class="muted">14:00</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">みどり動物病院 — サンプル追客TEL</td><td class="muted">16:00</td></tr>
+          <tr><td><span class="pill blue">明日</span></td><td class="lk">北日本フード — 交渉/承認</td><td class="muted">10:30</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <!-- アラート -->
+    <div class="card">
+      <div class="hd">⚠️ アラート（追客・滞留）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>内容</th><th>対象</th><th class="num">滞留</th></tr></thead>
+          <tbody>
+            <tr><td>14日 活動なし</td><td class="lk"><a href="opportunity.html">北日本フード_2026春提案</a></td><td class="num">18日</td></tr>
+            <tr><td>サンプル送付後 未追客</td><td class="lk"><a href="sample-follow.html">みどり動物病院</a></td><td class="num">9日</td></tr>
+            <tr><td>受注予定日 超過</td><td class="lk"><a href="opportunity.html">共立飼料_定期</a></td><td class="num">4日</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 追客営業 -->
+    <div class="card">
+      <div class="hd">追客営業（サンプル）<span class="sub"><a href="sample-follow.html">一覧へ</a></span></div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>送付先</th><th>担当</th><th>状況</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">みどり動物病院</td><td>佐藤</td><td><span class="pill amber">追客中</span></td></tr>
+            <tr><td class="lk">共立飼料</td><td>鈴木</td><td><span class="pill green">受注へ</span></td></tr>
+            <tr><td class="lk">高橋ペットクリニック</td><td>田中</td><td><span class="pill gray">未着手</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ランチャー -->
+  <div class="section-title">デモ画面 一覧（クリックで移動）</div>
+  <div class="grid g4">
+    <a class="kpi" href="dashboard-overall.html"><div class="val" style="font-size:20px">📊 全体MTG DB</div><div class="label">週次会議で使う1枚</div></a>
+    <a class="kpi" href="dashboard-team.html"><div class="val" style="font-size:20px">👥 チームDB</div><div class="label">松島 / GTV ほか</div></a>
+    <a class="kpi" href="dashboard-personal.html"><div class="val" style="font-size:20px">🧑 個人DB</div><div class="label">統一フォーマット</div></a>
+    <a class="kpi" href="dashboard-exec.html"><div class="val" style="font-size:20px">📈 経営DB</div><div class="label">着地・利益・シェア</div></a>
+    <a class="kpi" href="dashboard-shipping.html"><div class="val" style="font-size:20px">🚚 出荷DB</div><div class="label">XA3連携</div></a>
+    <a class="kpi" href="accounts.html"><div class="val" style="font-size:20px">🏢 取引先</div><div class="label">会社リスト</div></a>
+    <a class="kpi" href="opportunity.html"><div class="val" style="font-size:20px">💼 商談</div><div class="label">提案型 / 補充型</div></a>
+    <a class="kpi" href="activity-input.html"><div class="val" style="font-size:20px">📝 活動入力</div><div class="label">訪問/電話/提案</div></a>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

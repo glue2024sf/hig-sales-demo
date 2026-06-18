@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>出荷ダッシュボード | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🚚</div>
+    <div>
+      <div class="eyebrow">ダッシュボード</div>
+      <h1>出荷ダッシュボード（XA3連携想定）</h1>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">期間: 当週</span>
+    <span class="chip">商品: 全て</span>
+    <span class="grow"></span>
+    <span class="muted">更新: 週次取込（仮データ）</span>
+  </div>
+
+  <div class="demo-note">⚠️ XA3との連携方法・取込頻度は未確定（※要確認）。本DBは週次取込前提の仮データです。</div>
+
+  <!-- 出荷サマリ -->
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">当週 出荷額</div><div class="val">¥48.6<small>M</small></div><div class="delta up">▲ 先週比 +3.4%</div></div>
+    <div class="kpi"><div class="label">先週比</div><div class="val">+3.4<small>%</small></div><div class="delta up">▲ ¥1.6M</div></div>
+    <div class="kpi"><div class="label">先月比</div><div class="val">-1.2<small>%</small></div><div class="delta down">▼ 季節要因</div></div>
+    <div class="kpi"><div class="label">月次累計</div><div class="val">¥186<small>M</small></div><div class="delta flat">出荷ベース</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">商品別 出荷額トレンド</div>
+    <div class="bd">
+      <svg viewBox="0 0 640 150" width="100%" height="150" class="spark">
+        <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,110 100,90 200,98 300,70 400,80 500,55 600,60"/>
+        <polyline fill="none" stroke="#f5a623" stroke-width="2" points="0,120 100,118 200,105 300,108 400,95 500,100 600,92"/>
+        <polyline fill="none" stroke="#2e844a" stroke-width="2" points="0,135 100,128 200,130 300,122 400,125 500,118 600,120"/>
+      </svg>
+      <div class="legend"><span><i style="background:#0176d3"></i>高機能包材A</span><span><i style="background:#f5a623"></i>プレミアム飼料</span><span><i style="background:#2e844a"></i>医療用フィルム</span><span class="muted">直近7週</span></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">商品別売上（当週 / 比較）</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>商品</th><th>ロット</th><th class="num">当週出荷</th><th class="num">先週比</th><th class="num">先月比</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">高機能包材A</td><td class="muted">LOT-2026A</td><td class="num">¥16.2M</td><td class="num" style="color:var(--green)">+5.1%</td><td class="num" style="color:var(--green)">+2.0%</td></tr>
+          <tr><td class="lk">プレミアム飼料</td><td class="muted">LOT-FD06</td><td class="num">¥13.8M</td><td class="num" style="color:var(--green)">+2.2%</td><td class="num" style="color:var(--red)">-3.4%</td></tr>
+          <tr><td class="lk">栄養補助食</td><td class="muted">LOT-NS21</td><td class="num">¥9.1M</td><td class="num" style="color:var(--red)">-1.8%</td><td class="num" style="color:var(--green)">+1.1%</td></tr>
+          <tr><td class="lk">医療用フィルム</td><td class="muted">LOT-MF03</td><td class="num">¥6.4M</td><td class="num" style="color:var(--green)">+0.9%</td><td class="num" style="color:var(--red)">-0.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- アニマル補充モニタ -->
+  <div class="card">
+    <div class="hd">（参考）アニマル 反復補充モニタ <span class="pill gray" style="margin-left:8px">仮置き</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>取引先</th><th class="num">当月 補充見込</th><th class="num">前月実績</th><th>充足/不足</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">共立飼料</td><td class="num">¥9.2M</td><td class="num">¥8.8M</td><td><span class="pill green">充足</span></td></tr>
+          <tr><td class="lk">山田畜産</td><td class="num">¥4.1M</td><td class="num">¥5.0M</td><td><span class="pill amber">不足傾向</span></td></tr>
+          <tr><td class="lk">北日本フード</td><td class="num">¥6.7M</td><td class="num">¥6.5M</td><td><span class="pill green">充足</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 アニマルの月1万行明細をSF内/外どちらに置くかは未決（To-Be論点 S3/M3）。本DBは集計表示の仮案。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>取引先 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="acct">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🏢</div>
+    <div>
+      <div class="eyebrow">取引先</div>
+      <h1>会社リスト</h1>
+    </div>
+    <div class="actions"><a class="btn primary" href="#">新規</a></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">すべて</span>
+    <span class="chip">P&amp;P</span><span class="chip">アニマル</span><span class="chip">メディカル</span>
+    <span class="grow"></span>
+    <input class="field" style="width:240px;margin:0" placeholder="リスト内を検索…">
+    <span class="muted">42件 ・ 並び替え: 売上 ▾</span>
+  </div>
+
+  <div class="card">
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead>
+          <tr><th>取引先名</th><th>事業部</th><th>販路</th><th>担当チーム</th><th>自社担当</th><th class="num">年間売上</th><th>進行中商談</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="lk"><a href="account-detail.html">北日本フード</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>佐藤</td><td class="num">¥78.0M</td><td><span class="pill amber">2件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">サンライズ製薬</a></td><td>メディカル</td><td>直販</td><td>GTV</td><td>鈴木</td><td class="num">¥54.2M</td><td><span class="pill amber">1件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">共立飼料</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>田中</td><td class="num">¥48.6M</td><td><span class="pill green">受注</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">みどり動物病院</a></td><td>アニマル</td><td>直販</td><td>GTV</td><td>高橋</td><td class="num">¥12.3M</td><td><span class="pill blue">1件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">山田畜産</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>田中</td><td class="num">¥31.0M</td><td><span class="pill blue">1件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">高橋ペットクリニック</a></td><td>メディカル</td><td>直販</td><td>GTV</td><td>佐藤</td><td class="num">¥8.4M</td><td><span class="pill gray">—</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">大和包装資材</a></td><td>P&amp;P</td><td>卸</td><td>松島</td><td>鈴木</td><td class="num">¥96.5M</td><td><span class="pill amber">3件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">東海パッケージ</a></td><td>P&amp;P</td><td>卸</td><td>GTV</td><td>鈴木</td><td class="num">¥62.1M</td><td><span class="pill blue">1件</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 Excel的なリスト管理（並び替え・絞り込み・詳細ビュー）。重複対策は「取引先名＋事業部」で重複ルール（※要確認）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

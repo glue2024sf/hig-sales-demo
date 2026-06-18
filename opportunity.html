@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>商談（提案型） | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="opp">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">💼</div>
+    <div>
+      <div class="eyebrow">商談 › 提案型（P&amp;P / メディカル 想定）</div>
+      <h1>北日本フード_2026春提案</h1>
+    </div>
+    <div class="actions">
+      <a class="btn" href="opportunity-animal.html">補充型を見る →</a>
+      <a class="btn primary" href="#">次のステージへ</a>
+    </div>
+  </div>
+
+  <!-- stage path -->
+  <div class="path" style="margin-bottom:16px">
+    <div class="st done">引合い</div>
+    <div class="st done">見積提示</div>
+    <div class="st cur">交渉/承認</div>
+    <div class="st">受注</div>
+    <div class="st">（失注）</div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">基本</div>
+      <div class="bd">
+        <dl class="dl">
+          <dt><span class="req">★</span>取引先</dt><dd><a href="account-detail.html">北日本フード</a></dd>
+          <dt><span class="req">★</span>事業部</dt><dd>アニマル</dd>
+          <dt><span class="req">★</span>商談名</dt><dd>北日本フード_2026春提案</dd>
+          <dt><span class="req">★</span>ステージ</dt><dd>交渉/承認</dd>
+          <dt><span class="req">★</span>金額（見込可）</dt><dd>¥24,000,000</dd>
+          <dt><span class="req">★</span>完了予定日</dt><dd>2026-06-30</dd>
+          <dt><span class="req">★</span>自社担当</dt><dd>佐藤（松島チーム）</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">進捗・分析</div>
+      <div class="bd">
+        <dl class="dl">
+          <dt>確度%</dt><dd>70%（ステージ連動）</dd>
+          <dt>引合い日</dt><dd>2026-05-08</dd>
+          <dt>受注日</dt><dd class="muted">— （受注時に記録）</dd>
+          <dt>失注理由</dt><dd class="muted">— （失注時に★必須）</dd>
+          <dt>競合状況</dt><dd>他社A社と比較中 ※Belsales自動抽出</dd>
+        </dl>
+        <hr class="sep">
+        <div class="section-title">Belsales 自動連携（候補→承認）</div>
+        <table class="tbl">
+          <tr><td>ヒアリング充足度</td><td><span class="pill amber">68%</span> 価格条件が未確認</td></tr>
+          <tr><td>ネクストアクション</td><td>役員同行で最終提示（6/20）<a href="#" style="margin-left:6px">承認</a></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">活動（Belsales議事録も自動反映）<span class="sub"><a href="activity-input.html">活動を記録</a></span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <tbody>
+          <tr><td><span class="pill blue">訪問</span></td><td>5/31 価格交渉。先方は予算上限を提示 <span class="pill green" style="margin-left:6px">Belsales自動</span></td><td class="muted">佐藤</td></tr>
+          <tr><td><span class="pill gray">電話</span></td><td>5/24 見積条件のすり合わせ</td><td class="muted">佐藤</td></tr>
+          <tr><td><span class="pill amber">提案</span></td><td>5/16 2026春提案を提示</td><td class="muted">佐藤</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 入力導線: 取引先から「商談を新規」→ ★最小入力で保存 →「次のステージへ」で進捗更新。失注時のみ失注理由を要求。見積/商品明細はフェーズ2（論点F2）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
