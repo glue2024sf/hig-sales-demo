@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>北日本フード | HIG 営業デモ</title>
+<title>グランビューホテルズ | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="acct">
 <div class="wrap">
 
   <div class="page-head">
-    <div class="icon">🏢</div>
+    <div class="icon">🏨</div>
     <div>
-      <div class="eyebrow"><a href="accounts.html">取引先</a> › 詳細</div>
-      <h1>北日本フード 株式会社</h1>
+      <div class="eyebrow"><a href="accounts.html">取引先</a> › チェーン運営会社</div>
+      <h1>グランビューホテルズ 株式会社</h1>
     </div>
     <div class="actions">
       <a class="btn" href="activity-input.html">活動を記録</a>
@@ -23,35 +23,44 @@
 
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
-      <div class="hd">基本情報</div>
+      <div class="hd">チェーン基本情報</div>
       <div class="bd">
         <dl class="dl">
-          <dt><span class="req">★</span>取引先名</dt><dd>北日本フード 株式会社</dd>
-          <dt><span class="req">★</span>事業部</dt><dd>アニマル</dd>
-          <dt><span class="req">★</span>販路</dt><dd>卸</dd>
-          <dt>取引先区分</dt><dd>卸先</dd>
-          <dt>親取引先</dt><dd class="muted">— （法人グループ名寄せ用）</dd>
+          <dt><span class="req">★</span>チェーン名</dt><dd>グランビューホテルズ 株式会社</dd>
+          <dt>階層</dt><dd>チェーン運営会社（本社）</dd>
+          <dt>主要チャネル</dt><dd>直販</dd>
+          <dt>決済区分</dt><dd>本社決済</dd>
+          <dt>本社キーマン</dt><dd>購買本部長 田所様</dd>
+          <dt>エリア</dt><dd>全国（本社: 東京都）</dd>
         </dl>
       </div>
     </div>
     <div class="card">
-      <div class="hd">担当・体制</div>
+      <div class="hd">サマリ</div>
       <div class="bd">
-        <dl class="dl">
-          <dt><span class="req">★</span>自社担当</dt><dd>佐藤</dd>
-          <dt>担当チーム</dt><dd>松島チーム</dd>
-          <dt>先方窓口</dt><dd>購買部 加藤様 / 011-xxx-xxxx</dd>
-          <dt>取引条件</dt><dd class="muted">掛率/与信/締支払 ※要確認</dd>
-        </dl>
+        <div class="grid g2">
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">配下施設数</div><div class="val">38</div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">導入施設</div><div class="val">29<small>/38</small></div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">年間売上</div><div class="val">¥96.5<small>M</small></div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">浸透率</div><div class="val">76<small>%</small></div></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">年間売上</div><div class="val">¥78<small>M</small></div><div class="delta up">▲ +6%</div></div>
-    <div class="kpi"><div class="label">進行中商談</div><div class="val">2<small>件</small></div><div class="delta flat">¥30.7M</div></div>
-    <div class="kpi"><div class="label">直近活動</div><div class="val">18<small>日前</small></div><div class="delta down">▼ 要フォロー</div></div>
-    <div class="kpi"><div class="label">受注率（過去1年）</div><div class="val">44<small>%</small></div><div class="delta up">▲</div></div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">配下の個別施設（関連リスト）<span class="sub">チェーン⇄施設を行き来</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>施設名</th><th>顧客コード</th><th>都道府県</th><th>施設キーマン</th><th class="num">年間売上</th><th>状態</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">グランビュー箱根</td><td class="muted">10231</td><td>神奈川県</td><td>支配人 林様</td><td class="num">¥6.2M</td><td><span class="pill green">導入済</span></td></tr>
+          <tr><td class="lk">グランビュー金沢</td><td class="muted">10288</td><td>石川県</td><td>支配人 西様</td><td class="num">¥4.1M</td><td><span class="pill green">導入済</span></td></tr>
+          <tr><td class="lk">グランビュー沖縄</td><td class="muted">10302</td><td>沖縄県</td><td>—</td><td class="num">¥0M</td><td><span class="pill amber">提案中</span></td></tr>
+          <tr><td class="lk muted">グランビュー仙台（新規開業）</td><td class="muted">—（採番待ち）</td><td>宮城県</td><td>—</td><td class="num">¥0M</td><td><span class="pill blue">開業案件</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="grid g2">
@@ -59,11 +68,10 @@
       <div class="hd">商談（関連リスト）</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>商談名</th><th class="num">金額</th><th>ステージ</th></tr></thead>
+          <thead><tr><th>商談名</th><th class="num">年間見込</th><th>ステージ</th></tr></thead>
           <tbody>
-            <tr><td class="lk"><a href="opportunity.html">2026春提案</a></td><td class="num">¥24.0M</td><td><span class="pill amber">交渉/承認</span></td></tr>
-            <tr><td class="lk"><a href="opportunity-animal.html">定期補充_2026-06</a></td><td class="num">¥6.7M</td><td><span class="pill green">受注</span></td></tr>
-            <tr><td class="lk muted">2025秋提案</td><td class="num">¥15.0M</td><td><span class="pill gray">失注（価格）</span></td></tr>
+            <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td></tr>
+            <tr><td class="lk muted">2025秋 什器更新</td><td class="num">¥12.0M</td><td><span class="pill gray">ロスト（価格）</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -73,16 +81,16 @@
       <div class="bd" style="padding:0">
         <table class="tbl">
           <tbody>
-            <tr><td><span class="pill blue">訪問</span></td><td>5/31 価格交渉・役員同行打診</td><td class="muted">佐藤</td></tr>
-            <tr><td><span class="pill gray">電話</span></td><td>5/24 見積条件の確認</td><td class="muted">佐藤</td></tr>
-            <tr><td><span class="pill amber">提案</span></td><td>5/16 2026春提案を提示</td><td class="muted">佐藤</td></tr>
+            <tr><td><span class="pill blue">訪問</span></td><td>6/2 本社購買と価格交渉</td><td class="muted">三原</td></tr>
+            <tr><td><span class="pill gray">TEL</span></td><td>5/27 内定条件の確認</td><td class="muted">三原</td></tr>
+            <tr><td><span class="pill amber">議事録</span></td><td>5/20 提案MTG（ベルセールス自動転記）</td><td class="muted">三原</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 入力導線: 引合い受領 → 取引先を検索 → 無ければ新規（★3項目だけで保存可）→ そのまま「商談を新規」。</div>
+  <div class="demo-note" style="margin-top:16px">💡 本社キーマンと施設キーマンを分けて管理。本社決済/個店決済の区分も保持（ヒアリングB）。新規開業ホテルは「開業案件」として別管理（ヒアリングE）。</div>
 
 </div>
 <script src="app.js"></script>

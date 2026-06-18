@@ -13,7 +13,7 @@
     <div class="icon">🏠</div>
     <div>
       <div class="eyebrow">ホーム</div>
-      <h1>おはようございます、倉島さん</h1>
+      <h1>おはようございます</h1>
     </div>
     <div class="actions">
       <a class="btn" href="activity-input.html">活動を記録</a>
@@ -21,25 +21,26 @@
     </div>
   </div>
 
-  <div class="demo-note">⚠️ これはレビュー用デモ画面です。数値・社名はすべてダミーです。気になった箇所はスクショに赤字でフィードバックをお願いします。</div>
+  <div class="demo-note">⚠️ レビュー用デモ画面です。数値・チェーン名はすべてダミーです。御社（DHCブランドのホテルアメニティ販売）のチャネル・TOP147・品番体系を前提に作成しています。気づいた点はスクショに赤字でFBをお願いします。</div>
 
   <!-- サマリ -->
   <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">今月 売上（全社）</div><div class="val">¥182.4<small>M</small></div><div class="delta up">▲ 同月比 +8.2%</div></div>
-    <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">73<small>%</small></div><div class="delta flat">目標 ¥250M</div></div>
-    <div class="kpi"><div class="label">進行中パイプライン</div><div class="val">¥412<small>M</small></div><div class="delta up">▲ 32件</div></div>
-    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ フォロー漏れ含む</div></div>
+    <div class="kpi"><div class="label">今月 売上（全チャネル・税抜）</div><div class="val">¥182.4<small>M</small></div><div class="delta up">▲ 前年同月 +8.2%</div></div>
+    <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">73<small>%</small></div><div class="delta flat">HIGベース(4-3月)</div></div>
+    <div class="kpi"><div class="label">進行中 見込（年間）</div><div class="val">¥412<small>M</small></div><div class="delta up">▲ 32件</div></div>
+    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ 追客漏れ含む</div></div>
   </div>
 
   <div class="grid g2" style="margin-bottom:16px">
-    <!-- 売上全体 -->
+    <!-- チャネル別売上 -->
     <div class="card">
-      <div class="hd">売上全体（事業部別 / 当月）<span class="sub">単位: 百万円</span></div>
+      <div class="hd">売上（チャネル別 / 当月）<span class="sub">単位: 百万円・税抜</span></div>
       <div class="bd">
-        <div class="bar"><span class="name">P&amp;P</span><span class="track"><span class="fill" style="width:82%"></span></span><span class="v">¥88M</span></div>
-        <div class="bar"><span class="name">アニマル</span><span class="track"><span class="fill a" style="width:64%"></span></span><span class="v">¥61M</span></div>
-        <div class="bar"><span class="name">メディカル</span><span class="track"><span class="fill g" style="width:34%"></span></span><span class="v">¥33M</span></div>
-        <div class="legend"><span><i style="background:var(--blue)"></i>P&amp;P</span><span><i style="background:#f5a623"></i>アニマル</span><span><i style="background:var(--green)"></i>メディカル</span></div>
+        <div class="bar"><span class="name">直販</span><span class="track"><span class="fill" style="width:88%"></span></span><span class="v">¥80M</span></div>
+        <div class="bar"><span class="name">東京マツシマ</span><span class="track"><span class="fill a" style="width:62%"></span></span><span class="v">¥56M</span></div>
+        <div class="bar"><span class="name">JTB商事</span><span class="track"><span class="fill p" style="width:36%"></span></span><span class="v">¥33M</span></div>
+        <div class="bar"><span class="name">ニシカワヤ</span><span class="track"><span class="fill g" style="width:15%"></span></span><span class="v">¥13M</span></div>
+        <div class="legend"><span class="muted">「特販」はチャネル横断チーム（出荷データ上の項目は現状なし ※要確認）</span></div>
       </div>
     </div>
     <!-- ネクストアクション -->
@@ -47,10 +48,10 @@
       <div class="hd">今日のネクストアクション</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <tr><td><span class="pill red">期限切れ</span></td><td class="lk">山田畜産 — 見積フォロー</td><td class="muted">6/16期限</td></tr>
-          <tr><td><span class="pill amber">本日</span></td><td class="lk">サンライズ製薬 — 提案訪問</td><td class="muted">14:00</td></tr>
-          <tr><td><span class="pill amber">本日</span></td><td class="lk">みどり動物病院 — サンプル追客TEL</td><td class="muted">16:00</td></tr>
-          <tr><td><span class="pill blue">明日</span></td><td class="lk">北日本フード — 交渉/承認</td><td class="muted">10:30</td></tr>
+          <tr><td><span class="pill red">期限切れ</span></td><td class="lk">グランビューホテルズ — 内定フォロー</td><td class="muted">6/16期限</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">やまと温泉リゾート — 提案訪問</td><td class="muted">14:00</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">サンリゾート — サンプル追客TEL</td><td class="muted">16:00</td></tr>
+          <tr><td><span class="pill blue">明日</span></td><td class="lk">都ホテルチェーン — 価格交渉</td><td class="muted">10:30</td></tr>
         </table>
       </div>
     </div>
@@ -59,28 +60,28 @@
   <div class="grid g2" style="margin-bottom:16px">
     <!-- アラート -->
     <div class="card">
-      <div class="hd">⚠️ アラート（追客・滞留）</div>
+      <div class="hd">⚠️ アラート（追客・ロスト予兆）</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>内容</th><th>対象</th><th class="num">滞留</th></tr></thead>
+          <thead><tr><th>内容</th><th>対象</th><th class="num">経過</th></tr></thead>
           <tbody>
-            <tr><td>14日 活動なし</td><td class="lk"><a href="opportunity.html">北日本フード_2026春提案</a></td><td class="num">18日</td></tr>
-            <tr><td>サンプル送付後 未追客</td><td class="lk"><a href="sample-follow.html">みどり動物病院</a></td><td class="num">9日</td></tr>
-            <tr><td>受注予定日 超過</td><td class="lk"><a href="opportunity.html">共立飼料_定期</a></td><td class="num">4日</td></tr>
+            <tr><td>サンプル送付後 未追客（10営業日超）</td><td class="lk"><a href="sample-follow.html">サンリゾート 沖縄</a></td><td class="num">13日</td></tr>
+            <tr><td>内定後 動きなし</td><td class="lk"><a href="opportunity.html">グランビューホテルズ_2026春</a></td><td class="num">18日</td></tr>
+            <tr><td>ロスト予兆（発注なし&ヒアリング済）</td><td class="lk"><a href="account-detail.html">都ホテル 名古屋</a></td><td class="num">—</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <!-- 追客営業 -->
+    <!-- サンプル追客 -->
     <div class="card">
-      <div class="hd">追客営業（サンプル）<span class="sub"><a href="sample-follow.html">一覧へ</a></span></div>
+      <div class="hd">サンプル追客<span class="sub"><a href="sample-follow.html">一覧へ</a></span></div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>送付先</th><th>担当</th><th>状況</th></tr></thead>
+          <thead><tr><th>送付先（施設）</th><th>担当</th><th>状況</th></tr></thead>
           <tbody>
-            <tr><td class="lk">みどり動物病院</td><td>佐藤</td><td><span class="pill amber">追客中</span></td></tr>
-            <tr><td class="lk">共立飼料</td><td>鈴木</td><td><span class="pill green">受注へ</span></td></tr>
-            <tr><td class="lk">高橋ペットクリニック</td><td>田中</td><td><span class="pill gray">未着手</span></td></tr>
+            <tr><td class="lk">サンリゾート 沖縄</td><td>三原</td><td><span class="pill red">追客遅延</span></td></tr>
+            <tr><td class="lk">やまと温泉 草津</td><td>櫻井</td><td><span class="pill amber">追客中</span></td></tr>
+            <tr><td class="lk">グランビュー箱根</td><td>田村</td><td><span class="pill green">転換</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -90,14 +91,14 @@
   <!-- ランチャー -->
   <div class="section-title">デモ画面 一覧（クリックで移動）</div>
   <div class="grid g4">
-    <a class="kpi" href="dashboard-overall.html"><div class="val" style="font-size:20px">📊 全体MTG DB</div><div class="label">週次会議で使う1枚</div></a>
-    <a class="kpi" href="dashboard-team.html"><div class="val" style="font-size:20px">👥 チームDB</div><div class="label">松島 / GTV ほか</div></a>
-    <a class="kpi" href="dashboard-personal.html"><div class="val" style="font-size:20px">🧑 個人DB</div><div class="label">統一フォーマット</div></a>
-    <a class="kpi" href="dashboard-exec.html"><div class="val" style="font-size:20px">📈 経営DB</div><div class="label">着地・利益・シェア</div></a>
-    <a class="kpi" href="dashboard-shipping.html"><div class="val" style="font-size:20px">🚚 出荷DB</div><div class="label">XA3連携</div></a>
-    <a class="kpi" href="accounts.html"><div class="val" style="font-size:20px">🏢 取引先</div><div class="label">会社リスト</div></a>
-    <a class="kpi" href="opportunity.html"><div class="val" style="font-size:20px">💼 商談</div><div class="label">提案型 / 補充型</div></a>
-    <a class="kpi" href="activity-input.html"><div class="val" style="font-size:20px">📝 活動入力</div><div class="label">訪問/電話/提案</div></a>
+    <a class="kpi" href="dashboard-weekly.html"><div class="val" style="font-size:19px">📊 週報DB</div><div class="label">毎週全員が見る1枚</div></a>
+    <a class="kpi" href="dashboard-team.html"><div class="val" style="font-size:19px">👥 営業チームDB</div><div class="label">売上/サンプル/ロスト</div></a>
+    <a class="kpi" href="dashboard-personal.html"><div class="val" style="font-size:19px">🧑 個人DB</div><div class="label">見込・新規・フォロー</div></a>
+    <a class="kpi" href="dashboard-quarter.html"><div class="val" style="font-size:19px">📈 四半期・経営DB</div><div class="label">集計軸切替・粗利</div></a>
+    <a class="kpi" href="dashboard-shipping.html"><div class="val" style="font-size:19px">🚚 出荷・売上DB</div><div class="label">Tシステム連携</div></a>
+    <a class="kpi" href="accounts.html"><div class="val" style="font-size:19px">🏨 取引先</div><div class="label">チェーン⇄施設 二層</div></a>
+    <a class="kpi" href="opportunity.html"><div class="val" style="font-size:19px">💼 商談</div><div class="label">7ステージ</div></a>
+    <a class="kpi" href="sample-follow.html"><div class="val" style="font-size:19px">🧴 サンプル管理</div><div class="label">統合・追客・転換</div></a>
   </div>
 
 </div>

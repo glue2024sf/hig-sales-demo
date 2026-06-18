@@ -3,50 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>取引先 | HIG 営業デモ</title>
+<title>取引先（チェーン） | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="acct">
 <div class="wrap">
 
   <div class="page-head">
-    <div class="icon">🏢</div>
+    <div class="icon">🏨</div>
     <div>
-      <div class="eyebrow">取引先</div>
-      <h1>会社リスト</h1>
+      <div class="eyebrow">取引先 › チェーン運営会社（TOP147）</div>
+      <h1>チェーン運営会社リスト</h1>
     </div>
     <div class="actions"><a class="btn primary" href="#">新規</a></div>
   </div>
 
+  <div class="demo-note">⚠️ 顧客は<b>チェーン運営会社（本社）⇄個別施設の二層</b>。チェーンに属さない個店の施設もあり。両方を行き来して見られることがMUST（ヒアリングB）。</div>
+
   <div class="toolbar">
-    <span class="chip on">すべて</span>
-    <span class="chip">P&amp;P</span><span class="chip">アニマル</span><span class="chip">メディカル</span>
+    <span class="chip on">全チェーン</span>
+    <span class="chip">本社決済</span><span class="chip">個店決済</span>
     <span class="grow"></span>
-    <input class="field" style="width:240px;margin:0" placeholder="リスト内を検索…">
-    <span class="muted">42件 ・ 並び替え: 売上 ▾</span>
+    <input class="field" style="width:240px;margin:0" placeholder="チェーン/施設を検索…">
+    <span class="muted">147件 ・ 並び替え: 年間売上 ▾</span>
   </div>
 
   <div class="card">
     <div class="bd" style="padding:0">
       <table class="tbl">
         <thead>
-          <tr><th>取引先名</th><th>事業部</th><th>販路</th><th>担当チーム</th><th>自社担当</th><th class="num">年間売上</th><th>進行中商談</th></tr>
+          <tr><th>チェーン運営会社</th><th class="num">施設数</th><th>主要チャネル</th><th>決済</th><th>担当</th><th class="num">年間売上</th><th>営業状況</th></tr>
         </thead>
         <tbody>
-          <tr><td class="lk"><a href="account-detail.html">北日本フード</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>佐藤</td><td class="num">¥78.0M</td><td><span class="pill amber">2件</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">サンライズ製薬</a></td><td>メディカル</td><td>直販</td><td>GTV</td><td>鈴木</td><td class="num">¥54.2M</td><td><span class="pill amber">1件</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">共立飼料</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>田中</td><td class="num">¥48.6M</td><td><span class="pill green">受注</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">みどり動物病院</a></td><td>アニマル</td><td>直販</td><td>GTV</td><td>高橋</td><td class="num">¥12.3M</td><td><span class="pill blue">1件</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">山田畜産</a></td><td>アニマル</td><td>卸</td><td>松島</td><td>田中</td><td class="num">¥31.0M</td><td><span class="pill blue">1件</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">高橋ペットクリニック</a></td><td>メディカル</td><td>直販</td><td>GTV</td><td>佐藤</td><td class="num">¥8.4M</td><td><span class="pill gray">—</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">大和包装資材</a></td><td>P&amp;P</td><td>卸</td><td>松島</td><td>鈴木</td><td class="num">¥96.5M</td><td><span class="pill amber">3件</span></td></tr>
-          <tr><td class="lk"><a href="account-detail.html">東海パッケージ</a></td><td>P&amp;P</td><td>卸</td><td>GTV</td><td>鈴木</td><td class="num">¥62.1M</td><td><span class="pill blue">1件</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">グランビューホテルズ</a></td><td class="num">38</td><td>直販</td><td>本社決済</td><td>三原</td><td class="num">¥96.5M</td><td><span class="pill amber">内定</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">都ホテルチェーン</a></td><td class="num">52</td><td>東京マツシマ</td><td>本社決済</td><td>櫻井</td><td class="num">¥78.0M</td><td><span class="pill blue">営業済</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">サンリゾート</a></td><td class="num">21</td><td>JTB商事</td><td>個店決済</td><td>田村</td><td class="num">¥54.2M</td><td><span class="pill blue">情報収集済</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">やまと温泉リゾート</a></td><td class="num">17</td><td>ニシカワヤ</td><td>本社決済</td><td>佐久間</td><td class="num">¥48.6M</td><td><span class="pill green">継続発注</span></td></tr>
+          <tr><td class="lk"><a href="account-detail.html">シーサイド観光</a></td><td class="num">12</td><td>直販</td><td>個店決済</td><td>三原</td><td class="num">¥31.0M</td><td><span class="pill blue">営業済</span></td></tr>
+          <tr><td class="lk muted"><a href="account-detail.html">（個店）金沢ベイホテル</a></td><td class="num">1</td><td>直販</td><td>個店決済</td><td>田村</td><td class="num">¥8.4M</td><td><span class="pill gray">情報未収集</span></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 Excel的なリスト管理（並び替え・絞り込み・詳細ビュー）。重複対策は「取引先名＋事業部」で重複ルール（※要確認）。</div>
+  <div class="demo-note" style="margin-top:16px">💡 個別施設は一意の顧客コード（現状5桁・連番）で識別 → 出荷データとの突合キー。TOP147（本社）と出荷データ（施設）の対応表は現状60% → 一緒に整備していく（ヒアリングB）。</div>
 
 </div>
 <script src="app.js"></script>

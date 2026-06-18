@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>チームダッシュボード | HIG 営業デモ</title>
+<title>営業チームダッシュボード | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="dash">
@@ -13,54 +13,47 @@
     <div class="icon">👥</div>
     <div>
       <div class="eyebrow">ダッシュボード</div>
-      <h1>チームダッシュボード — 松島チーム</h1>
+      <h1>営業チームダッシュボード</h1>
     </div>
-    <div class="actions"><a class="btn primary" href="#">PDFで出力</a></div>
   </div>
 
   <div class="toolbar">
-    <span class="chip on">チーム: 松島</span>
-    <span class="chip">GTV</span>
-    <span class="chip">期間: 当月</span>
+    <span class="chip on">直販チーム</span><span class="chip">東京マツシマ</span><span class="chip">JTB商事</span><span class="chip">ニシカワヤ</span>
     <span class="grow"></span>
     <span class="muted">売上比較軸:</span>
-    <span class="chip on">同月比</span><span class="chip">同日比</span><span class="chip">月次累計</span><span class="chip">目標比</span><span class="chip">3ヶ月累計</span>
+    <span class="chip on">月次</span><span class="chip">3ヶ月平均</span><span class="chip">新規</span>
   </div>
 
   <!-- 売上 -->
+  <div class="section-title">売上</div>
   <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">当月売上</div><div class="val">¥58.4<small>M</small></div><div class="delta up">▲ 同月比 +6.4%</div></div>
-    <div class="kpi"><div class="label">同日比</div><div class="val">+2.1<small>%</small></div><div class="delta up">▲ 前年同日超</div></div>
+    <div class="kpi"><div class="label">当月売上</div><div class="val">¥58.4<small>M</small></div><div class="delta up">▲ 前年同月 +6.4%</div></div>
+    <div class="kpi"><div class="label">3ヶ月平均</div><div class="val">¥54.1<small>M</small></div><div class="delta up">▲ +4.8%</div></div>
+    <div class="kpi"><div class="label">新規（当月）</div><div class="val">¥11.0<small>M</small></div><div class="delta up">▲ 12施設</div></div>
     <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">78<small>%</small></div><div class="delta flat">目標 ¥75M</div></div>
-    <div class="kpi"><div class="label">3ヶ月累計</div><div class="val">¥171<small>M</small></div><div class="delta up">▲ +4.8%</div></div>
   </div>
 
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
-      <div class="hd">月次累計 vs 目標</div>
+      <div class="hd">売上推移（月次 / 3ヶ月平均）</div>
       <div class="bd">
         <svg viewBox="0 0 320 140" width="100%" height="140" class="spark">
-          <polyline fill="none" stroke="#d8dde6" stroke-width="2" stroke-dasharray="4 4" points="0,120 60,100 120,80 180,60 240,40 300,20"/>
-          <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,122 60,108 120,92 180,70 240,55 300,46"/>
-          <circle cx="300" cy="46" r="4" fill="#0176d3"/>
+          <polyline fill="none" stroke="#d8dde6" stroke-width="2" points="0,110 60,100 120,92 180,84 240,78 300,70"/>
+          <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,118 60,96 120,104 180,80 240,86 300,62"/>
+          <circle cx="300" cy="62" r="4" fill="#0176d3"/>
         </svg>
-        <div class="legend"><span><i style="background:#0176d3"></i>実績</span><span><i style="background:#d8dde6"></i>目標</span></div>
+        <div class="legend"><span><i style="background:#0176d3"></i>月次</span><span><i style="background:#d8dde6"></i>3ヶ月平均</span></div>
       </div>
     </div>
     <div class="card">
-      <div class="hd">フェーズ別パイプライン</div>
+      <div class="hd">主要チェーン別 売上</div>
       <div class="bd">
-        <div class="bar"><span class="name">引合い</span><span class="track"><span class="fill" style="width:90%"></span></span><span class="v">¥44M</span></div>
-        <div class="bar"><span class="name">見積提示</span><span class="track"><span class="fill" style="width:62%"></span></span><span class="v">¥31M</span></div>
-        <div class="bar"><span class="name">交渉/承認</span><span class="track"><span class="fill a" style="width:40%"></span></span><span class="v">¥20M</span></div>
-        <div class="bar"><span class="name">受注</span><span class="track"><span class="fill g" style="width:24%"></span></span><span class="v">¥12M</span></div>
+        <div class="bar"><span class="name">グランビューHD</span><span class="track"><span class="fill" style="width:90%"></span></span><span class="v">¥22M</span></div>
+        <div class="bar"><span class="name">都ホテルチェーン</span><span class="track"><span class="fill" style="width:64%"></span></span><span class="v">¥16M</span></div>
+        <div class="bar"><span class="name">サンリゾート</span><span class="track"><span class="fill a" style="width:44%"></span></span><span class="v">¥11M</span></div>
+        <div class="bar"><span class="name">やまと温泉</span><span class="track"><span class="fill g" style="width:36%"></span></span><span class="v">¥9M</span></div>
       </div>
     </div>
-  </div>
-
-  <div class="grid g2" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">新規見込 金額</div><div class="val">¥95<small>M</small></div><div class="delta up">▲ +12件</div></div>
-    <div class="kpi"><div class="label">新規見込 件数</div><div class="val">28<small>件</small></div><div class="delta up">▲ 先月比 +5</div></div>
   </div>
 
   <div class="grid g2" style="margin-bottom:16px">
@@ -69,59 +62,44 @@
       <div class="hd">サンプルフォロー</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>送付先</th><th>担当</th><th>送付日</th><th>状況</th></tr></thead>
+          <thead><tr><th>送付先（施設）</th><th>担当</th><th>送付日</th><th>状況</th></tr></thead>
           <tbody>
-            <tr><td class="lk">みどり動物病院</td><td>佐藤</td><td>6/9</td><td><span class="pill amber">追客中</span></td></tr>
-            <tr><td class="lk">高橋ペットクリニック</td><td>田中</td><td>6/12</td><td><span class="pill gray">未着手</span></td></tr>
-            <tr><td class="lk">共立飼料</td><td>田中</td><td>6/2</td><td><span class="pill green">受注へ</span></td></tr>
+            <tr><td class="lk">サンリゾート 沖縄</td><td>三原</td><td>5/29</td><td><span class="pill red">追客遅延</span></td></tr>
+            <tr><td class="lk">やまと温泉 草津</td><td>櫻井</td><td>6/9</td><td><span class="pill amber">追客中</span></td></tr>
+            <tr><td class="lk">グランビュー箱根</td><td>田村</td><td>6/2</td><td><span class="pill green">転換</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <!-- アラート -->
+    <!-- ロスト -->
     <div class="card">
-      <div class="hd">⚠️ アラート</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
-          <thead><tr><th>種別</th><th>対象</th><th class="num">経過</th></tr></thead>
-          <tbody>
-            <tr><td>14日 活動なし</td><td class="lk">北日本フード_2026春提案</td><td class="num">18日</td></tr>
-            <tr><td>受注予定日 超過</td><td class="lk">共立飼料_定期</td><td class="num">4日</td></tr>
-            <tr><td>失注リスク</td><td class="lk">山田畜産_補充提案</td><td class="num">—</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid g2">
-    <!-- ロスト管理 -->
-    <div class="card">
-      <div class="hd">ロスト管理（失注理由 内訳 / 当月）</div>
+      <div class="hd">ロスト管理</div>
       <div class="bd">
+        <p class="help">判定: 発注なし&ヒアリング済 / または 3年発注なし</p>
         <div class="bar"><span class="name">価格</span><span class="track"><span class="fill" style="width:80%"></span></span><span class="v">8件</span></div>
-        <div class="bar"><span class="name">競合</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="v">5件</span></div>
-        <div class="bar"><span class="name">見送り</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="v">3件</span></div>
-        <div class="bar"><span class="name">タイミング</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="v">2件</span></div>
-      </div>
-    </div>
-    <!-- 主要案件 -->
-    <div class="card">
-      <div class="hd">主要案件ステータス</div>
-      <div class="bd" style="padding:0">
-        <table class="tbl">
-          <thead><tr><th>案件名</th><th class="num">金額</th><th>フェーズ</th><th class="num">滞留</th></tr></thead>
-          <tbody>
-            <tr><td class="lk"><a href="opportunity.html">北日本フード_2026春提案</a></td><td class="num">¥24.0M</td><td><span class="pill amber">交渉</span></td><td class="num">18日</td></tr>
-            <tr><td class="lk"><a href="opportunity.html">サンライズ製薬_新製品</a></td><td class="num">¥18.5M</td><td><span class="pill blue">見積</span></td><td class="num">6日</td></tr>
-            <tr><td class="lk"><a href="opportunity-animal.html">共立飼料_定期補充</a></td><td class="num">¥9.2M</td><td><span class="pill green">受注</span></td><td class="num">—</td></tr>
-          </tbody>
-        </table>
+        <div class="bar"><span class="name">競合採用</span><span class="track"><span class="fill" style="width:50%"></span></span><span class="v">5件</span></div>
+        <div class="bar"><span class="name">3年発注なし</span><span class="track"><span class="fill" style="width:40%"></span></span><span class="v">4件</span></div>
+        <div class="bar"><span class="name">施設閉館</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="v">2件</span></div>
       </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 売上比較軸（同月比/同日比/月次累計/目標比/3ヶ月累計）はチップで切替。デフォルト表示はどれが良いかFB募集中。</div>
+  <!-- 主要案件 -->
+  <div class="card">
+    <div class="hd">主要案件ステータス</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>案件名</th><th>チェーン</th><th class="num">年間見込</th><th>ステージ</th><th class="num">確度</th></tr></thead>
+        <tbody>
+          <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューHD</td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td class="num">80%</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">PB改定提案</a></td><td>都ホテルチェーン</td><td class="num">¥18.5M</td><td><span class="pill blue">営業済</span></td><td class="num">50%</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">開業案件_沖縄</a></td><td>サンリゾート</td><td class="num">¥9.2M</td><td><span class="pill blue">情報収集済</span></td><td class="num">30%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 営業チーム表示項目（ヒアリングI）: 売上（月次/3ヶ月平均/新規/主要チェーン）・サンプルフォロー・ロスト・主要案件。チーム編成（チャネル別か地域別か）は ※要確認。</div>
 
 </div>
 <script src="app.js"></script>

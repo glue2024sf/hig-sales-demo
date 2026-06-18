@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>週次レポート入力 | HIG 営業デモ</title>
+<title>週報入力 | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="weekly">
@@ -12,43 +12,46 @@
   <div class="page-head">
     <div class="icon">🗓️</div>
     <div>
-      <div class="eyebrow">週次レポート（チャンネルリーダー用）</div>
-      <h1>各チャンネル主要動き 入力</h1>
+      <div class="eyebrow">週報（役職以上が入力）</div>
+      <h1>各チャネルの動き 入力</h1>
     </div>
-    <div class="actions"><a class="btn" href="dashboard-overall.html">全体MTG DBで確認 →</a></div>
+    <div class="actions"><a class="btn" href="dashboard-weekly.html">週報DBで確認 →</a></div>
   </div>
 
-  <div class="demo-note">⚠️ 入力デモ。役職級メンバーが<b>週1回1レコード</b>入力 → 全体MTGダッシュボードに最新分のみ表示、過去分は履歴参照。</div>
+  <div class="demo-note">⚠️ 入力デモ。週報は<b>毎週全員が見る</b>（数値・コミット・各チャネルの動き）。「チャネルの動き」は役職以上が週次入力 → 全員閲覧（ヒアリングI）。</div>
 
   <div class="grid g2">
     <div class="card">
-      <div class="hd">週次レポートを入力</div>
+      <div class="hd">チャネルの動きを入力</div>
       <div class="bd">
         <div class="row2">
           <div class="field"><label><span class="req">★</span>対象週</label>
             <select><option>2026-W25 (6/15-6/19)</option><option>2026-W24</option></select>
           </div>
-          <div class="field"><label><span class="req">★</span>チャンネル</label>
-            <select><option>営業</option><option>物流・生産</option><option>商品企画</option><option>生産消費企画</option></select>
+          <div class="field"><label><span class="req">★</span>チャネル</label>
+            <select><option>直販</option><option>東京マツシマ</option><option>JTB商事</option><option>ニシカワヤ</option><option>特販</option></select>
           </div>
         </div>
-        <div class="field"><label><span class="req">★</span>今週のトピック</label>
-          <textarea>大型提案2件が交渉フェーズ入り。北日本フードは役員同行を調整中。</textarea>
+        <div class="row2">
+          <div class="field"><label>今週売上（税抜）</label><input value="¥20,100,000"></div>
+          <div class="field"><label>今月コミット</label><input value="¥80,000,000"></div>
+        </div>
+        <div class="field"><label><span class="req">★</span>主要チェーンの動き</label>
+          <textarea>グランビューHD：チェーン開拓が内定へ。本社決済の最終確認待ち。</textarea>
         </div>
         <div class="field"><label>主要案件（複数可）</label>
-          <input value="北日本フード_2026春提案, サンライズ製薬_新製品">
+          <input value="グランビューHD_2026春 新規導入">
         </div>
         <div class="row2">
           <div class="field"><label>ステータス</label>
-            <select><option>進行中</option><option>注意</option><option>完了</option></select>
+            <select><option>順調</option><option>交渉継続</option><option>価格調整</option><option>要注意</option></select>
           </div>
-          <div class="field"><label>次アクション</label><input value="役員同行を調整"></div>
+          <div class="field"><label>次アクション</label><input value="本社決済の最終確認"></div>
         </div>
         <div style="display:flex;gap:8px;justify-content:flex-end">
           <button class="btn">先週分をコピー</button>
           <button class="btn primary">保存（最新分として反映）</button>
         </div>
-        <p class="help">「先週分をコピー」で差分更新でき、入力負荷を抑える。</p>
       </div>
     </div>
 
@@ -56,19 +59,20 @@
       <div class="hd">入力済み（今週 W25）</div>
       <div class="bd" style="padding:0">
         <table class="tbl">
-          <thead><tr><th>チャンネル</th><th>トピック</th><th>状況</th></tr></thead>
+          <thead><tr><th>チャネル</th><th>主要チェーンの動き</th><th>状況</th></tr></thead>
           <tbody>
-            <tr><td class="lk">営業</td><td>大型提案2件が交渉入り</td><td><span class="pill blue">進行中</span></td></tr>
-            <tr><td class="lk">物流・生産</td><td>飼料在庫逼迫、補充前倒し</td><td><span class="pill amber">注意</span></td></tr>
-            <tr><td class="lk">商品企画</td><td>新製品サンプル配布開始</td><td><span class="pill blue">進行中</span></td></tr>
-            <tr><td class="muted">生産消費企画</td><td class="muted">未入力</td><td><span class="pill gray">—</span></td></tr>
+            <tr><td class="lk">直販</td><td>グランビューHD 内定へ</td><td><span class="pill blue">交渉継続</span></td></tr>
+            <tr><td class="lk">東京マツシマ</td><td>PB（A〇M）改定提案中</td><td><span class="pill amber">価格調整</span></td></tr>
+            <tr><td class="lk">JTB商事</td><td>新規開業2件 引合い</td><td><span class="pill blue">提案準備</span></td></tr>
+            <tr><td class="lk">ニシカワヤ</td><td>温浴チャネル深耕</td><td><span class="pill green">順調</span></td></tr>
+            <tr><td class="muted">特販</td><td class="muted">未入力</td><td><span class="pill gray">—</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 ※要確認: 入力主体（リーダーのみ/メンバーも）、対象週の締めタイミング。</div>
+  <div class="demo-note" style="margin-top:16px">💡 週次で毎週見たい指標と並び順、目標（予算）データの持ち方（月次×チャネル×担当）は別途打ち合わせ（ヒアリングI）。</div>
 
 </div>
 <script src="app.js"></script>

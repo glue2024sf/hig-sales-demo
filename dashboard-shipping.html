@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>出荷ダッシュボード | HIG 営業デモ</title>
+<title>出荷・売上ダッシュボード | HIG 営業デモ</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body data-page="dash">
@@ -13,70 +13,55 @@
     <div class="icon">🚚</div>
     <div>
       <div class="eyebrow">ダッシュボード</div>
-      <h1>出荷ダッシュボード（XA3連携想定）</h1>
+      <h1>出荷・売上ダッシュボード（Tシステム連携）</h1>
     </div>
   </div>
 
   <div class="toolbar">
-    <span class="chip on">期間: 当週</span>
-    <span class="chip">商品: 全て</span>
+    <span class="chip on">期間: 当月</span>
+    <span class="chip on">HIGベース(4-3月)</span><span class="chip">DHCベース(1-12月)</span>
     <span class="grow"></span>
-    <span class="muted">更新: 週次取込（仮データ）</span>
+    <span class="muted">元: Tシステム（Excelベース受発注「0529」）／連携希望</span>
   </div>
 
-  <div class="demo-note">⚠️ XA3との連携方法・取込頻度は未確定（※要確認）。本DBは週次取込前提の仮データです。</div>
+  <div class="demo-note">⚠️ 出荷データは現状Tシステム（Excelベースの受発注、項目数30／玉川加工用43）。継続連携の方式は ※要確認。本DBは初期取込の仮データです。</div>
 
-  <!-- 出荷サマリ -->
   <div class="grid g4" style="margin-bottom:16px">
-    <div class="kpi"><div class="label">当週 出荷額</div><div class="val">¥48.6<small>M</small></div><div class="delta up">▲ 先週比 +3.4%</div></div>
-    <div class="kpi"><div class="label">先週比</div><div class="val">+3.4<small>%</small></div><div class="delta up">▲ ¥1.6M</div></div>
-    <div class="kpi"><div class="label">先月比</div><div class="val">-1.2<small>%</small></div><div class="delta down">▼ 季節要因</div></div>
-    <div class="kpi"><div class="label">月次累計</div><div class="val">¥186<small>M</small></div><div class="delta flat">出荷ベース</div></div>
+    <div class="kpi"><div class="label">当月 出荷額（税抜）</div><div class="val">¥186<small>M</small></div><div class="delta up">▲ 前年同月 +3.4%</div></div>
+    <div class="kpi"><div class="label">全チャネル合計</div><div class="val">¥186<small>M</small></div><div class="delta flat">直販+代理店</div></div>
+    <div class="kpi"><div class="label">出荷施設数</div><div class="val">1,284<small></small></div><div class="delta up">▲ +28</div></div>
+    <div class="kpi"><div class="label">対応表 名寄せ率</div><div class="val">60<small>%</small></div><div class="delta down">▼ 要整備（一緒に作る）</div></div>
   </div>
 
   <div class="card" style="margin-bottom:16px">
-    <div class="hd">商品別 出荷額トレンド</div>
+    <div class="hd">チャネル別 出荷推移</div>
     <div class="bd">
       <svg viewBox="0 0 640 150" width="100%" height="150" class="spark">
-        <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,110 100,90 200,98 300,70 400,80 500,55 600,60"/>
-        <polyline fill="none" stroke="#f5a623" stroke-width="2" points="0,120 100,118 200,105 300,108 400,95 500,100 600,92"/>
-        <polyline fill="none" stroke="#2e844a" stroke-width="2" points="0,135 100,128 200,130 300,122 400,125 500,118 600,120"/>
+        <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,90 100,80 200,86 300,70 400,76 500,60 600,64"/>
+        <polyline fill="none" stroke="#f5a623" stroke-width="2" points="0,110 100,108 200,100 300,102 400,94 500,98 600,90"/>
+        <polyline fill="none" stroke="#5867e8" stroke-width="2" points="0,128 100,124 200,126 300,120 400,122 500,116 600,118"/>
       </svg>
-      <div class="legend"><span><i style="background:#0176d3"></i>高機能包材A</span><span><i style="background:#f5a623"></i>プレミアム飼料</span><span><i style="background:#2e844a"></i>医療用フィルム</span><span class="muted">直近7週</span></div>
+      <div class="legend"><span><i style="background:#0176d3"></i>直販</span><span><i style="background:#f5a623"></i>東京マツシマ</span><span><i style="background:#5867e8"></i>JTB商事</span><span class="muted">直近7ヶ月</span></div>
     </div>
   </div>
 
   <div class="card" style="margin-bottom:16px">
-    <div class="hd">商品別売上（当週 / 比較）</div>
+    <div class="hd">品番別 出荷（当月 / 比較）</div>
     <div class="bd" style="padding:0">
       <table class="tbl">
-        <thead><tr><th>商品</th><th>ロット</th><th class="num">当週出荷</th><th class="num">先週比</th><th class="num">先月比</th></tr></thead>
+        <thead><tr><th>品番</th><th>商品</th><th>区分</th><th class="num">当月出荷</th><th class="num">前年比</th></tr></thead>
         <tbody>
-          <tr><td class="lk">高機能包材A</td><td class="muted">LOT-2026A</td><td class="num">¥16.2M</td><td class="num" style="color:var(--green)">+5.1%</td><td class="num" style="color:var(--green)">+2.0%</td></tr>
-          <tr><td class="lk">プレミアム飼料</td><td class="muted">LOT-FD06</td><td class="num">¥13.8M</td><td class="num" style="color:var(--green)">+2.2%</td><td class="num" style="color:var(--red)">-3.4%</td></tr>
-          <tr><td class="lk">栄養補助食</td><td class="muted">LOT-NS21</td><td class="num">¥9.1M</td><td class="num" style="color:var(--red)">-1.8%</td><td class="num" style="color:var(--green)">+1.1%</td></tr>
-          <tr><td class="lk">医療用フィルム</td><td class="muted">LOT-MF03</td><td class="num">¥6.4M</td><td class="num" style="color:var(--green)">+0.9%</td><td class="num" style="color:var(--red)">-0.5%</td></tr>
+          <tr><td class="lk">A95G</td><td>スキンケアパウチ</td><td>全チャネル</td><td class="num">¥42.2M</td><td class="num" style="color:var(--green)">+5.1%</td></tr>
+          <tr><td class="lk">A88G</td><td>インバス用ボトル</td><td>全チャネル</td><td class="num">¥31.8M</td><td class="num" style="color:var(--green)">+2.2%</td></tr>
+          <tr><td class="lk">A12M</td><td>UV・リップ（PB）</td><td>東京マツシマPB</td><td class="num">¥18.4M</td><td class="num" style="color:var(--red)">-1.4%</td></tr>
+          <tr><td class="lk">SG-07</td><td>アメニティセット</td><td>全チャネルセット</td><td class="num">¥14.1M</td><td class="num" style="color:var(--green)">+8.0%</td></tr>
+          <tr><td class="lk">A30X</td><td>売店用トラベルセット</td><td>施設売店/個人</td><td class="num">¥6.4M</td><td class="num" style="color:var(--green)">+0.9%</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- アニマル補充モニタ -->
-  <div class="card">
-    <div class="hd">（参考）アニマル 反復補充モニタ <span class="pill gray" style="margin-left:8px">仮置き</span></div>
-    <div class="bd" style="padding:0">
-      <table class="tbl">
-        <thead><tr><th>取引先</th><th class="num">当月 補充見込</th><th class="num">前月実績</th><th>充足/不足</th></tr></thead>
-        <tbody>
-          <tr><td class="lk">共立飼料</td><td class="num">¥9.2M</td><td class="num">¥8.8M</td><td><span class="pill green">充足</span></td></tr>
-          <tr><td class="lk">山田畜産</td><td class="num">¥4.1M</td><td class="num">¥5.0M</td><td><span class="pill amber">不足傾向</span></td></tr>
-          <tr><td class="lk">北日本フード</td><td class="num">¥6.7M</td><td class="num">¥6.5M</td><td><span class="pill green">充足</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="demo-note" style="margin-top:16px">💡 アニマルの月1万行明細をSF内/外どちらに置くかは未決（To-Be論点 S3/M3）。本DBは集計表示の仮案。</div>
+  <div class="demo-note" style="margin-top:16px">💡 品番記号: A〇G=全チャネル / A〇M=東京マツシマPB / A〇X=施設売店・個人 / B=資材 / C=パンフ・チラシ / D=DHC一般品 / SG・SM・SJ=セット品。出荷2年分の移行範囲・期間は ※要相談（全チャネルはマスト）。</div>
 
 </div>
 <script src="app.js"></script>

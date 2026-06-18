@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>週報ダッシュボード | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">📊</div>
+    <div>
+      <div class="eyebrow">ダッシュボード（毎週全員が見る）</div>
+      <h1>週報ダッシュボード</h1>
+    </div>
+    <div class="actions"><a class="btn" href="weekly-report.html">週報を入力</a></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">対象週: 2026-W25 (6/15-6/19)</span>
+    <span class="chip">基準: HIGベース(4-3月)</span><span class="chip">DHCベース(1-12月)</span>
+    <span class="grow"></span>
+    <span class="muted">毎週全員が見る：数値（売上）／コミット／各チャネルの動き</span>
+  </div>
+
+  <!-- 数値（売上）・コミット -->
+  <div class="section-title">数値（売上）・コミット</div>
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">今週 売上</div><div class="val">¥41.2<small>M</small></div><div class="delta up">▲ 前週比 +5.1%</div></div>
+    <div class="kpi"><div class="label">月次累計</div><div class="val">¥182<small>M</small></div><div class="delta flat">目標 ¥250M</div></div>
+    <div class="kpi"><div class="label">今月コミット</div><div class="val">¥238<small>M</small></div><div class="delta up">▲ 達成見込 95%</div></div>
+    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ 追客漏れ</div></div>
+  </div>
+
+  <!-- 各チャネルの動き（役職以上が更新→全員閲覧） -->
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">各チャネルの動き（役職以上が週次入力 → 最新分）<span class="sub"><a href="weekly-report.html">入力画面へ</a></span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チャネル</th><th class="num">今週売上</th><th class="num">月次累計</th><th>主要チェーンの動き</th><th>コミット/次アクション</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">直販</td><td class="num">¥20.1M</td><td class="num">¥80M</td><td>グランビューHD：チェーン開拓が内定へ</td><td><span class="pill blue">交渉継続</span></td></tr>
+          <tr><td class="lk">東京マツシマ</td><td class="num">¥12.4M</td><td class="num">¥56M</td><td>PB商品（A〇M）の改定提案中</td><td><span class="pill amber">価格調整</span></td></tr>
+          <tr><td class="lk">JTB商事</td><td class="num">¥6.1M</td><td class="num">¥33M</td><td>新規開業ホテル2件の引合い</td><td><span class="pill blue">提案準備</span></td></tr>
+          <tr><td class="lk">ニシカワヤ</td><td class="num">¥2.6M</td><td class="num">¥13M</td><td>温浴チャネル深耕（重点）</td><td><span class="pill green">順調</span></td></tr>
+          <tr><td class="lk muted">特販</td><td class="num">¥0M</td><td class="num">¥0M</td><td>横断案件（出荷データ項目なし ※要確認）</td><td><span class="pill gray">—</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 全社主要案件 -->
+  <div class="card">
+    <div class="hd">全社 主要案件ステータス</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>案件名</th><th>チェーン</th><th>チャネル</th><th class="num">年間見込</th><th>ステージ</th><th>担当</th></tr></thead>
+        <tbody>
+          <tr><td class="lk"><a href="opportunity.html">2026春 新規導入</a></td><td>グランビューホテルズ</td><td>直販</td><td class="num">¥24.0M</td><td><span class="pill amber">内定</span></td><td>三原</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">PB改定提案</a></td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥18.5M</td><td><span class="pill blue">営業済</span></td><td>櫻井</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">開業案件_沖縄</a></td><td>サンリゾート</td><td>JTB商事</td><td class="num">¥9.2M</td><td><span class="pill blue">情報収集済</span></td><td>田村</td></tr>
+          <tr><td class="lk"><a href="opportunity.html">温浴深耕</a></td><td>やまと温泉リゾート</td><td>ニシカワヤ</td><td class="num">¥6.8M</td><td><span class="pill green">継続発注</span></td><td>佐久間</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 狙い: 毎週の会議資料（Excel）をSalesforceに集約。チャネルの動きは役職以上が入力 → 全員が同じ画面で確認。DHCベース/HIGベースの切替で売上を表示。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

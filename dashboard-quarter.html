@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>四半期・経営ダッシュボード | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">📈</div>
+    <div>
+      <div class="eyebrow">ダッシュボード（四半期会議・経営）</div>
+      <h1>四半期・経営ダッシュボード</h1>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <span class="muted">集計軸:</span>
+    <span class="chip on">全社</span><span class="chip">チャネル</span><span class="chip">チーム</span><span class="chip">個人</span><span class="chip">ブランド</span><span class="chip">エリア</span>
+    <span class="grow"></span>
+    <span class="chip on">HIGベース(4-3月)</span><span class="chip">DHCベース(1-12月)</span>
+  </div>
+
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">四半期 売上（税抜）</div><div class="val">¥548<small>M</small></div><div class="delta up">▲ 前年比 +6.1%</div></div>
+    <div class="kpi"><div class="label">年度着地見込</div><div class="val">¥2.31<small>B</small></div><div class="delta up">▲ 予算比 102%</div></div>
+    <div class="kpi"><div class="label">HIG利益率（直販）</div><div class="val">33.0<small>%</small></div><div class="delta up">▲ +1.2pt</div></div>
+    <div class="kpi"><div class="label">HIG利益率（代理店経由）</div><div class="val">22.4<small>%</small></div><div class="delta flat">前年並み</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">年度 累計実績 vs 予算 vs 前年（HIGベース 4-3月）</div>
+    <div class="bd">
+      <svg viewBox="0 0 640 180" width="100%" height="180" class="spark">
+        <polyline fill="none" stroke="#d8dde6" stroke-width="2" stroke-dasharray="5 5" points="0,150 100,130 200,108 300,88 400,66 500,44 600,24"/>
+        <polyline fill="none" stroke="#8a8a8a" stroke-width="2" points="0,152 100,136 200,118 300,96 400,78 500,58 600,40"/>
+        <polyline fill="none" stroke="#0176d3" stroke-width="3" points="0,150 100,128 200,104 300,84 400,60"/>
+        <circle cx="400" cy="60" r="4" fill="#0176d3"/>
+      </svg>
+      <div class="legend"><span><i style="background:#0176d3"></i>実績</span><span><i style="background:#d8dde6"></i>予算</span><span><i style="background:#8a8a8a"></i>前年</span><span class="muted">4月 → 翌3月</span></div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <!-- チャネル別 -->
+    <div class="card">
+      <div class="hd">チャネル別 売上・粗利</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>チャネル</th><th class="num">売上</th><th class="num">粗利率</th><th class="num">前年比</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">直販</td><td class="num">¥262M</td><td class="num">33.0%</td><td class="num" style="color:var(--green)">+7%</td></tr>
+            <tr><td class="lk">東京マツシマ</td><td class="num">¥168M</td><td class="num">23.1%</td><td class="num" style="color:var(--green)">+4%</td></tr>
+            <tr><td class="lk">JTB商事</td><td class="num">¥86M</td><td class="num">21.8%</td><td class="num" style="color:var(--red)">-2%</td></tr>
+            <tr><td class="lk">ニシカワヤ</td><td class="num">¥32M</td><td class="num">20.5%</td><td class="num" style="color:var(--green)">+11%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- ブランド/ポートフォリオ -->
+    <div class="card">
+      <div class="hd">ポートフォリオ別（3区分 ※要確認）</div>
+      <div class="bd">
+        <div class="bar"><span class="name">アメニティ主力</span><span class="track"><span class="fill" style="width:82%"></span></span><span class="v">¥360M</span></div>
+        <div class="bar"><span class="name">温浴（重点）</span><span class="track"><span class="fill g" style="width:38%"></span></span><span class="v">¥118M</span></div>
+        <div class="bar"><span class="name">その他/資材</span><span class="track"><span class="fill a" style="width:22%"></span></span><span class="v">¥70M</span></div>
+        <p class="help">今後の注力: 理美容・海外（グアム等）。3つのポートフォリオで管理（ヒアリングA）。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- エリア -->
+  <div class="card">
+    <div class="hd">エリア別（都道府県単位・地図可視化想定）</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>エリア</th><th class="num">導入施設数</th><th class="num">売上</th><th class="num">客単価</th><th>浸透</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">東京都</td><td class="num">182</td><td class="num">¥120M</td><td class="num">¥660K</td><td><span class="pill green">高</span></td></tr>
+          <tr><td class="lk">大阪府</td><td class="num">96</td><td class="num">¥64M</td><td class="num">¥667K</td><td><span class="pill green">高</span></td></tr>
+          <tr><td class="lk">沖縄県</td><td class="num">58</td><td class="num">¥41M</td><td class="num">¥707K</td><td><span class="pill amber">中</span></td></tr>
+          <tr><td class="lk">北海道</td><td class="num">44</td><td class="num">¥22M</td><td class="num">¥500K</td><td><span class="pill amber">中</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 四半期会議の集計軸（ヒアリングI）: 全社/チャネル/チーム/個人/ブランド/エリア で切替。DHCベース(1-12月)とHIGベース(4-3月)を切替表示（ヒアリングG）。粗利はHIG利益率(直販)/(代理店経由)。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
