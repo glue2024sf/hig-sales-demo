@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ベルセールス議事録 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="act">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🎙️</div>
+    <div>
+      <div class="eyebrow">活動 › ベルセールス議事録</div>
+      <h1>ベルセールス議事録 連携</h1>
+    </div>
+    <div class="actions"><a class="btn primary" href="#">SF活動へ転記</a></div>
+  </div>
+
+  <div class="demo-note">⚠️ 営業後、当日中もしくは翌日中に録音をアップ → 文字起こし → 活動へ自動転記（範囲は全て）。調整窓口＝ベルセールス（三好さん）。トップセールスのトークを「型」化し横展開（ヒアリングH）。</div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">議事録（グランビューHD 6/18 価格交渉）</div>
+      <div class="bd">
+        <div class="section-title">会話サマリー</div>
+        <p>年間ボリュームを前提に単価調整を打診。先方は予算上限を提示。役員同行での最終提示を合意。</p>
+        <div class="section-title">顧客の主要発言</div>
+        <table class="tbl">
+          <tr><td>「他チェーンの導入実績を見たい」</td><td><a href="#">→ ネクストアクション化</a></td></tr>
+          <tr><td>「什器は次年度予算で検討」</td><td><a href="#">→ 商談メモ</a></td></tr>
+        </table>
+        <div class="section-title" style="margin-top:10px">ヒアリング充足度</div>
+        <div class="bar"><span class="name">予算</span><span class="track"><span class="fill g" style="width:90%"></span></span><span class="v">充足</span></div>
+        <div class="bar"><span class="name">決裁プロセス</span><span class="track"><span class="fill g" style="width:80%"></span></span><span class="v">充足</span></div>
+        <div class="bar"><span class="name">競合状況</span><span class="track"><span class="fill a" style="width:30%"></span></span><span class="v">未取得</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">SFへの転記（候補 → 承認）</div>
+      <div class="bd">
+        <table class="tbl">
+          <thead><tr><th>SF項目</th><th>転記候補</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>活動メモ</td><td>会話サマリー全文</td><td><a href="#">承認</a></td></tr>
+            <tr><td>ステージ</td><td>営業済 → 内定（候補）</td><td><a href="#">承認</a></td></tr>
+            <tr><td>ネクストアクション</td><td>役員同行で最終提示（6/20）</td><td><a href="#">承認</a></td></tr>
+            <tr><td>ヒアリング充足度</td><td>68%（競合未取得）</td><td><a href="#">承認</a></td></tr>
+          </tbody>
+        </table>
+        <p class="help">自動転記は「候補提示 → 人が承認」が基本（誤抽出の暴走防止）。プロンプト設計はGlue、要約生成はベルセールス。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">未転記の議事録（待ち）</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>商談/施設</th><th>営業</th><th>録音日</th><th>状態</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">都ホテル京都 PB改定</td><td>櫻井</td><td>6/18</td><td><span class="pill amber">文字起こし済・転記待ち</span></td></tr>
+          <tr><td class="lk">サンR沖縄 開業案件</td><td>田村</td><td>6/17</td><td><span class="pill blue">処理中</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 結果だけでなくプロセスを可視化し、トップセールスのトークを横展開（プロセスマネジメント）。役割分担: 要約=ベルセールス／項目マッピング=Glue／型定義=HIG（ヒアリングH）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

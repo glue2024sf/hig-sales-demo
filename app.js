@@ -18,11 +18,33 @@
       key: 'acct', label: '取引先', href: 'accounts.html',
       menu: [
         { label: 'チェーン運営会社（TOP147）', href: 'accounts.html' },
-        { label: 'チェーン詳細 ＋ 施設', href: 'account-detail.html' }
+        { label: 'チェーン詳細', href: 'account-detail.html' },
+        { label: '施設 詳細', href: 'facility-detail.html' },
+        { label: '取引先責任者（キーマン）', href: 'contacts.html' },
+        { label: '新規 チェーン/施設 登録', href: 'account-new.html' },
+        { label: '対応表 整備（名寄せ）', href: 'mapping.html' }
       ]
     },
-    { key: 'opp', label: '商談', href: 'opportunity.html' },
-    { key: 'act', label: '活動', href: 'activity-input.html' },
+    {
+      key: 'opp', label: '商談', href: 'opportunities.html',
+      menu: [
+        { label: '商談一覧（自分の担当）', href: 'opportunities.html' },
+        { label: '商談 詳細', href: 'opportunity.html' },
+        { label: '見積・提案アイテム', href: 'quote.html' },
+        { label: '開業案件（オープン）', href: 'opening-projects.html' },
+        { label: 'ロスト管理・復活', href: 'lost.html' },
+        { label: '承認プロセス', href: 'approval.html' }
+      ]
+    },
+    {
+      key: 'act', label: '活動', href: 'activities.html',
+      menu: [
+        { label: '活動一覧・タイムライン', href: 'activities.html' },
+        { label: '活動を記録', href: 'activity-input.html' },
+        { label: 'ベルセールス議事録', href: 'belsales.html' },
+        { label: 'ToDo・期限切れアラート', href: 'todos.html' }
+      ]
+    },
     { key: 'sample', label: 'サンプル', href: 'sample-follow.html' },
     { key: 'prod', label: '商品（品番）', href: 'products.html' },
     { key: 'weekly', label: '週報入力', href: 'weekly-report.html' }

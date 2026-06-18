@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新規 チェーン/施設 登録 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="acct">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">➕</div>
+    <div>
+      <div class="eyebrow">取引先 › 新規登録</div>
+      <h1>新規 チェーン / 施設 登録</h1>
+    </div>
+  </div>
+
+  <div class="demo-note">⚠️ 入力デモ。引合い受領 → チェーンを検索 → 無ければ新規（最小項目で保存）→ 施設を追加（顧客コード採番）→ そのまま商談へ。新規開業ホテルは「開業案件」で別管理。</div>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd">① チェーン運営会社（本社）</div>
+      <div class="bd">
+        <div class="field"><label>既存チェーンを検索</label><input placeholder="チェーン名で検索（重複登録の防止）"></div>
+        <hr class="sep">
+        <div class="field"><label><span class="req">★</span>チェーン名</label><input placeholder="例: 新都リゾートホテルズ"></div>
+        <div class="row2">
+          <div class="field"><label><span class="req">★</span>主要チャネル</label>
+            <select><option>直販</option><option>東京マツシマ</option><option>JTB商事</option><option>ニシカワヤ</option></select>
+          </div>
+          <div class="field"><label><span class="req">★</span>決済区分</label>
+            <select><option>本社決済</option><option>個店決済</option></select>
+          </div>
+        </div>
+        <div class="field"><label>本社キーマン</label><input placeholder="氏名・役職"></div>
+        <p class="help">★3項目（チェーン名/チャネル/決済区分）だけで保存可。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd">② 個別施設</div>
+      <div class="bd">
+        <div class="field"><label><span class="req">★</span>施設名</label><input placeholder="例: 新都リゾート 軽井沢"></div>
+        <div class="row2">
+          <div class="field"><label><span class="req">★</span>顧客コード</label><input placeholder="自動採番（5桁・連番）" value="10421"></div>
+          <div class="field"><label><span class="req">★</span>都道府県</label>
+            <select><option>長野県</option><option>東京都</option><option>大阪府</option><option>沖縄県</option></select>
+          </div>
+        </div>
+        <div class="field"><label>施設キーマン</label><input placeholder="支配人など"></div>
+        <div class="field">
+          <label>種別</label>
+          <div class="seg">
+            <label><input type="radio" name="t" checked> 既存施設</label>
+            <label><input type="radio" name="t"> 新規開業（オープン案件）</label>
+          </div>
+          <p class="help">新規開業は開業日を入力 → <a href="opening-projects.html">開業案件</a>で別管理</p>
+        </div>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button class="btn">保存して施設を追加</button>
+          <button class="btn primary">保存して商談へ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 重複防止: チェーン名で既存検索してから新規。施設は顧客コード（出荷突合キー）を採番。チェーンに属さない個店もそのまま登録可（ヒアリングB）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

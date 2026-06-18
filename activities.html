@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>活動一覧・タイムライン | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="act">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🗂️</div>
+    <div>
+      <div class="eyebrow">活動 › 一覧・タイムライン</div>
+      <h1>活動一覧・タイムライン</h1>
+    </div>
+    <div class="actions"><a class="btn primary" href="activity-input.html">活動を記録</a></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">自分</span><span class="chip">チーム</span>
+    <span class="grow"></span>
+    <span class="chip on">訪問</span><span class="chip">TEL</span><span class="chip">メール</span><span class="chip">DM</span><span class="chip">展示会</span><span class="chip">議事録</span>
+  </div>
+
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">今週 活動</div><div class="val">31<small>件</small></div></div>
+    <div class="kpi"><div class="label">訪問</div><div class="val">8<small>件</small></div></div>
+    <div class="kpi"><div class="label">TEL</div><div class="val">18<small>件</small></div></div>
+    <div class="kpi"><div class="label">議事録(自動)</div><div class="val">5<small>件</small></div><div class="delta up">▲ ベルセールス</div></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd">タイムライン（時系列）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td class="muted">6/18 16:20</td><td><span class="pill amber">議事録</span></td><td>グランビューHD 価格交渉（自動転記）</td><td class="muted">三原</td></tr>
+            <tr><td class="muted">6/18 11:00</td><td><span class="pill blue">訪問</span></td><td>都ホテル京都 PB改定提案</td><td class="muted">櫻井</td></tr>
+            <tr><td class="muted">6/17 15:30</td><td><span class="pill gray">TEL</span></td><td>サンR沖縄 サンプル追客</td><td class="muted">田村</td></tr>
+            <tr><td class="muted">6/17 10:00</td><td><span class="pill gray">メール</span></td><td>やまと温泉 見積送付</td><td class="muted">佐久間</td></tr>
+            <tr><td class="muted">6/16 14:00</td><td><span class="pill blue">展示会</span></td><td>ホテルショー フォロー名刺12件</td><td class="muted">三原</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">活動種別 構成（当月）</div>
+      <div class="bd">
+        <div class="bar"><span class="name">訪問</span><span class="track"><span class="fill" style="width:60%"></span></span><span class="v">34件</span></div>
+        <div class="bar"><span class="name">TEL</span><span class="track"><span class="fill p" style="width:90%"></span></span><span class="v">72件</span></div>
+        <div class="bar"><span class="name">メール</span><span class="track"><span class="fill g" style="width:45%"></span></span><span class="v">38件</span></div>
+        <div class="bar"><span class="name">展示会/セミナー</span><span class="track"><span class="fill a" style="width:18%"></span></span><span class="v">9件</span></div>
+        <div class="bar"><span class="name">議事録(自動)</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="v">22件</span></div>
+        <p class="help">訪問・TELはマスト記録。DMはフェーズ1で行うか未定（ヒアリングH）。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 議事録（Outlook由来）はSFへ移行希望。ベルセールス連携で訪問・TELの内容が自動でタイムラインに乗る（範囲は全て・当日/翌日）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

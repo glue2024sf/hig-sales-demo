@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ToDo・期限切れアラート | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="act">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">⏰</div>
+    <div>
+      <div class="eyebrow">活動 › ToDo・ネクストアクション</div>
+      <h1>ToDo・期限切れアラート</h1>
+    </div>
+    <div class="actions"><a class="btn primary" href="#">ToDoを追加</a></div>
+  </div>
+
+  <div class="demo-note">⚠️ ネクストアクション/期限を「商談 or ToDo」のどちらで持つか、期限切れアラートの通知先（個人/チーム）は本日確認（ヒアリングD）。本画面はToDo方式の案。</div>
+
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">期限切れ</div><div class="val" style="color:var(--red)">5<small>件</small></div><div class="delta down">▼ 要対応</div></div>
+    <div class="kpi"><div class="label">本日</div><div class="val" style="color:var(--amber)">7<small>件</small></div></div>
+    <div class="kpi"><div class="label">今週</div><div class="val">18<small>件</small></div></div>
+    <div class="kpi"><div class="label">サンプル追客（10営業日）</div><div class="val">2<small>件</small></div><div class="delta down">▼ 遅延</div></div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd" style="color:var(--red)">⚠️ 期限切れ（通知先: 担当＋上長）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td><span class="pill red">3日超</span></td><td class="lk"><a href="opportunity.html">グランビューHD 内定フォロー</a></td><td class="muted">三原</td></tr>
+            <tr><td><span class="pill red">遅延</span></td><td class="lk"><a href="sample-follow.html">サンR沖縄 サンプル追客</a></td><td class="muted">田村</td></tr>
+            <tr><td><span class="pill red">受注予定超過</span></td><td class="lk">UV・リップ拡販 発注書受領</td><td class="muted">櫻井</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">本日のToDo</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td><input type="checkbox"></td><td class="lk">やまと温泉 提案訪問</td><td class="muted">14:00</td></tr>
+            <tr><td><input type="checkbox"></td><td class="lk">サンリゾート サンプル追客TEL</td><td class="muted">16:00</td></tr>
+            <tr><td><input type="checkbox" checked></td><td class="muted" style="text-decoration:line-through">都ホテル 見積送付</td><td class="muted">済</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">ネクストアクション一覧（商談連動）</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>ネクストアクション</th><th>関連商談</th><th>期限</th><th>担当</th><th>通知先</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">本社決済の最終確認</td><td>グランビューHD 2026春</td><td style="color:var(--red)">6/16（超過）</td><td>三原</td><td>担当＋上長</td></tr>
+          <tr><td class="lk">見積条件すり合わせ</td><td>都ホテル PB改定</td><td>6/23</td><td>櫻井</td><td>担当</td></tr>
+          <tr><td class="lk">役員同行で最終提示</td><td>グランビューHD 2026春</td><td>6/20</td><td>三原</td><td>担当＋チーム</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 期限切れは担当＋上長/チームへ通知（通知先は要確認）。サンプルは送付後10営業日でアラート（<a href="sample-follow.html">サンプル管理</a>と連動）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

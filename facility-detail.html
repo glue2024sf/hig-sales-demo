@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>施設詳細 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="acct">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🏩</div>
+    <div>
+      <div class="eyebrow"><a href="accounts.html">取引先</a> › <a href="account-detail.html">グランビューホテルズ</a> › 施設</div>
+      <h1>グランビュー箱根</h1>
+    </div>
+    <div class="actions">
+      <a class="btn" href="activity-input.html">活動を記録</a>
+      <a class="btn primary" href="opportunity.html">商談を新規</a>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">施設 基本情報</div>
+      <div class="bd">
+        <dl class="dl">
+          <dt><span class="req">★</span>施設名</dt><dd>グランビュー箱根</dd>
+          <dt><span class="req">★</span>顧客コード</dt><dd>10231（5桁・連番）</dd>
+          <dt>親チェーン</dt><dd><a href="account-detail.html">グランビューホテルズ</a></dd>
+          <dt><span class="req">★</span>都道府県</dt><dd>神奈川県</dd>
+          <dt>決済区分</dt><dd>本社決済</dd>
+          <dt>施設キーマン</dt><dd>支配人 林様</dd>
+          <dt>取引チャネル</dt><dd>直販（一部 東京マツシマ）<span class="pill gray" style="margin-left:6px">複数チャネルあり</span></dd>
+          <dt>状態</dt><dd><span class="pill green">導入済</span></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">サマリ</div>
+      <div class="bd">
+        <div class="grid g2">
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">年間売上</div><div class="val">¥6.2<small>M</small></div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">客単価</div><div class="val">¥660<small>K</small></div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">最終発注</div><div class="val">12<small>日前</small></div></div>
+          <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">導入品番</div><div class="val">7</div></div>
+        </div>
+        <div class="legend" style="margin-top:10px"><span class="muted">同一施設が複数チャネルで取引するケースあり（チャネルは取引ごと）</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">導入品番（出荷実績）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>品番</th><th>商品</th><th>チャネル</th><th class="num">年間</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">A95G</td><td>スキンケアパウチ</td><td>直販</td><td class="num">¥2.4M</td></tr>
+            <tr><td class="lk">A88G</td><td>インバス用ボトル</td><td>直販</td><td class="num">¥1.8M</td></tr>
+            <tr><td class="lk">SG-07</td><td>アメニティセット</td><td>直販</td><td class="num">¥1.2M</td></tr>
+            <tr><td class="lk">A12M</td><td>UV・リップ（PB）</td><td>東京マツシマ</td><td class="num">¥0.8M</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">活動（直近）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tbody>
+            <tr><td><span class="pill blue">訪問</span></td><td>6/6 什器入替の相談</td><td class="muted">三原</td></tr>
+            <tr><td><span class="pill gray">TEL</span></td><td>5/30 追加発注の確認</td><td class="muted">三原</td></tr>
+            <tr><td><span class="pill amber">サンプル</span></td><td>6/2 SG-07送付 → 転換</td><td class="muted">三原</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-note">💡 施設は顧客コード5桁で一意（出荷データとの突合キー）。本社キーマンと施設キーマンを分けて管理。同一施設の複数チャネル取引に対応（ヒアリングB）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

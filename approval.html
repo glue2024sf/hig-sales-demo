@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>承認プロセス | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="opp">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">✅</div>
+    <div>
+      <div class="eyebrow">商談 › 承認プロセス</div>
+      <h1>承認プロセス（価格・大型案件）</h1>
+    </div>
+  </div>
+
+  <div class="demo-note">⚠️ 値引率・金額が閾値を超える見積/価格改定は承認を要求（※閾値は要確認）。チェーンごとの価格匙加減を統制（ヒアリングC/D）。</div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">承認待ち（自分の申請）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>対象</th><th>区分</th><th class="num">金額/値引</th><th>承認者</th><th>状態</th></tr></thead>
+          <tbody>
+            <tr><td class="lk"><a href="quote.html">グランビューHD 2026春</a></td><td>値引率</td><td class="num">6.5%</td><td>営業課長</td><td><span class="pill amber">承認待ち</span></td></tr>
+            <tr><td class="lk">都ホテル PB改定</td><td>価格改定</td><td class="num">+4%</td><td>部長</td><td><span class="pill amber">承認待ち</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">承認ルート（例 ※要確認）</div>
+      <div class="bd">
+        <div class="path" style="display:block">
+          <div style="padding:6px 0">① 担当営業 申請</div>
+          <div style="padding:6px 0">② 値引率5%未満 → 自動承認</div>
+          <div style="padding:6px 0">③ 5〜10% → 営業課長</div>
+          <div style="padding:6px 0">④ 10%超 / ¥20M超 → 部長</div>
+          <div style="padding:6px 0">⑤ 価格改定（チェーン別） → 部長</div>
+        </div>
+        <p class="help">閾値・承認者は運用に合わせて設定。価格改定履歴も保持。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">承認履歴</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <tbody>
+          <tr><td><span class="pill green">承認</span></td><td>UV・リップ拡販（値引4%）</td><td class="muted">自動承認</td><td class="muted">6/14</td></tr>
+          <tr><td><span class="pill green">承認</span></td><td>やまと温泉 継続（標準価格）</td><td class="muted">課長</td><td class="muted">6/10</td></tr>
+          <tr><td><span class="pill red">差戻</span></td><td>サンR沖縄（値引12%）</td><td class="muted">部長 → 再見積</td><td class="muted">6/5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 見積画面で閾値超過時に「承認に申請」→ このプロセスへ。承認後にステージを「内定/受注」へ進められる運用も可（※承認基準は本日確認）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

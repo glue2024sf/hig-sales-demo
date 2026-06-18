@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>対応表 整備（名寄せ） | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="acct">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🔗</div>
+    <div>
+      <div class="eyebrow">取引先 › 対応表 整備</div>
+      <h1>TOP147 ⇄ 出荷データ 名寄せ</h1>
+    </div>
+    <div class="actions"><a class="btn primary" href="#">突合をエクスポート</a></div>
+  </div>
+
+  <div class="demo-note">⚠️ TOP147チェーンリスト（本社単位）と出荷データ（施設単位）を紐付ける対応表。<b>現状60%</b> → 顧客コード5桁をキーに「一緒に作っていく」（ヒアリングB）。</div>
+
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">名寄せ済み</div><div class="val">60<small>%</small></div><div class="delta up">▲ 目標 100%</div></div>
+    <div class="kpi"><div class="label">未紐付け 施設</div><div class="val" style="color:var(--red)">512<small>件</small></div><div class="delta down">▼ 要対応</div></div>
+    <div class="kpi"><div class="label">チェーン非所属（個店）</div><div class="val">88<small>件</small></div><div class="delta flat">個店として扱う</div></div>
+    <div class="kpi"><div class="label">名寄せ候補（自動提案）</div><div class="val">133<small>件</small></div><div class="delta up">▲ 要確認</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">進捗（チェーン別 名寄せ率）</div>
+    <div class="bd">
+      <div class="bar"><span class="name">グランビューHD</span><span class="track"><span class="fill g" style="width:92%"></span></span><span class="v">92%</span></div>
+      <div class="bar"><span class="name">都ホテルチェーン</span><span class="track"><span class="fill" style="width:74%"></span></span><span class="v">74%</span></div>
+      <div class="bar"><span class="name">サンリゾート</span><span class="track"><span class="fill a" style="width:48%"></span></span><span class="v">48%</span></div>
+      <div class="bar"><span class="name">やまと温泉</span><span class="track"><span class="fill a" style="width:35%"></span></span><span class="v">35%</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">未紐付け 施設（出荷データ側） — 名寄せ作業</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>顧客コード</th><th>出荷データ上の名称</th><th>都道府県</th><th>名寄せ候補（チェーン）</th><th>操作</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">20455</td><td>グランビュー仙台</td><td>宮城県</td><td>グランビューHD <span class="pill amber" style="margin-left:4px">候補</span></td><td><a href="#">紐付け</a> / <a href="#">個店</a></td></tr>
+          <tr><td class="lk">20512</td><td>都ホテル 札幌アネックス</td><td>北海道</td><td>都ホテルチェーン <span class="pill amber" style="margin-left:4px">候補</span></td><td><a href="#">紐付け</a> / <a href="#">個店</a></td></tr>
+          <tr><td class="lk">20688</td><td>サンR沖縄(略称ゆれ)</td><td>沖縄県</td><td>サンリゾート <span class="pill amber" style="margin-left:4px">候補</span></td><td><a href="#">紐付け</a> / <a href="#">個店</a></td></tr>
+          <tr><td class="lk">20701</td><td>金沢ベイホテル</td><td>石川県</td><td class="muted">該当なし</td><td><a href="#">個店として登録</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 名寄せキー＝顧客コード5桁。略称ゆれ・表記ゆれは候補提示 → 人が確認して紐付け。チェーンに属さない施設は「個店」として確定。この整備は移行の前提（ヒアリングG）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
