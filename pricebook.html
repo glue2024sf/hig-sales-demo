@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>価格表・価格改定 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="more">
+<div class="wrap">
+
+  <div class="lv-head">
+    <span class="obj-icon o-prod lg">¥</span>
+    <div class="meta">
+      <div class="kicker">価格表（Price Book）</div>
+      <div class="lv-title">価格表 一覧<span class="caret">▾</span></div>
+      <div class="sub">標準価格表＋チェーン別特価。値上げはチェーンごとに匙加減</div>
+    </div>
+    <div class="acts"><a class="btn" href="#">価格改定を起票</a><a class="btn primary" href="#">新規価格表</a></div>
+  </div>
+
+  <div class="lv-tabs">
+    <a class="on" href="pricebook.html">価格表</a>
+    <a href="pricebook.html">価格改定 履歴</a>
+    <a href="pricebook.html">改定 申請中</a>
+  </div>
+
+  <table class="lvt" style="margin-bottom:18px">
+    <thead><tr><th class="chk"><input type="checkbox"></th><th>価格表名 <span class="sortcaret">▲</span></th><th>適用範囲</th><th>適用開始</th><th class="num">対象品番</th><th>状態</th><th class="rowact"></th></tr></thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#detail">2026年度 標準価格表</a></td><td>全チャネル</td><td>2026-04-01</td><td class="num">142</td><td><span class="pill green">有効</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#detail">グランビューHD 特価</a></td><td>チェーン: グランビューHD</td><td>2026-04-01</td><td class="num">38</td><td><span class="pill green">有効</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#detail">都ホテル PB価格</a></td><td>東京マツシマPB</td><td>2026-04-01</td><td class="num">24</td><td><span class="pill amber">改定申請中</span></td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk muted" href="#detail">2025年度 標準価格表</a></td><td>全チャネル</td><td>2025-04-01</td><td class="num">138</td><td><span class="pill gray">失効（履歴）</span></td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card" id="detail">
+    <div class="hd">2026年度 標準価格表 — 品番別価格 ＋ 改定履歴</div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>品番</th><th>商品</th><th class="num">2025年度</th><th class="num">2026年度</th><th class="num">改定率</th><th>備考</th></tr></thead>
+        <tbody>
+          <tr><td class="lk"><a href="product-record.html">A95G</a></td><td>スキンケアパウチ</td><td class="num">¥115</td><td class="num">¥120</td><td class="num" style="color:var(--red)">+4.3%</td><td>原材料高</td></tr>
+          <tr><td class="lk"><a href="product-record.html">A88G</a></td><td>インバス用ボトル</td><td class="num">¥250</td><td class="num">¥260</td><td class="num" style="color:var(--red)">+4.0%</td><td>—</td></tr>
+          <tr><td class="lk"><a href="product-record.html">SG-07</a></td><td>アメニティセット</td><td class="num">¥640</td><td class="num">¥640</td><td class="num">±0%</td><td>据置</td></tr>
+          <tr><td class="lk"><a href="product-record.html">A12M</a></td><td>UV・リップ(PB)</td><td class="num">¥175</td><td class="num">¥180</td><td class="num" style="color:var(--red)">+2.9%</td><td>マツシマ協議中</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:14px">💡 価格改定（値上げ）はチェーンごとに匙加減 → チェーン別価格表で表現、改定履歴をさかのぼれる（ヒアリングC）。改定は<a href="approval.html">承認プロセス</a>を経由。各品番の価格は<a href="product-record.html">商品レコード</a>の価格表エントリと連動。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -11,9 +11,12 @@
         { label: '営業チーム', href: 'dashboard-team.html' },
         { label: '個人', href: 'dashboard-personal.html' },
         { label: '四半期・経営', href: 'dashboard-quarter.html' },
-        { label: '出荷・売上（Tシステム連携）', href: 'dashboard-shipping.html' }
+        { label: '出荷・売上（Tシステム連携）', href: 'dashboard-shipping.html' },
+        { label: '目標（予算）管理', href: 'targets.html' },
+        { label: 'エリア・地図', href: 'map.html' }
       ]
     },
+    { key: 'report', label: 'レポート', href: 'reports.html' },
     { key: 'acct', label: '取引先', href: 'accounts.html' },
     { key: 'contact', label: '取引先責任者', href: 'contacts.html' },
     { key: 'opp', label: '商談', href: 'opportunities.html' },
@@ -24,6 +27,8 @@
       key: 'more', label: 'その他', href: 'mapping.html',
       menu: [
         { label: '対応表 整備（名寄せ）', href: 'mapping.html' },
+        { label: '価格表・価格改定', href: 'pricebook.html' },
+        { label: 'データ取込（Tシステム）', href: 'data-import.html' },
         { label: '承認プロセス', href: 'approval.html' },
         { label: '新規 取引先 登録', href: 'account-new.html' },
         { label: '週報入力', href: 'weekly-report.html' }

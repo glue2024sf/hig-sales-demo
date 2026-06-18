@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>目標（予算）管理 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="lv-head">
+    <span class="obj-icon" style="background:#0176d3;width:42px;height:42px;border-radius:8px;font-size:22px">🎯</span>
+    <div class="meta">
+      <div class="kicker">目標（予算）<span class="pill gray" style="margin-left:4px">カスタムオブジェクト</span></div>
+      <div class="lv-title">2026年度 目標<span class="caret">▾</span></div>
+      <div class="sub">月次 × チャネル × 担当 ・ HIGベース(4-3月)</div>
+    </div>
+    <div class="acts"><a class="btn" href="#">インポート</a><a class="btn primary" href="#">目標を編集</a></div>
+  </div>
+
+  <div class="lv-tabs">
+    <a class="on" href="targets.html">チャネル別</a>
+    <a href="targets.html">担当別</a>
+    <a href="targets.html">チェーン別</a>
+    <a href="targets.html">月次推移</a>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">チャネル別 目標 vs 実績（当四半期 Q1: 4-6月）<span class="sub">単位: 百万円・税抜</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チャネル</th><th class="num">目標</th><th class="num">実績</th><th class="num">達成率</th><th>進捗</th><th>担当</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">直販</td><td class="num">¥225M</td><td class="num">¥230M</td><td class="num" style="color:var(--green)">102%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill g" style="width:100%"></span></span></td><td>三原</td></tr>
+          <tr><td class="lk">東京マツシマ</td><td class="num">¥170M</td><td class="num">¥161M</td><td class="num" style="color:var(--amber)">95%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill a" style="width:95%"></span></span></td><td>櫻井</td></tr>
+          <tr><td class="lk">JTB商事</td><td class="num">¥100M</td><td class="num">¥94M</td><td class="num" style="color:var(--amber)">94%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill a" style="width:94%"></span></span></td><td>田村</td></tr>
+          <tr><td class="lk">ニシカワヤ</td><td class="num">¥30M</td><td class="num">¥36M</td><td class="num" style="color:var(--green)">120%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill g" style="width:100%"></span></span></td><td>佐久間</td></tr>
+          <tr style="background:#fafafa"><td><b>全社</b></td><td class="num"><b>¥525M</b></td><td class="num"><b>¥521M</b></td><td class="num"><b>99%</b></td><td></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hd">月次目標 設定（チャネル × 月）<span class="sub">セルを編集して保存</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チャネル</th><th class="num">4月</th><th class="num">5月</th><th class="num">6月</th><th class="num">7月</th><th class="num">8月</th><th class="num">9月</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">直販</td><td class="num">¥72M</td><td class="num">¥75M</td><td class="num">¥78M</td><td class="num">¥80M</td><td class="num">¥78M</td><td class="num">¥82M</td></tr>
+          <tr><td class="lk">東京マツシマ</td><td class="num">¥55M</td><td class="num">¥56M</td><td class="num">¥59M</td><td class="num">¥60M</td><td class="num">¥58M</td><td class="num">¥62M</td></tr>
+          <tr><td class="lk">JTB商事</td><td class="num">¥32M</td><td class="num">¥33M</td><td class="num">¥35M</td><td class="num">¥34M</td><td class="num">¥33M</td><td class="num">¥36M</td></tr>
+          <tr><td class="lk">ニシカワヤ</td><td class="num">¥9M</td><td class="num">¥10M</td><td class="num">¥11M</td><td class="num">¥12M</td><td class="num">¥11M</td><td class="num">¥13M</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:14px">💡 目標（予算）データの持ち方＝月次×チャネル×担当（ヒアリングI・別途打ち合わせ項目）。ダッシュボードの「目標比」「達成率」はこの目標を参照。担当別/チェーン別の切替も想定。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

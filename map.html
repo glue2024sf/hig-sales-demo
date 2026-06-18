@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>エリア・地図可視化 | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  .jpgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+  .pref{border-radius:6px;padding:8px 6px;text-align:center;font-size:11px;font-weight:700;color:#fff;cursor:pointer}
+  .pref small{display:block;font-weight:600;opacity:.9;font-size:10px}
+  .lv5{background:#0a5c2e}.lv4{background:#2e844a}.lv3{background:#7bb37e}.lv2{background:#f5a623}.lv1{background:#d8623a}.lv0{background:#c9ced6;color:#555}
+</style>
+</head>
+<body data-page="dash">
+<div class="wrap">
+
+  <div class="lv-head">
+    <span class="obj-icon" style="background:#2e844a;width:42px;height:42px;border-radius:8px;font-size:22px">🗺️</span>
+    <div class="meta">
+      <div class="kicker">エリア分析</div>
+      <div class="lv-title">地図可視化（都道府県）<span class="caret">▾</span></div>
+      <div class="sub">指標: 導入率（導入施設 / 全施設）・色が濃いほど高浸透</div>
+    </div>
+    <div class="acts"><a class="btn" href="#">指標切替</a></div>
+  </div>
+
+  <div class="lv-tabs">
+    <a class="on" href="map.html">導入率</a>
+    <a href="map.html">売上</a>
+    <a href="map.html">客単価</a>
+    <a href="map.html">未開拓（ホワイトスペース）</a>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:0">
+    <div class="card">
+      <div class="hd">都道府県マップ（導入率）</div>
+      <div class="bd">
+        <div class="jpgrid">
+          <div class="pref lv4">北海道<small>62%</small></div>
+          <div class="pref lv2">青森<small>28%</small></div>
+          <div class="pref lv2">岩手<small>24%</small></div>
+          <div class="pref lv3">宮城<small>48%</small></div>
+          <div class="pref lv1">秋田<small>15%</small></div>
+          <div class="pref lv2">山形<small>26%</small></div>
+          <div class="pref lv3">福島<small>41%</small></div>
+          <div class="pref lv5">東京<small>88%</small></div>
+          <div class="pref lv4">神奈川<small>71%</small></div>
+          <div class="pref lv3">千葉<small>52%</small></div>
+          <div class="pref lv3">埼玉<small>49%</small></div>
+          <div class="pref lv2">栃木<small>33%</small></div>
+          <div class="pref lv2">群馬<small>30%</small></div>
+          <div class="pref lv3">茨城<small>38%</small></div>
+          <div class="pref lv4">静岡<small>64%</small></div>
+          <div class="pref lv4">愛知<small>68%</small></div>
+          <div class="pref lv5">大阪<small>85%</small></div>
+          <div class="pref lv4">京都<small>72%</small></div>
+          <div class="pref lv3">兵庫<small>55%</small></div>
+          <div class="pref lv2">奈良<small>27%</small></div>
+          <div class="pref lv1">和歌山<small>18%</small></div>
+          <div class="pref lv3">広島<small>44%</small></div>
+          <div class="pref lv2">岡山<small>29%</small></div>
+          <div class="pref lv2">福岡<small>34%</small></div>
+          <div class="pref lv1">熊本<small>16%</small></div>
+          <div class="pref lv2">長崎<small>22%</small></div>
+          <div class="pref lv3">沖縄<small>58%</small></div>
+          <div class="pref lv0">他<small>—</small></div>
+        </div>
+        <div class="legend" style="margin-top:12px">
+          <span><i class="" style="background:#d8623a"></i>〜20%</span>
+          <span><i style="background:#f5a623"></i>〜35%</span>
+          <span><i style="background:#7bb37e"></i>〜55%</span>
+          <span><i style="background:#2e844a"></i>〜75%</span>
+          <span><i style="background:#0a5c2e"></i>75%〜</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hd">エリア別 サマリ（都道府県単位）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>都道府県</th><th class="num">導入/全</th><th class="num">導入率</th><th class="num">売上</th><th>注力</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">東京都</td><td class="num">160/182</td><td class="num">88%</td><td class="num">¥120M</td><td><span class="pill green">維持</span></td></tr>
+            <tr><td class="lk">大阪府</td><td class="num">82/96</td><td class="num">85%</td><td class="num">¥64M</td><td><span class="pill green">維持</span></td></tr>
+            <tr><td class="lk">沖縄県</td><td class="num">34/58</td><td class="num">58%</td><td class="num">¥41M</td><td><span class="pill amber">開拓余地</span></td></tr>
+            <tr><td class="lk">福岡県</td><td class="num">21/62</td><td class="num">34%</td><td class="num">¥18M</td><td><span class="pill red">重点開拓</span></td></tr>
+            <tr><td class="lk">和歌山県</td><td class="num">6/33</td><td class="num">18%</td><td class="num">¥5M</td><td><span class="pill red">ホワイトスペース</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:16px">💡 導入有無×ランクを都道府県単位で色分け（ヒアリングI/B）。未開拓エリア（ホワイトスペース）を可視化して開拓の優先度付け。施設の都道府県・客単価から集計。実装はSalesforce Maps もしくは住所プロット。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

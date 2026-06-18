@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>レポート | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="report">
+<div class="wrap">
+
+  <div class="lv-head">
+    <span class="obj-icon o-dash lg">📑</span>
+    <div class="meta">
+      <div class="kicker">レポート</div>
+      <div class="lv-title">最近のレポート<span class="caret">▾</span></div>
+      <div class="sub">12 件 • フォルダ: 営業 / 経営 / サンプル</div>
+    </div>
+    <div class="acts"><a class="btn" href="#">新規フォルダ</a><a class="btn primary" href="#">新規レポート</a></div>
+  </div>
+
+  <div class="lv-tabs">
+    <a class="on" href="reports.html">最近</a>
+    <a href="reports.html">営業フォルダ</a>
+    <a href="reports.html">経営フォルダ</a>
+    <a href="reports.html">サンプル</a>
+    <a href="reports.html">自分が作成</a>
+  </div>
+
+  <table class="lvt" style="margin-bottom:18px">
+    <thead><tr><th class="chk"><input type="checkbox"></th><th>レポート名 <span class="sortcaret">▲</span></th><th>フォルダ</th><th>種類</th><th>最終実行</th><th class="rowact"></th></tr></thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">チャネル別 月次売上</a></td><td>経営</td><td>マトリックス</td><td>本日</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">商談パイプライン（ステージ別）</a></td><td>営業</td><td>サマリー</td><td>本日</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">新規/ロスト 施設数</a></td><td>営業</td><td>サマリー</td><td>昨日</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">サンプル 追客→転換</a></td><td>サンプル</td><td>サマリー</td><td>昨日</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">主要チェーン別 売上ランキング</a></td><td>経営</td><td>サマリー</td><td>3日前</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="#run">担当別 活動量（訪問/TEL）</a></td><td>営業</td><td>マトリックス</td><td>3日前</td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <!-- レポート実行プレビュー（マトリックス） -->
+  <div class="card" id="run">
+    <div class="hd">📊 チャネル別 月次売上（マトリックス）<span class="sub">税抜・HIGベース(4-3月) / グループ化: チャネル × 月</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チャネル</th><th class="num">4月</th><th class="num">5月</th><th class="num">6月</th><th class="num">合計</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">直販</td><td class="num">¥72M</td><td class="num">¥78M</td><td class="num">¥80M</td><td class="num"><b>¥230M</b></td></tr>
+          <tr><td class="lk">東京マツシマ</td><td class="num">¥51M</td><td class="num">¥54M</td><td class="num">¥56M</td><td class="num"><b>¥161M</b></td></tr>
+          <tr><td class="lk">JTB商事</td><td class="num">¥30M</td><td class="num">¥31M</td><td class="num">¥33M</td><td class="num"><b>¥94M</b></td></tr>
+          <tr><td class="lk">ニシカワヤ</td><td class="num">¥11M</td><td class="num">¥12M</td><td class="num">¥13M</td><td class="num"><b>¥36M</b></td></tr>
+          <tr style="background:#fafafa"><td><b>合計</b></td><td class="num"><b>¥164M</b></td><td class="num"><b>¥175M</b></td><td class="num"><b>¥182M</b></td><td class="num"><b>¥521M</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="demo-note" style="margin-top:14px">💡 ダッシュボードの元になるレポート群。週次/四半期の集計はレポートで作成し、フォルダ（営業/経営/サンプル）で共有範囲を制御。DHC/HIGベース・集計軸（チャネル/チーム/個人/ブランド/エリア）で出し分け（ヒアリングI）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
