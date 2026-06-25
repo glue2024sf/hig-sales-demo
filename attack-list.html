@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>アタックリスト | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="attack">
+<div class="wrap">
+
+  <div class="lv-head">
+    <span class="obj-icon" style="background:#d8623a;width:42px;height:42px;border-radius:8px;font-size:22px">🎯</span>
+    <div class="meta">
+      <div class="kicker">アタックリスト（重点開拓・100万円以上）</div>
+      <div class="lv-title">松島チーム ターゲット<span class="caret">▾</span></div>
+      <div class="sub">毎週のチームMTGで「今どこを狙うか／どこまで消し込めたか」を確認する画面</div>
+    </div>
+    <div class="acts"><a class="btn" href="#">ターゲット追加</a><a class="btn primary" href="opportunity.html">商談化</a></div>
+  </div>
+
+  <div class="lv-tabs">
+    <a class="on" href="attack-list.html">自チーム（重点 100万↑）</a>
+    <a href="attack-list.html">チェーン本部</a>
+    <a href="attack-list.html">オープン施設</a>
+    <a href="attack-list.html">見込みなし（新規開拓要）</a>
+    <a href="attack-list.html">全社</a>
+  </div>
+
+  <div class="lv-toolbar">
+    <span class="count">重点 14 件 ・ <b>100万円以上のみ</b>（小口は優先度↓で非表示）</span><span class="spring"></span>
+    <span class="search"><input placeholder="このリストを検索..."></span>
+    <span class="ic">⚙</span><span class="ic" title="ボード">▦</span><span class="ic">⟳</span>
+  </div>
+
+  <!-- サマリ -->
+  <div class="grid g4" style="margin:14px 0">
+    <div class="kpi"><div class="label">重点ターゲット</div><div class="val">14<small>件</small></div><div class="delta flat">100万円以上</div></div>
+    <div class="kpi"><div class="label">年間見込 合計</div><div class="val">¥182<small>M</small></div><div class="delta up">▲ 確度加重 ¥104M</div></div>
+    <div class="kpi"><div class="label">年度内見込 合計</div><div class="val">¥118<small>M</small></div><div class="delta flat">導入月から自動算出</div></div>
+    <div class="kpi"><div class="label">消し込み率</div><div class="val">43<small>%</small></div><div class="delta up">▲ 受注/継続発注ベース</div></div>
+  </div>
+
+  <table class="lvt">
+    <thead>
+      <tr>
+        <th class="chk"><input type="checkbox"></th>
+        <th>ターゲット <span class="sortcaret">▲</span></th>
+        <th>種別</th>
+        <th>ランク</th>
+        <th class="num">年間見込</th>
+        <th class="num">年度内見込</th>
+        <th class="num">確度</th>
+        <th>消し込み状況</th>
+        <th>担当</th>
+        <th>次アクション</th>
+        <th class="rowact"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">アイコニア（チェーン全社波及）</a></td><td><span class="pill blue">チェーン本部</span></td><td><span class="pill red">SS</span></td><td class="num">¥50.0M</td><td class="num">¥29.2M</td><td class="num">50%</td><td><span class="pill amber">提案中（消化40%）</span></td><td>三原</td><td>本部一括の意思決定確認</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">グランビューHD 2026春</a></td><td><span class="pill blue">チェーン本部</span></td><td><span class="pill red">SS</span></td><td class="num">¥24.0M</td><td class="num">¥16.0M</td><td class="num">80%</td><td><span class="pill amber">内定</span></td><td>三原</td><td>本社決済の最終確認</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="facility-detail.html">XL渋谷（個店）</a></td><td><span class="pill gray">個店 100万↑</span></td><td><span class="pill amber">S</span></td><td class="num">¥3.6M</td><td class="num">¥2.1M</td><td class="num">30%</td><td><span class="pill blue">接触中</span></td><td>櫻井</td><td>サンプル提案</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opening-projects.html">マリン横浜（オープン）</a></td><td><span class="pill green">オープン</span></td><td><span class="pill amber">S</span></td><td class="num">¥7.5M</td><td class="num">¥5.6M</td><td class="num">60%</td><td><span class="pill amber">内定</span></td><td>三原</td><td>開業前 什器選定</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="opening-projects.html">グランビュー仙台（オープン）</a></td><td><span class="pill green">オープン</span></td><td><span class="pill">A</span></td><td class="num">¥6.0M</td><td class="num">¥3.5M</td><td class="num">40%</td><td><span class="pill blue">接触中</span></td><td>三原</td><td>開業日逆算アプローチ</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="account-detail.html">都ホテル PB改定</a></td><td><span class="pill blue">チェーン本部</span></td><td><span class="pill amber">S</span></td><td class="num">¥18.5M</td><td class="num">¥12.3M</td><td class="num">50%</td><td><span class="pill blue">提案中</span></td><td>櫻井</td><td>見積条件すり合わせ</td><td class="rowact">▾</td></tr>
+      <tr><td class="chk"><input type="checkbox"></td><td><a class="lk" href="facility-detail.html">サンR沖縄（個店）</a></td><td><span class="pill gray">個店 100万↑</span></td><td><span class="pill">A</span></td><td class="num">¥6.8M</td><td class="num">¥4.0M</td><td class="num">30%</td><td><span class="pill gray">未着手</span></td><td>田村</td><td>初回ヒアリング</td><td class="rowact">▾</td></tr>
+    </tbody>
+  </table>
+
+  <div class="demo-note" style="margin-top:14px">💡 前回MTG反映: <b>100万円以上に絞って重点管理</b>（小口は優先度↓）。<b>チェーン本部／オープン施設／個店</b>を区分。優先度は<b>ランク(SS/S/A)×金額×確度</b>の多軸（ランク=ポテンシャル、金額・確度=見込み精度）。毎週チームMTGで「どこを狙う→どこまで消し込めた」を確認。見込みが無い枠は新規開拓ターゲットを追加。チーム別に表示（松島チームなら松島だけ）。</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

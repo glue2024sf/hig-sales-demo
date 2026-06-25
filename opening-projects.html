@@ -27,6 +27,22 @@
     <div class="kpi"><div class="label">開業前 受注</div><div class="val">2<small>件</small></div><div class="delta up">▲</div></div>
   </div>
 
+  <!-- チーム別 オープン消し込み（前回MTG反映） -->
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">チーム別 オープン消し込み状況<span class="sub">各チームに割り振られたオープン施設が消し込みできているか・消化%</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>チーム</th><th class="num">割当オープン</th><th class="num">消化（受注/失注確定）</th><th class="num">消化率</th><th>進捗</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">松島チーム</td><td class="num">12</td><td class="num">7</td><td class="num">58%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill g" style="width:58%"></span></span></td></tr>
+          <tr><td class="lk">直販チーム</td><td class="num">9</td><td class="num">3</td><td class="num">33%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill a" style="width:33%"></span></span></td></tr>
+          <tr><td class="lk">GTV/代理店</td><td class="num">6</td><td class="num">2</td><td class="num">33%</td><td><span class="track" style="display:inline-block;width:120px;vertical-align:middle"><span class="fill a" style="width:33%"></span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bd" style="border-top:1px solid var(--line)"><p class="help">オープン施設は施設レコードの「状態」で管理し、<b>活動を登録するとステータス更新フラグ</b>が立つ。チームMTGで消し込み漏れを確認。<a href="attack-list.html">アタックリスト（オープン施設）</a>・各チームの<a href="todos.html">ToDo（オープン版）</a>にも反映（前回MTG）。</p></div>
+  </div>
+
   <div class="card" style="margin-bottom:16px">
     <div class="hd">開業スケジュール（逆算アプローチ）</div>
     <div class="bd">
@@ -51,7 +67,7 @@
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 開業日を保持し、開業まで日数でアラート。開業案件は通常商談と区別して進捗管理（ヒアリングE）。施設登録は<a href="account-new.html">新規登録</a>で「新規開業」を選択。</div>
+  <div class="demo-note" style="margin-top:16px">💡 前回MTG反映: チェーン本部とは別に<b>オープン施設リスト</b>をSalesforceに入力（担当=神山さん予定）。各チームに割り振り、活動でステータス更新→チーム別に消し込み確認。<b>データ投入は全要件が固まってから</b>整理して実施（先に入れるとノイズになる）。開業日を保持し開業まで日数でアラート。</div>
 
 </div>
 <script src="app.js"></script>

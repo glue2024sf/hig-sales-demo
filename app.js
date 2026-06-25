@@ -16,6 +16,7 @@
         { label: 'エリア・地図', href: 'map.html' }
       ]
     },
+    { key: 'attack', label: 'アタックリスト', href: 'attack-list.html' },
     { key: 'report', label: 'レポート', href: 'reports.html' },
     { key: 'acct', label: '取引先', href: 'accounts.html' },
     { key: 'contact', label: '取引先責任者', href: 'contacts.html' },

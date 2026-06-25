@@ -33,6 +33,31 @@
     <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">78<small>%</small></div><div class="delta flat">目標 ¥75M</div></div>
   </div>
 
+  <!-- 着地予測 ＋ 営業日数進捗（前回MTG反映） -->
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="hd">年度内 着地予測（目標との差し引き）<span class="sub">プラス見込 − ロスト</span></div>
+      <div class="bd">
+        <div class="bar"><span class="name">年度目標</span><span class="track"><span class="fill" style="width:100%;background:#c9ced6"></span></span><span class="v">¥180M</span></div>
+        <div class="bar"><span class="name">受注済</span><span class="track"><span class="fill g" style="width:42%"></span></span><span class="v">¥76M</span></div>
+        <div class="bar"><span class="name">＋プラス見込</span><span class="track"><span class="fill" style="width:33%"></span></span><span class="v">+¥59M</span></div>
+        <div class="bar"><span class="name">−ロスト(年度内残月)</span><span class="track"><span class="fill" style="width:11%;background:var(--red)"></span></span><span class="v">−¥20M</span></div>
+        <hr class="sep" style="margin:8px 0">
+        <div class="bar"><span class="name"><b>着地予測</b></span><span class="track"><span class="fill a" style="width:64%"></span></span><span class="v"><b>¥115M</b></span></div>
+        <p class="help" style="color:var(--red)">目標 ¥180M に対し着地 ¥115M（64%）＝ <b>ペースが遅れ</b>。あと ¥65M の上積みが必要。</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd">営業日数進捗ベース</div>
+      <div class="bd">
+        <div class="kpi" style="border:0;box-shadow:none;padding:0"><div class="label">営業日 経過（年間200日）</div><div class="val">50<small>/200日</small></div><div class="delta flat">あるべき進捗 25%</div></div>
+        <div class="bar" style="margin-top:12px"><span class="name">あるべき(日数)</span><span class="track"><span class="fill" style="width:25%;background:#c9ced6"></span></span><span class="v">25%</span></div>
+        <div class="bar"><span class="name">実績 進捗</span><span class="track"><span class="fill" style="width:14%;background:var(--red)"></span></span><span class="v">14%</span></div>
+        <p class="help">日数では25%まで来るべきところ実績14% → 遅れを早期検知（前回MTG: 「ペース悪いやん」が一目で分かる）。</p>
+      </div>
+    </div>
+  </div>
+
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
       <div class="hd">売上推移（月次 / 3ヶ月平均）</div>
@@ -99,7 +124,7 @@
     </div>
   </div>
 
-  <div class="demo-note" style="margin-top:16px">💡 営業チーム表示項目（ヒアリングI）: 売上（月次/3ヶ月平均/新規/主要チェーン）・サンプルフォロー・ロスト・主要案件。チーム編成（チャネル別か地域別か）は ※要確認。</div>
+  <div class="demo-note" style="margin-top:16px">💡 前回MTG反映: <b>着地予測（受注＋プラス見込−年度内残月のロスト vs 目標）</b>と<b>営業日数進捗</b>を上部に追加し「ペースの遅れ」を一目で。サンプルフォローはチームでは<b>「回っているか」程度</b>で十分（個人単位の細かい管理は各チーム内・優先度↓）。<a href="attack-list.html">アタックリスト</a>で重点案件の消し込みを確認。</div>
 
 </div>
 <script src="app.js"></script>

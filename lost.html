@@ -26,6 +26,24 @@
     <div class="kpi"><div class="label">3年発注なし</div><div class="val">42<small>施設</small></div><div class="delta down">▼ 棚卸し対象</div></div>
   </div>
 
+  <!-- 年度内残月ロスト → 着地への差し引き（前回MTG反映） -->
+  <div class="card" style="margin-bottom:16px">
+    <div class="hd">年度内 残月ロスト集計 → 着地への差し引き<span class="sub">例: 12ヶ月契約の4ヶ月目でロスト → 残8ヶ月分を年度内ロストに計上</span></div>
+    <div class="bd" style="padding:0">
+      <table class="tbl">
+        <thead><tr><th>施設/チェーン</th><th class="num">年間契約額</th><th>ロスト時点</th><th class="num">残月</th><th class="num">年度内ロスト額</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">都ホテル 名古屋</td><td class="num">¥12.0M</td><td>4ヶ月目</td><td class="num">8ヶ月</td><td class="num" style="color:var(--red)">−¥8.0M</td></tr>
+          <tr><td class="lk">シーサイド熱海</td><td class="num">¥6.0M</td><td>2ヶ月目</td><td class="num">10ヶ月</td><td class="num" style="color:var(--red)">−¥5.0M</td></tr>
+          <tr style="background:#fafafa"><td colspan="4"><b>年度内ロスト 合計</b></td><td class="num" style="color:var(--red)"><b>−¥20.0M</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bd" style="border-top:1px solid var(--line)">
+      <p class="help">目標に対して <b>プラス見込 ＋¥59M − 年度内ロスト ¥20M = 着地予測</b> として <a href="dashboard-team.html">チームDB</a> の着地予測に反映。</p>
+    </div>
+  </div>
+
   <div class="grid g2" style="margin-bottom:16px">
     <div class="card">
       <div class="hd">ロスト理由 内訳</div>
