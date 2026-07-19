@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ダッシュボード デザイン3案 | HIG 営業デモ</title>
+<style>
+  :root{ --ink:#16324f; --mut:#5a6570; --line:#e3e8ee; --bg:#f4f6f9; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:-apple-system,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif; color:var(--ink); background:var(--bg); }
+  .top{ background:#032d60; color:#fff; padding:14px 22px; display:flex; align-items:center; gap:12px; }
+  .top .badge{ background:#0176d3; padding:2px 9px; border-radius:5px; font-weight:700; font-size:13px; }
+  .top h1{ font-size:16px; margin:0; font-weight:600; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:26px 22px 50px; }
+  .lead{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin-bottom:22px; }
+  .lead b{ color:var(--ink); }
+  .lead .note{ color:var(--mut); font-size:13px; margin-top:6px; }
+  .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media(max-width:860px){ .cards{ grid-template-columns:1fr; } }
+  .pc{ background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 1px 3px rgba(16,50,79,.06); }
+  .pc .cap{ height:96px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:34px; font-weight:800; letter-spacing:1px; }
+  .capA{ background:linear-gradient(135deg,#0176d3,#032d60); }
+  .capB{ background:linear-gradient(135deg,#6b34c0,#b8501f); }
+  .capC{ background:linear-gradient(135deg,#12343b,#2e844a); }
+  .pc .bd{ padding:16px 16px 18px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .pc h2{ margin:0; font-size:17px; }
+  .pc .sub{ color:var(--mut); font-size:12.5px; }
+  .pc ul{ margin:2px 0 0; padding-left:18px; color:#3a4650; font-size:12.5px; line-height:1.7; }
+  .pc .who{ font-size:12px; color:var(--mut); background:#f4f6f9; border-radius:6px; padding:6px 9px; }
+  .pc .links{ margin-top:auto; display:flex; gap:8px; flex-wrap:wrap; }
+  .pc .links a{ text-decoration:none; font-size:13px; padding:7px 11px; border-radius:7px; border:1px solid #cfd8e2; color:#0a6ab5; background:#fff; }
+  .pc .links a.main{ background:#0176d3; color:#fff; border-color:#0176d3; font-weight:600; }
+  .foot{ margin-top:24px; color:var(--mut); font-size:12.5px; }
+  .tags{ display:flex; gap:6px; flex-wrap:wrap; }
+  .tag{ font-size:11px; border:1px solid #d6dbe0; border-radius:999px; padding:2px 8px; color:#44505c; }
+</style>
+</head>
+<body>
+  <div class="top"><span class="badge">HIG</span><h1>ダッシュボード デザイン 3案（全体・個人・チーム／各フル実装）</h1></div>
+  <div class="wrap">
+    <div class="lead">
+      💡 7/9定例の続き。<b>3ページ（全体／個人／チーム）を「完全に作り切った」状態で、レイアウト・デザインの異なる3案</b>用意しました。<b>中身（KPI・数値・登場人物）は3案とも共通</b>なので、純粋に「見せ方の好み」で選べます。
+      <div class="note">数値・チェーン名はすべてダミー。7/9決定（前年比%＋3ヶ月%併記／TOP20・その他／今週のトピックス・懸念／個人の導入・内定・見込み3ブロック／受注角度%・導入予定月 必須／チームのレジャー区分・JTB西川屋 個別＋合算）は3案とも反映済み。</div>
+    </div>
+
+    <div class="cards">
+      <!-- A -->
+      <div class="pc">
+        <div class="cap capA">A</div>
+        <div class="bd">
+          <h2>Lightning Standard</h2>
+          <div class="sub">実際のSalesforce画面に最も近いクラシック設計</div>
+          <div class="tags"><span class="tag">標準SLDS風</span><span class="tag">堅実・見慣れた</span></div>
+          <ul>
+            <li>青ヘッダ＋白カード＋標準テーブル</li>
+            <li>導入後の実画面イメージが湧きやすい</li>
+            <li>手戻りリスク最小</li>
+          </ul>
+          <div class="who">向く人: 「実物どおりが安心」な現場・管理者</div>
+          <div class="links">
+            <a class="main" href="a-overall.html">全体を見る →</a>
+            <a href="a-personal.html">個人</a>
+            <a href="a-team.html">チーム</a>
+          </div>
+        </div>
+      </div>
+      <!-- B -->
+      <div class="pc">
+        <div class="cap capB">B</div>
+        <div class="bd">
+          <h2>Executive Visual</h2>
+          <div class="sub">大きなKPIとチャート中心のビジュアル経営ダッシュ</div>
+          <div class="tags"><span class="tag">グラフ多用</span><span class="tag">会議映え</span></div>
+          <ul>
+            <li>KPIヒーロー＋ドーナツ/エリアチャート</li>
+            <li>数字の大小・増減が一目で伝わる</li>
+            <li>経営会議・週次リーダー会向け</li>
+          </ul>
+          <div class="who">向く人: 経営・リーダー層／プレゼン重視</div>
+          <div class="links">
+            <a class="main" href="b-overall.html">全体を見る →</a>
+            <a href="b-personal.html">個人</a>
+            <a href="b-team.html">チーム</a>
+          </div>
+        </div>
+      </div>
+      <!-- C -->
+      <div class="pc">
+        <div class="cap capC">C</div>
+        <div class="bd">
+          <h2>Dense Cockpit</h2>
+          <div class="sub">1画面完結・高密度のオペレーション向け</div>
+          <div class="tags"><span class="tag">高密度</span><span class="tag">一覧性</span></div>
+          <ul>
+            <li>多カラムで指標を凝縮、スクロール最小</li>
+            <li>毎朝サッと全体把握したい運用に最適</li>
+            <li>情報量は最大</li>
+          </ul>
+          <div class="who">向く人: 毎日回す営業・営業事務</div>
+          <div class="links">
+            <a class="main" href="c-overall.html">全体を見る →</a>
+            <a href="c-personal.html">個人</a>
+            <a href="c-team.html">チーム</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">← デモ全体に戻る: <a href="../index.html">HIG 営業デモ ホーム</a></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全体（週報／全社）｜デザイン案B Executive Visual</title>
+<link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+<!-- 横断バー（3案共通） -->
+<div class="topbar">
+  <div class="brand"><span class="dot">📊</span><span>デザイン案B<small>｜Executive Visual</small></span></div>
+  <nav>
+    <a class="on" href="b-overall.html">全体</a>
+    <a href="b-personal.html">個人</a>
+    <a href="b-team.html">チーム</a>
+  </nav>
+  <a class="back" href="index.html">← 3案を比較</a>
+</div>
+
+<div class="wrap">
+
+  <div class="page-head">
+    <div>
+      <div class="eyebrow">週次 全社ダッシュボード</div>
+      <h1>全体サマリー</h1>
+    </div>
+    <div class="spacer"></div>
+    <div class="who">毎週全員が閲覧：売上・コミット・各チャネルの動き</div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">対象週 2026-W29（7/13-7/17）</span>
+    <span class="muted small">会計基準</span>
+    <span class="seg"><span class="on">HIGベース(4-3月)</span><span>DHCベース(1-12月)</span></span>
+    <span class="grow"></span>
+    <span class="note">数値はすべてダミー・税抜／単位M＝百万円</span>
+  </div>
+
+  <!-- ============ KPIヒーロー ============ -->
+  <div class="hero">
+    <div class="kpi feature">
+      <div class="label">当月売上</div>
+      <div class="num">¥182<small>M</small></div>
+      <div class="deltas">
+        <span class="delta up"><span class="arw">▲</span>前年比 +6%</span>
+        <span class="delta up"><span class="arw">▲</span>3ヶ月 +4%</span>
+      </div>
+      <svg class="spark" width="120" height="52" viewBox="0 0 120 52" fill="none" aria-hidden="true">
+        <polyline points="4,44 24,40 44,42 64,32 84,30 104,20 116,14" stroke="rgba(255,255,255,.6)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="kpi">
+      <div class="label">達成率</div>
+      <div class="num">73<small>%</small></div>
+      <div class="sub">あるべき日数 71%</div>
+      <span class="delta up" style="margin-top:7px"><span class="arw">▲</span>ペース +2pt</span>
+    </div>
+    <div class="kpi">
+      <div class="label">着地予測</div>
+      <div class="num">¥238<small>M</small></div>
+      <div class="sub">今期目標比 95%</div>
+      <span class="delta flat" style="margin-top:7px">目標まで ¥12M</span>
+    </div>
+    <div class="kpi">
+      <div class="label">今期目標（月）</div>
+      <div class="num">¥250<small>M</small></div>
+      <div class="sub">HIGベース 月次目標</div>
+      <span class="delta up" style="margin-top:7px"><span class="arw">▲</span>達成見込 95%</span>
+    </div>
+  </div>
+
+  <!-- ============ 推移 ＆ 構成比 ============ -->
+  <div class="section"><h2>月次トレンド・チャネル構成</h2><span class="hint">直近3ヶ月＋当月途中を昨年同日と比較</span></div>
+  <div class="grid g2">
+
+    <!-- 月次トレンド（エリア＋折れ線） -->
+    <div class="card">
+      <div class="hd"><h3>月次トレンド（同日ベース）</h3><span class="sub">4月〜当月・今年 vs 昨年</span></div>
+      <div class="bd">
+        <svg viewBox="0 0 460 190" width="100%" height="190" role="img" aria-label="月次トレンド折れ線">
+          <defs>
+            <linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6b34c0" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#6b34c0" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- グリッド -->
+          <g stroke="#efecf6" stroke-width="1">
+            <line x1="40" y1="30" x2="440" y2="30"/><line x1="40" y1="70" x2="440" y2="70"/>
+            <line x1="40" y1="110" x2="440" y2="110"/><line x1="40" y1="150" x2="440" y2="150"/>
+          </g>
+          <!-- 今年エリア -->
+          <path d="M40,83 L170,57 L300,42 L430,31 L430,150 L40,150 Z" fill="url(#areaG)"/>
+          <!-- 昨年（点線） -->
+          <polyline points="40,120 170,91 300,72 430,68" fill="none" stroke="#c9c2da" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+          <!-- 今年（実線） -->
+          <polyline points="40,83 170,57 300,42 430,31" fill="none" stroke="#6b34c0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#6b34c0">
+            <circle cx="40" cy="83" r="4.5"/><circle cx="170" cy="57" r="4.5"/>
+            <circle cx="300" cy="42" r="4.5"/><circle cx="430" cy="31" r="5.5" stroke="#fff" stroke-width="2"/>
+          </g>
+          <!-- 軸ラベル -->
+          <g fill="#9a97ab" font-size="11" font-weight="700" text-anchor="middle">
+            <text x="40" y="172">4月</text><text x="170" y="172">5月</text>
+            <text x="300" y="172">6月</text><text x="430" y="172">7月(途中)</text>
+          </g>
+        </svg>
+        <div class="flex" style="gap:16px;margin-top:4px">
+          <span class="small"><b style="color:#6b34c0">●</b> 今年（同日）</span>
+          <span class="small muted"><b style="color:#c9c2da">╌</b> 昨年（同日）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- チャネル構成比ドーナツ -->
+    <div class="card">
+      <div class="hd"><h3>チャネル構成比</h3><span class="sub">当月売上 ¥182M</span></div>
+      <div class="bd">
+        <div class="donut-wrap">
+          <svg width="176" height="176" viewBox="0 0 200 200" role="img" aria-label="チャネル構成比ドーナツ">
+            <g transform="rotate(-90 100 100)" fill="none" stroke-width="26">
+              <circle cx="100" cy="100" r="80" stroke="#efecf6" stroke-width="26"/>
+              <circle cx="100" cy="100" r="80" stroke="#6b34c0" stroke-dasharray="221 282" stroke-dashoffset="0"/>
+              <circle cx="100" cy="100" r="80" stroke="#b8501f" stroke-dasharray="155 348" stroke-dashoffset="-221"/>
+              <circle cx="100" cy="100" r="80" stroke="#e08a2b" stroke-dasharray="91 412" stroke-dashoffset="-376"/>
+              <circle cx="100" cy="100" r="80" stroke="#2a6fd6" stroke-dasharray="36 467" stroke-dashoffset="-467"/>
+            </g>
+            <text x="100" y="94" text-anchor="middle" font-size="26" font-weight="800" fill="#271f3d">¥182M</text>
+            <text x="100" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#9a97ab">当月合計</text>
+          </svg>
+          <div class="legend">
+            <div class="li"><span class="sw" style="background:#6b34c0"></span><span class="nm">直販</span><span class="amt">¥80M</span><span class="pct">44%</span></div>
+            <div class="li"><span class="sw" style="background:#b8501f"></span><span class="nm">東京マツシマ</span><span class="amt">¥56M</span><span class="pct">31%</span></div>
+            <div class="li"><span class="sw" style="background:#e08a2b"></span><span class="nm">JTB＋西川屋</span><span class="amt">¥33M</span><span class="pct">18%</span></div>
+            <div class="li"><span class="sw" style="background:#2a6fd6"></span><span class="nm">ニシカワヤ</span><span class="amt">¥13M</span><span class="pct">7%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 年度達成率 ＆ 使用客 ============ -->
+  <div class="section"><h2>年度達成率・使用客の動き</h2></div>
+  <div class="grid g2">
+
+    <!-- 年度達成ゲージ -->
+    <div class="card">
+      <div class="hd"><h3>年度達成率（HIGベース 4-3月）</h3></div>
+      <div class="bd">
+        <div class="gauge">
+          <svg width="190" height="118" viewBox="0 0 190 118" role="img" aria-label="年度達成率ゲージ">
+            <defs>
+              <linearGradient id="gaugeG" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#6b34c0"/><stop offset="1" stop-color="#b8501f"/>
+              </linearGradient>
+            </defs>
+            <path d="M23,95 A72,72 0 0 1 167,95" fill="none" stroke="#efecf6" stroke-width="18" stroke-linecap="round"/>
+            <!-- 26% : 0.26*226=59 -->
+            <path d="M23,95 A72,72 0 0 1 167,95" fill="none" stroke="url(#gaugeG)" stroke-width="18" stroke-linecap="round" stroke-dasharray="59 226"/>
+            <!-- あるべき25% の目印（上端付近） -->
+            <circle cx="83" cy="26.5" r="3" fill="#fff" stroke="#8a8299" stroke-width="2"/>
+            <text x="95" y="82" text-anchor="middle" font-size="34" font-weight="800" fill="#271f3d">26%</text>
+            <text x="95" y="104" text-anchor="middle" font-size="11" font-weight="700" fill="#9a97ab">あるべき(日数) 25%</text>
+          </svg>
+          <div class="read">
+            <div class="cap">年度実績 / 年度目標</div>
+            <div class="pct" style="font-size:24px">¥548M<span style="font-size:15px;color:#9a97ab"> / ¥2,100M</span></div>
+            <div class="cmp"><span class="delta up" style="margin-top:8px"><span class="arw">▲</span>ペース +1pt（日数比）</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 使用客 売上状況 -->
+    <div class="card">
+      <div class="hd"><h3>使用客 売上状況</h3><span class="sub">前年同期比の増減</span></div>
+      <div class="bd">
+        <div class="flex between" style="align-items:flex-end">
+          <div>
+            <div class="small muted" style="font-weight:700">TOP20 合計</div>
+            <div class="bigmove up"><span class="arw">▲</span><span class="v">+¥12M</span></div>
+          </div>
+          <div style="text-align:right">
+            <div class="small muted" style="font-weight:700">その他（主要客以外）</div>
+            <div class="bigmove down"><span class="arw">▼</span><span class="v">−¥4M</span></div>
+          </div>
+        </div>
+        <hr class="hr">
+        <div class="barlist">
+          <div class="barrow"><span class="nm">グランビューHD</span><span class="track"><span class="fill g" style="width:70%"></span></span><span class="amt up-c">+¥6M</span></div>
+          <div class="barrow"><span class="nm">都ホテル</span><span class="track"><span class="fill g" style="width:45%"></span></span><span class="amt up-c">+¥3M</span></div>
+          <div class="barrow"><span class="nm">TOP20 その他</span><span class="track"><span class="fill g" style="width:35%"></span></span><span class="amt up-c">+¥3M</span></div>
+          <div class="barrow"><span class="nm">主要客以外</span><span class="track"><span class="fill ghost" style="width:30%"></span></span><span class="amt down-c">−¥4M</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ チャネル別の動き ============ -->
+  <div class="section"><h2>チャネル別の動き</h2><span class="hint">役職以上が週次入力 → 全員閲覧</span></div>
+  <div class="card">
+    <div class="bd" style="padding:6px">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>チャネル</th><th class="num">今週売上</th><th class="num">月次累計</th><th>主要チェーンの動き</th><th>コミット</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">直販</td><td class="num">¥20.1M</td><td class="num">¥80M</td><td>グランビューHD 内定へ</td><td><span class="pill violet">交渉継続</span></td></tr>
+            <tr><td class="lk">東京マツシマ</td><td class="num">¥12.4M</td><td class="num">¥56M</td><td>PB改定提案中</td><td><span class="pill orange">価格調整</span></td></tr>
+            <tr><td class="lk">JTB商事</td><td class="num">¥6.1M</td><td class="num">¥33M<span class="muted small">（JTB＋西川屋 合算）</span></td><td>新規開業2件</td><td><span class="pill blue">提案準備</span></td></tr>
+            <tr><td class="lk">ニシカワヤ</td><td class="num">¥2.6M</td><td class="num">¥13M</td><td>温浴深耕</td><td><span class="pill green">順調</span></td></tr>
+            <tr><td class="lk muted">特販</td><td class="num">¥0M</td><td class="num">¥0M</td><td>横断案件（要確認）</td><td><span class="pill gray">—</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ トピックス・懸念 ============ -->
+  <div class="section"><h2>今週のトピックス・懸念</h2><span class="hint">チャネル別フリーテキスト</span></div>
+  <div class="topics">
+    <div class="topic">
+      <div class="ch">直販 <span class="badge" style="background:#e7f4ec;color:#2e844a">好調</span></div>
+      <div class="txt">グランビューHDがチェーン開拓で内定へ。新規開業ホテル2件の引合いも進行中。</div>
+    </div>
+    <div class="topic warn">
+      <div class="ch">東京マツシマ <span class="badge w">懸念</span></div>
+      <div class="txt">PB改定の価格交渉が難航。改定幅の合意に時間を要しており、価格調整を継続中。</div>
+    </div>
+  </div>
+
+  <!-- ============ 全社主要案件 ============ -->
+  <div class="section"><h2>全社 主要案件ステータス</h2></div>
+  <div class="card">
+    <div class="bd" style="padding:6px">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>案件</th><th>チェーン</th><th>チャネル</th><th class="num">年間見込</th><th>ステージ</th><th>担当</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">2026春 新規導入</td><td>グランビューホテルズ</td><td>直販</td><td class="num">¥24.0M</td><td><span class="pill orange">内定</span></td><td>三原</td></tr>
+            <tr><td class="lk">PB改定提案</td><td>都ホテルチェーン</td><td>東京マツシマ</td><td class="num">¥18.5M</td><td><span class="pill blue">営業済</span></td><td>櫻井</td></tr>
+            <tr><td class="lk">開業案件_沖縄</td><td>サンリゾート</td><td>JTB商事</td><td class="num">¥9.2M</td><td><span class="pill blue">情報収集済</span></td><td>田村</td></tr>
+            <tr><td class="lk">温浴深耕</td><td>やまと温泉リゾート</td><td>ニシカワヤ</td><td class="num">¥6.8M</td><td><span class="pill green">継続発注</span></td><td>佐久間</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="notememo">💡 <b>7/9決定の反映</b>：前年同月比％＋直近3ヶ月％を併記／使用客はTOP20とその他で増減を可視化／チャネルの動きは役職以上が入力し全員閲覧／会計基準はHIG・DHCで切替。この案Bは「数字の大小と増減を一目で」経営会議向けに全面チャート化。</div>
+
+</div>
+</body>
+</html>

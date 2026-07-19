@@ -1,0 +1,208 @@
+/* =========================================================
+   デザイン案C ｜ Dense Cockpit（高密度・1画面完結）
+   HIG 営業ダッシュボード デモ用 共通スタイル（3ページ共有）
+   外部依存ゼロ・自己完結
+   ========================================================= */
+:root{
+  --ink:#12343b;          /* 濃色ヘッダ/サイド */
+  --ink2:#1c4652;         /* やや明るい濃色 */
+  --accent:#2e844a;       /* 緑アクセント */
+  --accent-d:#20633a;
+  --amber:#b7791f;
+  --red:#c0392b;
+  --blue:#1b6ca8;
+  --bg:#eceff2;
+  --panel:#ffffff;
+  --line:#d9dfe4;         /* 細い罫線 */
+  --line-2:#e8ecef;
+  --text:#20323a;
+  --mut:#68767e;
+  --mut-2:#8a969d;
+  --up:#2e844a;
+  --down:#c0392b;
+  --shade:#f4f6f8;        /* 小タイル背景 */
+  --radius:6px;
+}
+*{ box-sizing:border-box; }
+html,body{ margin:0; }
+body{
+  font-family:-apple-system,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  color:var(--text); background:var(--bg);
+  font-size:12.5px; line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+.num,.n{ font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1; }
+
+/* ---------- 横断バー ---------- */
+.xbar{
+  background:var(--ink); color:#eaf1f2;
+  display:flex; align-items:center; gap:14px;
+  padding:8px 16px; position:sticky; top:0; z-index:20;
+  border-bottom:2px solid var(--accent);
+}
+.xbar .brand{ display:flex; align-items:center; gap:9px; font-weight:700; font-size:13px; white-space:nowrap; }
+.xbar .brand .dot{ width:10px; height:10px; border-radius:2px; background:var(--accent); box-shadow:0 0 0 3px rgba(46,132,74,.25); }
+.xbar .brand small{ color:#9fb7bd; font-weight:500; font-size:11px; }
+.xbar nav{ display:flex; gap:4px; margin:0 auto; }
+.xbar nav a{
+  color:#c4d3d7; text-decoration:none; font-size:12px; font-weight:600;
+  padding:5px 12px; border-radius:5px; white-space:nowrap;
+}
+.xbar nav a:hover{ background:var(--ink2); color:#fff; }
+.xbar nav a.on{ background:var(--accent); color:#fff; }
+.xbar .back{ color:#9fb7bd; text-decoration:none; font-size:12px; white-space:nowrap; }
+.xbar .back:hover{ color:#fff; }
+
+/* ---------- ページ枠 ---------- */
+.wrap{ max-width:1280px; margin:0 auto; padding:12px 16px 30px; }
+
+/* ページヘッダ（薄い1行） */
+.phead{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin:4px 2px 10px; }
+.phead h1{ font-size:16px; margin:0; color:var(--ink); font-weight:700; }
+.phead .who{ font-size:12px; color:var(--mut); }
+.phead .grow{ flex:1; }
+
+/* トグル/チップ行 */
+.toolrow{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:0 2px 12px; }
+.chip{
+  font-size:11px; padding:3px 9px; border-radius:999px;
+  border:1px solid var(--line); background:var(--panel); color:var(--mut);
+}
+.chip.on{ background:var(--ink); color:#fff; border-color:var(--ink); font-weight:600; }
+.chip.acc{ background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+.seg{ display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--panel); }
+.seg span{ font-size:11px; padding:3px 10px; color:var(--mut); border-right:1px solid var(--line); cursor:default; }
+.seg span:last-child{ border-right:0; }
+.seg span.on{ background:var(--ink); color:#fff; font-weight:600; }
+.toolrow .grow{ flex:1; }
+.toolrow .hint{ font-size:11px; color:var(--mut-2); }
+
+/* ---------- グリッド ---------- */
+.grid{ display:grid; gap:10px; }
+.g2{ grid-template-columns:repeat(2,1fr); }
+.g3{ grid-template-columns:repeat(3,1fr); }
+.g4{ grid-template-columns:repeat(4,1fr); }
+.g5{ grid-template-columns:repeat(5,1fr); }
+.g6{ grid-template-columns:repeat(6,1fr); }
+.span2{ grid-column:span 2; }
+.span3{ grid-column:span 3; }
+.mb{ margin-bottom:10px; }
+
+/* ---------- パネル（カード） ---------- */
+.panel{ background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+.panel > .hd{
+  display:flex; align-items:center; gap:8px;
+  padding:6px 10px; border-bottom:1px solid var(--line-2);
+  font-size:11.5px; font-weight:700; color:var(--ink); background:#fafbfc;
+}
+.panel > .hd .sub{ margin-left:auto; font-size:10.5px; font-weight:500; color:var(--mut-2); }
+.panel > .hd .tagx{ font-size:10px; font-weight:600; color:var(--accent-d); background:#e7f1ea; border:1px solid #cfe4d6; border-radius:4px; padding:1px 6px; }
+.panel > .bd{ padding:10px; }
+.panel > .bd.flush{ padding:0; }
+
+/* ---------- KPIタイル（小・密） ---------- */
+.tile{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:8px 10px; display:flex; flex-direction:column; gap:2px; min-width:0;
+}
+.tile .lab{ font-size:10.5px; color:var(--mut); letter-spacing:.02em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.tile .big{ font-size:20px; font-weight:800; color:var(--ink); line-height:1.1; letter-spacing:-.01em; }
+.tile .big small{ font-size:11px; font-weight:600; color:var(--mut); margin-left:1px; }
+.tile .sub{ font-size:10.5px; color:var(--mut); display:flex; gap:6px; flex-wrap:wrap; }
+.tile.hl{ border-left:3px solid var(--accent); }
+.tile.warn{ border-left:3px solid var(--amber); }
+.up{ color:var(--up); font-weight:700; }
+.down{ color:var(--down); font-weight:700; }
+.flat{ color:var(--mut); }
+
+/* ミニ進捗（達成率など） */
+.meter{ height:5px; border-radius:3px; background:#e6eaee; overflow:hidden; margin-top:3px; }
+.meter > i{ display:block; height:100%; background:var(--accent); border-radius:3px; }
+.meter.amber > i{ background:var(--amber); }
+.ghost{ position:relative; }
+.ghost .mark{ position:absolute; top:-2px; width:2px; height:9px; background:#5a6b73; }
+
+/* ---------- テーブル（密） ---------- */
+table.tbl{ width:100%; border-collapse:collapse; font-size:11.5px; }
+table.tbl th,table.tbl td{ padding:5px 8px; border-bottom:1px solid var(--line-2); text-align:left; vertical-align:middle; }
+table.tbl thead th{ background:#f6f8f9; color:var(--mut); font-weight:600; font-size:10.5px; position:sticky; top:0; white-space:nowrap; }
+table.tbl tbody tr:hover{ background:#f7fafb; }
+table.tbl td.num,table.tbl th.num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+table.tbl tr:last-child td{ border-bottom:0; }
+.scrollx{ overflow-x:auto; }
+
+/* pill/バッジ */
+.pill{ font-size:10px; font-weight:600; padding:1px 7px; border-radius:999px; white-space:nowrap; display:inline-block; }
+.pill.green{ background:#e7f1ea; color:var(--accent-d); }
+.pill.blue{ background:#e5eff6; color:var(--blue); }
+.pill.amber{ background:#fbf1df; color:var(--amber); }
+.pill.red{ background:#fbe8e5; color:var(--red); }
+.pill.gray{ background:#eef1f3; color:var(--mut); }
+
+/* 増減の小さいバッジ */
+.chgs{ display:flex; gap:5px; flex-wrap:wrap; }
+.chgs .c{ font-size:10.5px; padding:1px 6px; border-radius:4px; background:var(--shade); border:1px solid var(--line-2); }
+.chgs .c b{ font-weight:700; }
+
+/* リスト（アラート/ToDo/トピックス） */
+.list{ list-style:none; margin:0; padding:0; }
+.list li{ display:flex; gap:7px; align-items:flex-start; padding:5px 0; border-bottom:1px solid var(--line-2); font-size:11.5px; }
+.list li:last-child{ border-bottom:0; }
+.list .ic{ flex:0 0 auto; width:15px; text-align:center; }
+.list .tx{ flex:1; min-width:0; }
+.list .tx .m{ color:var(--mut-2); font-size:10.5px; }
+.dot-r{ color:var(--red); } .dot-a{ color:var(--amber); } .dot-g{ color:var(--accent); } .dot-b{ color:var(--blue); }
+
+/* フリーテキスト小欄 */
+.notebox{ background:var(--shade); border:1px solid var(--line-2); border-radius:5px; padding:7px 9px; font-size:11px; }
+.notebox .k{ font-weight:700; color:var(--ink); }
+.notebox.warn{ background:#fdf6ec; border-color:#f0e0c6; }
+.notebox.warn .k{ color:var(--amber); }
+
+/* 3ブロック（導入/内定/見込み） */
+.blocks{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.block{ border:1px solid var(--line); border-radius:var(--radius); padding:8px 9px; background:var(--panel); }
+.block .t{ font-size:11px; font-weight:700; color:#fff; padding:2px 7px; border-radius:4px; display:inline-block; margin-bottom:5px; }
+.block .t.intro{ background:var(--accent); }
+.block .t.commit{ background:var(--blue); }
+.block .t.pipe{ background:var(--amber); }
+.block .row{ display:flex; justify-content:space-between; align-items:baseline; }
+.block .amt{ font-size:17px; font-weight:800; color:var(--ink); }
+.block .cnt{ font-size:11px; color:var(--mut); }
+.block .must{ font-size:10px; color:var(--amber); background:#fbf1df; border:1px solid #f0e0c6; border-radius:4px; padding:1px 5px; margin-top:5px; display:inline-block; }
+
+/* スパークライン凡例 */
+.sparkwrap{ display:flex; align-items:flex-end; gap:10px; }
+.legend{ font-size:10.5px; color:var(--mut-2); display:flex; gap:12px; flex-wrap:wrap; }
+.legend i{ display:inline-block; width:16px; height:0; border-top:2px solid; vertical-align:middle; margin-right:4px; }
+.mini-lab{ display:flex; justify-content:space-between; font-size:10px; color:var(--mut-2); margin-top:2px; }
+
+/* 論点メモ */
+.memo{ margin-top:14px; background:#eef4ef; border:1px solid #cfe4d6; border-left:3px solid var(--accent); border-radius:5px; padding:9px 12px; font-size:11.5px; color:#2a4a37; }
+.memo b{ color:var(--accent-d); }
+
+/* small helper */
+.muted{ color:var(--mut); }
+.tiny{ font-size:10.5px; }
+.right{ text-align:right; }
+.nowrap{ white-space:nowrap; }
+.sec{ font-size:11px; font-weight:700; color:var(--mut); text-transform:none; margin:2px 2px 6px; letter-spacing:.03em; }
+
+/* ---------- レスポンシブ ---------- */
+@media(max-width:1080px){
+  .g6{ grid-template-columns:repeat(3,1fr); }
+  .g5{ grid-template-columns:repeat(3,1fr); }
+}
+@media(max-width:820px){
+  .g4{ grid-template-columns:repeat(2,1fr); }
+  .g3{ grid-template-columns:repeat(2,1fr); }
+  .g2{ grid-template-columns:1fr; }
+  .span2,.span3{ grid-column:auto; }
+  .blocks{ grid-template-columns:1fr; }
+  .xbar nav{ margin:0; overflow-x:auto; }
+}
+@media(max-width:560px){
+  .g6,.g5,.g4,.g3{ grid-template-columns:1fr 1fr; }
+  .xbar{ flex-wrap:wrap; }
+  .xbar nav{ order:3; width:100%; }
+}

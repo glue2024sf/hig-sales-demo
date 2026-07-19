@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>チーム（東京マツシマ）｜デザイン案B Executive Visual</title>
+<link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+<!-- 横断バー（3案共通） -->
+<div class="topbar">
+  <div class="brand"><span class="dot">📊</span><span>デザイン案B<small>｜Executive Visual</small></span></div>
+  <nav>
+    <a href="b-overall.html">全体</a>
+    <a href="b-personal.html">個人</a>
+    <a class="on" href="b-team.html">チーム</a>
+  </nav>
+  <a class="back" href="index.html">← 3案を比較</a>
+</div>
+
+<div class="wrap">
+
+  <div class="page-head">
+    <div>
+      <div class="eyebrow">チームダッシュボード</div>
+      <h1>東京マツシマ</h1>
+    </div>
+    <div class="who">リーダー：櫻井</div>
+    <div class="spacer"></div>
+    <div class="who">区分：レジャー / レジャー以外</div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">対象週 2026-W29（7/13-7/17）</span>
+    <span class="seg"><span class="on">HIGベース(4-3月)</span><span>DHCベース(1-12月)</span></span>
+    <span class="grow"></span>
+    <span class="note">数値はすべてダミー・税抜／単位M＝百万円</span>
+  </div>
+
+  <!-- ============ KPIヒーロー ============ -->
+  <div class="hero">
+    <div class="kpi feature">
+      <div class="label">当月売上</div>
+      <div class="num">¥56<small>M</small></div>
+      <div class="deltas"><span class="delta up"><span class="arw">▲</span>前年比 +8%</span></div>
+      <svg class="spark" width="120" height="52" viewBox="0 0 120 52" fill="none" aria-hidden="true">
+        <polyline points="4,42 30,34 56,30 82,22 116,12" stroke="rgba(255,255,255,.6)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="kpi">
+      <div class="label">達成率</div>
+      <div class="num">80<small>%</small></div>
+      <div class="sub">目標（努力）¥70M</div>
+      <span class="delta up" style="margin-top:7px"><span class="arw">▲</span>好調ペース</span>
+    </div>
+    <div class="kpi">
+      <div class="label">目標（努力）</div>
+      <div class="num">¥70<small>M</small></div>
+      <div class="sub">残り ¥14M</div>
+      <span class="delta flat" style="margin-top:7px">到達へ +20%</span>
+    </div>
+    <div class="kpi">
+      <div class="label">個人貢献 トップ</div>
+      <div class="num">櫻井</div>
+      <div class="sub">¥32M（全体の57%）</div>
+      <span class="delta up" style="margin-top:7px"><span class="arw">▲</span>牽引</span>
+    </div>
+  </div>
+
+  <!-- ============ 区分構成 ＆ 達成ゲージ ============ -->
+  <div class="section"><h2>区分構成・達成率</h2><span class="hint">レジャー / レジャー以外</span></div>
+  <div class="grid g2">
+    <!-- レジャー区分ドーナツ -->
+    <div class="card">
+      <div class="hd"><h3>レジャー区分 構成比</h3><span class="sub">当月 ¥56M</span></div>
+      <div class="bd">
+        <div class="donut-wrap">
+          <svg width="176" height="176" viewBox="0 0 200 200" role="img" aria-label="レジャー区分ドーナツ">
+            <g transform="rotate(-90 100 100)" fill="none" stroke-width="26">
+              <circle cx="100" cy="100" r="80" stroke="#efecf6" stroke-width="26"/>
+              <circle cx="100" cy="100" r="80" stroke="#6b34c0" stroke-dasharray="341 162" stroke-dashoffset="0"/>
+              <circle cx="100" cy="100" r="80" stroke="#b8501f" stroke-dasharray="161 342" stroke-dashoffset="-341"/>
+            </g>
+            <text x="100" y="94" text-anchor="middle" font-size="26" font-weight="800" fill="#271f3d">¥56M</text>
+            <text x="100" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#9a97ab">当月合計</text>
+          </svg>
+          <div class="legend">
+            <div class="li"><span class="sw" style="background:#6b34c0"></span><span class="nm">レジャー</span><span class="amt">¥38M</span><span class="pct">68%</span></div>
+            <div class="li"><span class="sw" style="background:#b8501f"></span><span class="nm">レジャー以外</span><span class="amt">¥18M</span><span class="pct">32%</span></div>
+          </div>
+        </div>
+        <p class="small muted" style="margin:14px 2px 0">レジャー好調／レジャー以外は横ばい。</p>
+      </div>
+    </div>
+    <!-- 達成ゲージ -->
+    <div class="card">
+      <div class="hd"><h3>当月 達成率</h3><span class="sub">目標（努力）¥70M</span></div>
+      <div class="bd">
+        <div class="gauge">
+          <svg width="200" height="122" viewBox="0 0 200 122" role="img" aria-label="チーム達成率ゲージ">
+            <defs>
+              <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#6b34c0"/><stop offset="1" stop-color="#b8501f"/>
+              </linearGradient>
+            </defs>
+            <path d="M25,100 A75,75 0 0 1 175,100" fill="none" stroke="#efecf6" stroke-width="20" stroke-linecap="round"/>
+            <path d="M25,100 A75,75 0 0 1 175,100" fill="none" stroke="url(#tg)" stroke-width="20" stroke-linecap="round" stroke-dasharray="188 236"/>
+            <text x="100" y="86" text-anchor="middle" font-size="44" font-weight="800" fill="#271f3d">80%</text>
+            <text x="100" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="#9a97ab">達成率</text>
+          </svg>
+          <div class="read">
+            <div class="cap">実績 / 目標</div>
+            <div class="pct" style="font-size:30px">¥56M<span style="font-size:16px;color:#9a97ab"> / ¥70M</span></div>
+            <div class="cmp"><span class="delta up" style="margin-top:8px"><span class="arw">▲</span>前年比 +8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3ヶ月推移 ＆ 個人貢献 ============ -->
+  <div class="section"><h2>推移・個人貢献</h2><span class="hint">直近3ヶ月 同日ベース</span></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd"><h3>直近3ヶ月 推移（同日ベース）</h3><span class="sub">今年 vs 昨年</span></div>
+      <div class="bd">
+        <svg viewBox="0 0 460 190" width="100%" height="190" role="img" aria-label="チーム月次推移">
+          <defs>
+            <linearGradient id="tArea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#b8501f" stop-opacity=".26"/>
+              <stop offset="1" stop-color="#b8501f" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g stroke="#efecf6" stroke-width="1">
+            <line x1="40" y1="40" x2="440" y2="40"/><line x1="40" y1="80" x2="440" y2="80"/>
+            <line x1="40" y1="120" x2="440" y2="120"/><line x1="40" y1="150" x2="440" y2="150"/>
+          </g>
+          <path d="M40,100 L170,70 L300,50 L430,40 L430,150 L40,150 Z" fill="url(#tArea)"/>
+          <polyline points="40,140 170,110 300,90 430,80" fill="none" stroke="#c9c2da" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+          <polyline points="40,100 170,70 300,50 430,40" fill="none" stroke="#b8501f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#b8501f">
+            <circle cx="40" cy="100" r="4.5"/><circle cx="170" cy="70" r="4.5"/>
+            <circle cx="300" cy="50" r="4.5"/><circle cx="430" cy="40" r="5.5" stroke="#fff" stroke-width="2"/>
+          </g>
+          <g fill="#9a97ab" font-size="11" font-weight="700" text-anchor="middle">
+            <text x="40" y="172">4月</text><text x="170" y="172">5月</text>
+            <text x="300" y="172">6月</text><text x="430" y="172">7月(途中)</text>
+          </g>
+        </svg>
+        <div class="flex" style="gap:16px;margin-top:4px">
+          <span class="small"><b style="color:#b8501f">●</b> 今年（同日）</span>
+          <span class="small muted"><b style="color:#c9c2da">╌</b> 昨年（同日）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>個人貢献</h3><span class="sub">当月 ¥56M</span></div>
+      <div class="bd">
+        <div class="barlist" style="gap:20px;margin-top:8px">
+          <div class="barrow"><span class="nm">櫻井</span><span class="track" style="height:20px"><span class="fill v" style="width:57%"></span></span><span class="amt">¥32M</span></div>
+          <div class="barrow"><span class="nm">その他メンバー</span><span class="track" style="height:20px"><span class="fill o" style="width:43%"></span></span><span class="amt">¥24M</span></div>
+        </div>
+        <hr class="hr">
+        <div class="flex between">
+          <span class="small muted" style="font-weight:700">合計</span>
+          <span style="font-size:18px;font-weight:800">¥56M</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ チャネル内訳（JTB・西川屋／直販TOP20） ============ -->
+  <div class="section"><h2>チャネル内訳</h2><span class="hint">JTB・西川屋は個別＋合算／直販はTOP20とその他</span></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd"><h3>JTB・ニシカワヤ（西川屋）</h3><span class="sub">個別＋合算（将来分離に対応）</span></div>
+      <div class="bd">
+        <div class="grid g3" style="gap:12px">
+          <div class="kpi" style="box-shadow:none;border:1px solid var(--line)"><div class="label">JTB</div><div class="num" style="font-size:28px">¥19<small>M</small></div></div>
+          <div class="kpi" style="box-shadow:none;border:1px solid var(--line)"><div class="label">西川屋</div><div class="num" style="font-size:28px">¥14<small>M</small></div></div>
+          <div class="kpi feature" style="padding:14px 16px"><div class="label">合算</div><div class="num" style="font-size:28px">¥33<small>M</small></div></div>
+        </div>
+        <div class="barlist" style="margin-top:16px">
+          <div class="barrow"><span class="nm">JTB</span><span class="track"><span class="fill v" style="width:58%"></span></span><span class="amt">¥19M</span></div>
+          <div class="barrow"><span class="nm">西川屋</span><span class="track"><span class="fill o" style="width:42%"></span></span><span class="amt">¥14M</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>直販（TOP20 / その他）</h3><span class="sub">主要客以外の動向を重視</span></div>
+      <div class="bd">
+        <div class="flex between" style="align-items:flex-end">
+          <div>
+            <div class="small muted" style="font-weight:700">TOP20 合計</div>
+            <div class="bigmove up"><span class="arw">▲</span><span class="v">+¥12M</span></div>
+          </div>
+          <div style="text-align:right">
+            <div class="small muted" style="font-weight:700">その他（主要客以外）</div>
+            <div class="bigmove down"><span class="arw">▼</span><span class="v">−¥4M</span></div>
+          </div>
+        </div>
+        <hr class="hr">
+        <p class="small muted" style="margin:0 2px">主要客以外の落ち込みを早期に検知。TOP20は好調も、その他の失速に注意。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ トピックス ＆ 新規獲得・ロスト ============ -->
+  <div class="section"><h2>今週のトピックス・新規獲得</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd"><h3>トピックス・懸念</h3><span class="sub">フリーテキスト</span></div>
+      <div class="bd">
+        <div class="topics" style="grid-template-columns:1fr">
+          <div class="topic"><div class="ch">レジャー <span class="badge" style="background:#e7f4ec;color:#2e844a">好調</span></div><div class="txt">レジャー施設向けが好調に推移。稼働回復を追い風に発注量が増加。</div></div>
+          <div class="topic warn"><div class="ch">レジャー以外 <span class="badge w">横ばい</span></div><div class="txt">ビジネスホテル等は横ばい。PB改定提案の価格交渉が継続中。</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>新規獲得状況</h3><span class="sub"><span class="chip on" style="padding:3px 10px;font-size:11px">先週分</span> 新しい順</span></div>
+      <div class="bd">
+        <div class="stack">
+          <div class="item"><span class="ic green">🆕</span><div><div class="t">都ホテル京都 UV・リップ拡販</div><div class="d">7/16 新規 ・ 受注角度 60%</div></div><span class="r up-c">獲得</span></div>
+          <div class="item"><span class="ic violet">🆕</span><div><div class="t">サンR沖縄 什器入替</div><div class="d">7/14 情報収集 ・ 受注角度 30%</div></div><span class="r">進行</span></div>
+          <div class="item"><span class="ic red">❌</span><div><div class="t">◯◯ビジネスH アメニティ更新</div><div class="d">競合採用でロスト（7/15）</div></div><span class="r red">ロスト</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notememo">💡 <b>7/9決定の反映</b>：チームはレジャー/レジャー以外で区分表示／JTB・西川屋は個別＋合算（将来の分離に対応）／直販はTOP20とその他で主要客以外の動向を重視／新規獲得は先週分フィルタ・新しい順＋ロスト情報も可視化。案Bは達成ゲージと推移チャートで勢いを一目に。</div>
+
+</div>
+</body>
+</html>

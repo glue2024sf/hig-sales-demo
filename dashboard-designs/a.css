@@ -1,0 +1,276 @@
+/* ============================================================
+   デザイン案A｜Lightning Standard（クラシック）
+   HIG 営業ダッシュボード 共通スタイル（a-overall / a-personal / a-team 共有）
+   外部依存ゼロ・自己完結
+   ============================================================ */
+
+:root{
+  --navy:#032d60;
+  --navy2:#04396e;
+  --blue:#0176d3;
+  --blue-d:#014486;
+  --ink:#181818;
+  --ink2:#2e2e2e;
+  --mut:#5c6670;
+  --line:#dddbda;
+  --line2:#ecebea;
+  --bg:#f3f3f3;
+  --card:#ffffff;
+  --green:#2e844a;
+  --green-bg:#eafaee;
+  --amber:#a86403;
+  --amber-bg:#fef5e7;
+  --red:#ba0517;
+  --red-bg:#fdecee;
+  --blue-bg:#eaf5fe;
+  --gray:#706e6b;
+  --gray-bg:#f3f2f2;
+  --up:#2e844a;
+  --down:#ba0517;
+  --shadow:0 2px 4px rgba(0,0,0,.07),0 0 1px rgba(0,0,0,.10);
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; }
+body{
+  font-family:"Salesforce Sans",-apple-system,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  font-size:13px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:var(--blue-d); }
+
+/* ---- 横断バー（3案共通ナビ） ---- */
+.appbar{
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:9px 18px;
+  flex-wrap:wrap;
+}
+.appbar .brand{ display:flex; align-items:center; gap:8px; font-weight:600; font-size:13px; white-space:nowrap; }
+.appbar .brand .dot{ background:var(--blue); border-radius:4px; padding:2px 8px; font-weight:700; letter-spacing:.5px; }
+.appbar .brand .sep{ opacity:.55; }
+.appbar nav{ display:flex; gap:4px; margin:0 auto; }
+.appbar nav a{
+  color:#cfe3f7; text-decoration:none; font-size:13px; font-weight:500;
+  padding:5px 14px; border-radius:6px; white-space:nowrap;
+}
+.appbar nav a:hover{ background:rgba(255,255,255,.12); color:#fff; }
+.appbar nav a.on{ background:var(--blue); color:#fff; font-weight:600; }
+.appbar .back{ color:#cfe3f7; text-decoration:none; font-size:12.5px; white-space:nowrap; }
+.appbar .back:hover{ color:#fff; }
+
+/* ---- ページヘッダ（SLDSのオブジェクトヘッダ風） ---- */
+.pagehead{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:14px 22px 12px;
+}
+.pagehead .row{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; max-width:1220px; margin:0 auto; }
+.pagehead .ic{
+  width:40px; height:40px; border-radius:8px; background:var(--blue);
+  color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; flex:none;
+}
+.pagehead .eyebrow{ color:var(--mut); font-size:11.5px; letter-spacing:.3px; text-transform:uppercase; }
+.pagehead h1{ margin:1px 0 0; font-size:19px; font-weight:700; color:#080707; }
+.pagehead .grow{ flex:1; }
+.pagehead .who{ font-size:12px; color:var(--mut); text-align:right; }
+.pagehead .who b{ color:var(--ink2); }
+
+/* ---- ツールバー（週・会計基準チップ） ---- */
+.toolbar{
+  max-width:1220px; margin:14px auto 0; padding:0 22px;
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.chip{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; padding:5px 12px; border-radius:999px;
+  border:1px solid var(--line); background:#fff; color:var(--ink2); cursor:default;
+}
+.chip.on{ background:var(--navy); border-color:var(--navy); color:#fff; font-weight:600; }
+.chip.group{ padding:3px; gap:0; border-radius:8px; }
+.chip.group b{ padding:4px 11px; border-radius:6px; font-weight:600; font-size:12px; }
+.chip.group b.sel{ background:var(--blue); color:#fff; }
+.chip.group b.off{ color:var(--mut); }
+.toolbar .grow{ flex:1; }
+.toolbar .hint{ font-size:11.5px; color:var(--mut); }
+
+/* ---- 本文コンテナ ---- */
+.wrap{ max-width:1220px; margin:0 auto; padding:16px 22px 46px; }
+
+/* ---- セクション見出し ---- */
+.sec{ margin:22px 0 10px; display:flex; align-items:center; gap:9px; }
+.sec:first-child{ margin-top:6px; }
+.sec h2{ margin:0; font-size:14px; font-weight:700; color:#080707; }
+.sec .bar{ width:3px; height:15px; background:var(--blue); border-radius:2px; }
+.sec .note{ font-size:11.5px; color:var(--mut); font-weight:400; }
+.sec .grow{ flex:1; }
+
+/* ---- カード ---- */
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  box-shadow:var(--shadow); overflow:hidden;
+}
+.card > .hd{
+  padding:11px 15px; border-bottom:1px solid var(--line2);
+  font-size:13px; font-weight:700; color:#080707;
+  display:flex; align-items:center; gap:8px;
+}
+.card > .hd .sub{ font-weight:400; color:var(--mut); font-size:11.5px; margin-left:auto; }
+.card > .bd{ padding:15px; }
+.card > .bd.flush{ padding:0; }
+
+/* ---- グリッド ---- */
+.grid{ display:grid; gap:14px; }
+.g2{ grid-template-columns:repeat(2,1fr); }
+.g3{ grid-template-columns:repeat(3,1fr); }
+.g4{ grid-template-columns:repeat(4,1fr); }
+@media(max-width:900px){ .g4{ grid-template-columns:repeat(2,1fr); } .g3{ grid-template-columns:1fr; } .g2{ grid-template-columns:1fr; } }
+@media(max-width:560px){ .g4{ grid-template-columns:1fr; } }
+
+/* ---- KPIカード ---- */
+.kpi{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  box-shadow:var(--shadow); padding:13px 15px;
+}
+.kpi .label{ font-size:11.5px; color:var(--mut); font-weight:600; text-transform:uppercase; letter-spacing:.3px; }
+.kpi .val{ font-size:27px; font-weight:700; color:#080707; margin:5px 0 2px; line-height:1.1; letter-spacing:-.5px; }
+.kpi .val small{ font-size:14px; font-weight:600; color:var(--mut); margin-left:2px; }
+.kpi .val .sub{ font-size:13px; font-weight:600; color:var(--mut); }
+.kpi .sub2{ font-size:11.5px; color:var(--mut); }
+.kpi .delta{ font-size:12px; font-weight:600; display:flex; gap:8px; flex-wrap:wrap; }
+.kpi .delta .up{ color:var(--up); }
+.kpi .delta .down{ color:var(--down); }
+.kpi .delta .flat{ color:var(--mut); }
+
+/* ---- ピル（ステータス） ---- */
+.pill{ display:inline-block; font-size:11px; font-weight:600; padding:2px 9px; border-radius:999px; white-space:nowrap; border:1px solid transparent; line-height:1.5; }
+.pill.green{ background:var(--green-bg); color:var(--green); border-color:#bfe6c9; }
+.pill.blue{ background:var(--blue-bg); color:var(--blue-d); border-color:#bfe0fa; }
+.pill.amber{ background:var(--amber-bg); color:var(--amber); border-color:#f5d9a8; }
+.pill.red{ background:var(--red-bg); color:var(--red); border-color:#f6bcc2; }
+.pill.gray{ background:var(--gray-bg); color:var(--gray); border-color:#e0dedb; }
+
+/* ---- テーブル（SLDS風） ---- */
+.tbl{ width:100%; border-collapse:collapse; font-size:12.5px; }
+.tbl thead th{
+  text-align:left; font-size:11px; font-weight:700; color:var(--mut);
+  text-transform:uppercase; letter-spacing:.4px;
+  padding:9px 14px; background:#fafaf9; border-bottom:1px solid var(--line);
+  white-space:nowrap;
+}
+.tbl tbody td{ padding:9px 14px; border-bottom:1px solid var(--line2); color:var(--ink2); vertical-align:middle; }
+.tbl tbody tr:last-child td{ border-bottom:0; }
+.tbl tbody tr:hover{ background:#f8fbff; }
+.tbl .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tbl th.num{ text-align:right; }
+.tbl .lk{ color:var(--blue-d); font-weight:600; }
+.tbl .lk a{ color:var(--blue-d); text-decoration:none; }
+.tbl .lk a:hover{ text-decoration:underline; }
+.tbl .muted{ color:var(--mut); }
+.tbl-scroll{ overflow-x:auto; }
+.tbl-scroll .tbl{ min-width:560px; }
+
+/* ---- 増減の色 ---- */
+.up{ color:var(--up); font-weight:600; }
+.down{ color:var(--down); font-weight:600; }
+.pos{ color:var(--up); font-weight:700; }
+.neg{ color:var(--down); font-weight:700; }
+
+/* ---- バー（達成率） ---- */
+.metric{ display:flex; align-items:center; gap:12px; margin:8px 0; }
+.metric .name{ width:118px; font-size:12px; color:var(--ink2); flex:none; }
+.metric .track{ flex:1; height:12px; background:#ecebea; border-radius:999px; overflow:hidden; position:relative; }
+.metric .track .fill{ position:absolute; left:0; top:0; bottom:0; border-radius:999px; }
+.metric .track .fill.blue{ background:var(--blue); }
+.metric .track .fill.green{ background:var(--green); }
+.metric .track .fill.amber{ background:#eab308; }
+.metric .track .fill.gray{ background:#c9ced6; }
+.metric .track .goal{ position:absolute; top:-2px; bottom:-2px; width:2px; background:#514f4d; }
+.metric .v{ width:66px; text-align:right; font-size:12.5px; font-weight:700; flex:none; font-variant-numeric:tabular-nums; }
+
+/* ---- チャート凡例 ---- */
+.legend{ display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; font-size:11.5px; color:var(--mut); }
+.legend .it{ display:inline-flex; align-items:center; gap:6px; }
+.legend .sw{ width:12px; height:3px; border-radius:2px; display:inline-block; }
+.legend .sw.dot{ width:9px; height:9px; border-radius:50%; }
+
+/* ---- 獲得状況 3ブロック ---- */
+.acq{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media(max-width:760px){ .acq{ grid-template-columns:1fr; } }
+.acq .blk{ border:1px solid var(--line); border-radius:8px; padding:13px 15px; background:#fff; box-shadow:var(--shadow); }
+.acq .blk .top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.acq .blk .top .t{ font-size:13px; font-weight:700; }
+.acq .blk .big{ font-size:23px; font-weight:700; letter-spacing:-.5px; }
+.acq .blk .big small{ font-size:13px; color:var(--mut); font-weight:600; margin-left:3px; }
+.acq .blk .cnt{ font-size:12px; color:var(--mut); margin-top:2px; }
+.acq .blk .rate{ margin-top:9px; }
+.acq .blk .must{ margin-top:9px; font-size:11px; color:var(--amber); background:var(--amber-bg); border:1px solid #f5d9a8; border-radius:6px; padding:5px 8px; }
+.acq .blk.lead-t{ border-top:3px solid var(--blue); }
+.acq .blk.deal-t{ border-top:3px solid var(--amber); }
+.acq .blk.pipe-t{ border-top:3px solid var(--green); }
+
+/* ---- アラート/ToDo リスト ---- */
+.list{ list-style:none; margin:0; padding:0; }
+.list li{ display:flex; align-items:flex-start; gap:10px; padding:9px 15px; border-bottom:1px solid var(--line2); font-size:12.5px; }
+.list li:last-child{ border-bottom:0; }
+.list li .ic{ font-size:14px; line-height:1.3; flex:none; margin-top:1px; }
+.list li .tx{ flex:1; color:var(--ink2); }
+.list li .tx .meta{ color:var(--mut); font-size:11.5px; }
+.list li .tag{ flex:none; }
+
+/* ---- 2カラム内訳 (JTB/西川屋 等) ---- */
+.split{ display:grid; grid-template-columns:1fr 1fr auto; gap:0; }
+.breakdown{ display:flex; gap:12px; flex-wrap:wrap; }
+.bd-box{ flex:1; min-width:150px; border:1px solid var(--line); border-radius:8px; padding:12px 14px; background:#fff; }
+.bd-box.sum{ background:#f8fbff; border-color:#bfe0fa; }
+.bd-box .k{ font-size:11.5px; color:var(--mut); font-weight:600; }
+.bd-box .v{ font-size:21px; font-weight:700; letter-spacing:-.5px; margin-top:3px; }
+.bd-box .v small{ font-size:12px; color:var(--mut); font-weight:600; }
+.bd-box .n{ font-size:11px; color:var(--mut); margin-top:2px; }
+
+/* ---- フリーテキスト（トピックス・懸念） ---- */
+.topics{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:760px){ .topics{ grid-template-columns:1fr; } }
+.topic{ border:1px solid var(--line); border-left:3px solid var(--blue); border-radius:6px; padding:10px 13px; background:#fff; }
+.topic.warn{ border-left-color:var(--amber); background:var(--amber-bg); }
+.topic .h{ font-size:12px; font-weight:700; margin-bottom:4px; display:flex; align-items:center; gap:6px; }
+.topic .h .who{ font-weight:400; color:var(--mut); font-size:11px; }
+.topic p{ margin:0; font-size:12px; color:var(--ink2); }
+
+/* ---- 使用客 TOP20/その他 ---- */
+.usebox{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media(max-width:760px){ .usebox{ grid-template-columns:1fr; } }
+.usecol{ border:1px solid var(--line); border-radius:8px; padding:13px 15px; background:#fff; }
+.usecol .h{ font-size:12px; font-weight:700; color:var(--ink2); display:flex; justify-content:space-between; align-items:center; }
+.usecol .amt{ font-size:22px; font-weight:700; letter-spacing:-.5px; margin:6px 0 8px; }
+.usecol .rows{ font-size:12px; }
+.usecol .rows .r{ display:flex; justify-content:space-between; padding:4px 0; border-top:1px dashed var(--line2); }
+.usecol.up-t{ border-top:3px solid var(--green); }
+.usecol.down-t{ border-top:3px solid var(--red); }
+
+/* ---- 小道具 ---- */
+.tags{ display:flex; gap:6px; flex-wrap:wrap; }
+.muted{ color:var(--mut); }
+.divi{ border:0; border-top:1px solid var(--line2); margin:14px 0; }
+.pin{ font-size:11px; font-weight:700; padding:2px 8px; border-radius:5px; background:var(--blue-bg); color:var(--blue-d); }
+
+/* ---- 論点メモ ---- */
+.memo{
+  margin-top:26px; background:#fffdf7; border:1px solid #f0e3c4; border-left:4px solid #eab308;
+  border-radius:8px; padding:13px 16px; font-size:12.5px; color:#5b4a1a;
+}
+.memo b{ color:#3f3410; }
+
+/* ---- レスポンシブ微調整 ---- */
+@media(max-width:640px){
+  .appbar nav{ order:3; width:100%; margin:6px 0 0; justify-content:center; flex-wrap:wrap; }
+  .appbar .back{ margin-left:auto; }
+  .wrap{ padding:14px 14px 40px; }
+  .pagehead,.toolbar{ padding-left:14px; padding-right:14px; }
+}

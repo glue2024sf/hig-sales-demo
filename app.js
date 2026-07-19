@@ -7,6 +7,7 @@
     {
       key: 'dash', label: 'ダッシュボード', href: 'dashboard-weekly.html',
       menu: [
+        { label: '★ デザイン3案（全体・個人・チーム）', href: 'dashboard-designs/index.html' },
         { label: '週報（毎週全員）', href: 'dashboard-weekly.html' },
         { label: '営業チーム', href: 'dashboard-team.html' },
         { label: '個人', href: 'dashboard-personal.html' },

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>個人ホーム（三原）｜デザイン案B Executive Visual</title>
+<link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+<!-- 横断バー（3案共通） -->
+<div class="topbar">
+  <div class="brand"><span class="dot">📊</span><span>デザイン案B<small>｜Executive Visual</small></span></div>
+  <nav>
+    <a href="b-overall.html">全体</a>
+    <a class="on" href="b-personal.html">個人</a>
+    <a href="b-team.html">チーム</a>
+  </nav>
+  <a class="back" href="index.html">← 3案を比較</a>
+</div>
+
+<div class="wrap">
+
+  <div class="page-head">
+    <div>
+      <div class="eyebrow">個人ホーム</div>
+      <h1>三原 さん</h1>
+    </div>
+    <div class="who">チャネル：直販</div>
+    <div class="spacer"></div>
+    <div class="seg"><span class="on">月</span><span>四半期</span><span>今年度</span></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip on">2026年7月</span>
+    <span class="grow"></span>
+    <span class="note">💡 個人ホームは<b style="color:#6b34c0">売上集計を載せない</b>（個人管理項目）。新規獲得状況・アラート・見込みにフォーカス。</span>
+  </div>
+
+  <!-- ============ 個人目標 vs 実績（ゲージ） ============ -->
+  <div class="section"><h2>個人目標 vs 実績</h2><span class="hint">月 / 四半期 / 今年度で切替</span></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd"><h3>月次 達成率</h3><span class="sub">2026年7月</span></div>
+      <div class="bd">
+        <div class="gauge">
+          <svg width="200" height="122" viewBox="0 0 200 122" role="img" aria-label="個人月次達成率ゲージ">
+            <defs>
+              <linearGradient id="pg" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#6b34c0"/><stop offset="1" stop-color="#b8501f"/>
+              </linearGradient>
+            </defs>
+            <path d="M25,100 A75,75 0 0 1 175,100" fill="none" stroke="#efecf6" stroke-width="20" stroke-linecap="round"/>
+            <!-- 80% : 0.80 * 235.6 = 188 -->
+            <path d="M25,100 A75,75 0 0 1 175,100" fill="none" stroke="url(#pg)" stroke-width="20" stroke-linecap="round" stroke-dasharray="188 236"/>
+            <text x="100" y="86" text-anchor="middle" font-size="44" font-weight="800" fill="#271f3d">80%</text>
+            <text x="100" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="#9a97ab">達成率</text>
+          </svg>
+          <div class="read">
+            <div class="cap">実績 / 月目標</div>
+            <div class="pct" style="font-size:30px">¥24M<span style="font-size:16px;color:#9a97ab"> / ¥30M</span></div>
+            <div class="cmp"><span class="delta flat" style="margin-top:8px">残り ¥6M で目標達成</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>目標到達バー</h3><span class="sub">月 → 四半期 → 今年度</span></div>
+      <div class="bd">
+        <div class="barlist" style="gap:18px;margin-top:6px">
+          <div class="barrow"><span class="nm">月（7月）</span><span class="track" style="height:16px"><span class="fill" style="width:80%"></span></span><span class="amt">80%</span></div>
+          <div class="barrow"><span class="nm">四半期</span><span class="track" style="height:16px"><span class="fill v" style="width:68%"></span></span><span class="amt">68%</span></div>
+          <div class="barrow"><span class="nm">今年度</span><span class="track" style="height:16px"><span class="fill o" style="width:41%"></span></span><span class="amt">41%</span></div>
+        </div>
+        <p class="small muted" style="margin:16px 2px 0">※ 個人目標 vs 実績のみ表示（チャネル全体の売上集計は非表示）。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 新規獲得状況（3ブロック大型カード） ============ -->
+  <div class="section"><h2>新規獲得状況</h2><span class="hint">導入 / 内定 / 見込み（件数・金額・達成率）</span></div>
+  <div class="acq">
+    <div class="box intro">
+      <span class="tag">✔ 導入</span>
+      <div class="cnt">5<small> 件</small></div>
+      <div class="money">¥40M</div>
+      <div class="rate">達成率 88%</div>
+      <div class="track"><i style="width:88%"></i></div>
+    </div>
+    <div class="box pre">
+      <span class="tag">◎ 内定</span>
+      <div class="cnt">3<small> 件</small></div>
+      <div class="money">¥24M</div>
+      <div class="rate">達成率 60%</div>
+      <div class="track"><i style="width:60%"></i></div>
+    </div>
+    <div class="box lead">
+      <span class="tag">◇ 見込み</span>
+      <div class="cnt">8<small> 件</small></div>
+      <div class="money">¥52M</div>
+      <div class="rate">パイプライン合計</div>
+      <div class="track"><i style="width:74%"></i></div>
+      <div class="must">⚠ 見込みは「受注角度％」と「導入予定月」の入力を必須表示</div>
+    </div>
+  </div>
+
+  <!-- ============ アラート ＆ ネクストアクション ============ -->
+  <div class="section"><h2>対応アラート・ネクストアクション</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="hd"><h3>対応アラート</h3><span class="sub">要対応 4件</span></div>
+      <div class="bd">
+        <div class="stack">
+          <div class="item"><span class="ic red">⏰</span><div><div class="t">グランビューHD 内定フォロー</div><div class="d">期限超過（6/16）</div></div><span class="r red">超過</span></div>
+          <div class="item"><span class="ic amber">📦</span><div><div class="t">サンR沖縄 サンプル追客</div><div class="d">追客遅延（13日経過）</div></div><span class="r">遅延</span></div>
+          <div class="item"><span class="ic violet">📅</span><div><div class="t">やまと温泉 提案訪問</div><div class="d">本日 14:00</div></div><span class="r">本日</span></div>
+          <div class="item"><span class="ic green">📄</span><div><div class="t">都ホテル 見積送付</div><div class="d">タスク未完</div></div><span class="r">未完</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="hd"><h3>ネクストアクション（ToDo）</h3></div>
+      <div class="bd">
+        <div class="stack">
+          <div class="item"><span class="ic violet">✅</span><div><div class="t">グランビューHD 本社決済確認</div><div class="d">期限 6/27</div></div></div>
+          <div class="item"><span class="ic violet">✅</span><div><div class="t">サンR沖縄 追客TEL</div><div class="d">本日中</div></div><span class="r red">本日</span></div>
+          <div class="item"><span class="ic violet">✅</span><div><div class="t">都ホテル 見積条件の詰め</div><div class="d">期限 6/28</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 個人の見込み案件 ============ -->
+  <div class="section"><h2>個人の見込み案件</h2><span class="hint">受注角度・導入予定月あり</span></div>
+  <div class="card">
+    <div class="bd" style="padding:6px">
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>案件</th><th>チェーン/施設</th><th class="num">年間見込</th><th class="num">年度内</th><th>ステージ</th><th class="num">受注角度</th><th>導入予定月</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">2026春 新規導入</td><td>グランビューHD</td><td class="num">¥24.0M</td><td class="num">¥16.0M</td><td><span class="pill orange">内定</span></td><td class="num">80%</td><td>2026-09</td></tr>
+            <tr><td class="lk">什器入替提案</td><td>サンR沖縄</td><td class="num">¥6.8M</td><td class="num">¥4.0M</td><td><span class="pill blue">情報収集済</span></td><td class="num">30%</td><td>2026-11</td></tr>
+            <tr><td class="lk">UV・リップ拡販</td><td>都ホテル京都</td><td class="num">¥3.2M</td><td class="num">¥2.1M</td><td><span class="pill blue">営業済</span></td><td class="num">60%</td><td>2026-08</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ サンプル追客 ============ -->
+  <div class="section"><h2>サンプル追客</h2></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="bd">
+        <div class="item" style="border:0;padding:6px 2px">
+          <span class="ic amber">📦</span>
+          <div><div class="t">サンR沖縄 A95G（5/29 発送）</div><div class="d">追客遅延 — 早期TELフォロー要</div></div>
+          <span class="r red">遅延</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="bd">
+        <div class="item" style="border:0;padding:6px 2px">
+          <span class="ic green">📦</span>
+          <div><div class="t">グランビュー箱根 SG-07（6/2 発送）</div><div class="d">受注へ転換</div></div>
+          <span class="r up-c">転換</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notememo">💡 <b>7/9決定の反映</b>：個人ホームは売上集計を載せず「新規獲得状況（導入・内定・見込みの3ブロック）」を主役に。見込みは受注角度％・導入予定月を必須表示。アラート/ToDo/サンプル追客で日々の抜け漏れを防ぐ。</div>
+
+</div>
+</body>
+</html>
