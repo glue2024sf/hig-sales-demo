@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>希望レイアウト → 実装 対応表 | HIG 営業デモ</title>
+<title>ご指摘の反映状況（対応表）| HIG</title>
 <style>
   :root{ --ink:#16324f; --mut:#5a6570; --line:#e3e8ee; --bg:#f4f6f9; --blue:#0176d3; }
   *{ box-sizing:border-box; }
@@ -11,215 +11,158 @@
   .top{ background:#032d60; color:#fff; padding:14px 22px; display:flex; align-items:center; gap:12px; }
   .top .badge{ background:var(--blue); padding:2px 9px; border-radius:5px; font-weight:700; font-size:13px; }
   .top h1{ font-size:16px; margin:0; font-weight:600; }
-  .wrap{ max-width:1160px; margin:0 auto; padding:26px 22px 60px; }
-  .lead{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin-bottom:8px; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:26px 22px 60px; }
+  .lead{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
   .lead .note{ color:var(--mut); font-size:13px; margin-top:8px; line-height:1.75; }
-  .alert{ background:#fff8e6; border:1px solid #f0d9a0; border-left:4px solid #e0a800; border-radius:8px; padding:14px 16px; margin:16px 0 22px; font-size:13.5px; line-height:1.8; }
-  .alert b{ color:#8a6100; }
+  .score{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0 8px; }
+  @media(max-width:700px){ .score{ grid-template-columns:1fr; } }
+  .sc{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; border-left:5px solid; }
+  .sc.a{ border-left-color:#2e844a; } .sc.b{ border-left-color:#e0a800; } .sc.c{ border-left-color:#c23934; }
+  .sc .n{ font-size:26px; font-weight:800; line-height:1.1; }
+  .sc.a .n{ color:#1a7f37; } .sc.b .n{ color:#a35b00; } .sc.c .n{ color:#b3261e; }
+  .sc .l{ font-size:12.5px; color:var(--mut); margin-top:3px; }
+  .links{ display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 4px; }
+  .links a{ text-decoration:none; font-size:13px; padding:8px 13px; border-radius:7px; border:1px solid #cfd8e2; color:#0a6ab5; background:#fff; }
+  .links a.main{ background:#2e844a; color:#fff; border-color:#2e844a; font-weight:700; }
   h2{ font-size:16px; margin:32px 0 4px; padding-left:9px; border-left:4px solid var(--blue); }
   .src{ color:var(--mut); font-size:12.5px; margin:0 0 10px 13px; }
   .tbl{ background:#fff; border:1px solid var(--line); border-radius:10px; overflow-x:auto; }
-  table{ border-collapse:collapse; width:100%; min-width:860px; font-size:13px; }
+  table{ border-collapse:collapse; width:100%; min-width:840px; font-size:13px; }
   th,td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.65; }
   th{ background:#f7f9fb; font-weight:600; color:#3a4650; white-space:nowrap; }
   tr:last-child td{ border-bottom:0; }
-  .st{ display:inline-block; font-size:11px; border-radius:999px; padding:2px 9px; white-space:nowrap; font-weight:600; }
+  .st{ display:inline-block; font-size:11px; border-radius:999px; padding:2px 9px; white-space:nowrap; font-weight:700; }
   .ok{ background:#e6f4ea; color:#1a7f37; border:1px solid #b7e0c4; }
-  .part{ background:#fff4e5; color:#a35b00; border:1px solid #f2d3a5; }
+  .chk{ background:#fff4e5; color:#a35b00; border:1px solid #f2d3a5; }
   .no{ background:#fdecec; color:#b3261e; border:1px solid #f3c2c0; }
-  .legend{ display:flex; gap:16px; flex-wrap:wrap; font-size:12.5px; color:var(--mut); margin-top:10px; }
   .foot{ margin-top:34px; color:var(--mut); font-size:12.5px; }
   .foot a{ color:#0a6ab5; }
   .q{ background:#fff; border:1px solid var(--line); border-left:4px solid var(--blue); border-radius:8px; padding:14px 18px; margin-top:12px; font-size:13.5px; line-height:1.9; }
-  .q b{ display:block; margin-bottom:8px; font-size:14px; }
+  .q b{ display:block; margin-bottom:8px; font-size:14px; color:#032d60; }
   ol{ margin:0; padding-left:20px; }
+  .dummy{ background:#fff8e6; border:1px solid #f0d9a0; border-left:4px solid #e0a800; border-radius:8px; padding:13px 16px; font-size:13px; line-height:1.8; color:#5c4a12; margin-top:14px; }
+  .dummy b{ color:#8a6100; }
 </style>
 </head>
 <body>
-  <div class="top"><span class="badge">HIG</span><h1>希望レイアウト → 実装 対応表（いただいた4枚の資料との突き合わせ）</h1></div>
+  <div class="top"><span class="badge">HIG</span><h1>ご指摘の反映状況（対応表）— 2026/07/23 時点</h1></div>
   <div class="wrap">
 
     <div class="lead">
-      玉川様よりお送りいただいた <b>「全体」「チーム①」「チーム②」「個人」</b> の4枚（前回打ち合わせ時にお見せいただいた希望レイアウト）と、
-      現在の3案デモを1項目ずつ突き合わせた結果です。
+      玉川様・奥迫様よりいただいた希望レイアウト4枚（全体／チーム①／チーム②／個人）のご指摘を、
+      <b>1項目ずつ反映版の画面と突き合わせて検証</b>した結果です。全35項目。
       <div class="note">
-        ・デザインA／B／Cの3案は<b>中身（項目・指標）はすべて同一</b>のため、この対応表は3案すべてに共通です。<br>
-        ・画面上の数値・チェーン名はすべてダミーです。
+        「反映したつもり」ではなく、実際の画面ファイルを1項目ずつ確認して判定しています。
+        <b>反映できていないもの・解釈が合っているか自信がないものも、そのまま記載</b>しております。
+      </div>
+      <div class="links">
+        <a class="main" href="r-overall.html">① 全体を見る →</a>
+        <a href="r-team.html">② チーム</a>
+        <a href="r-personal.html">③ 個人</a>
       </div>
     </div>
 
-    <div class="alert">
-      <b>先に結論です。</b>
-      いただいた資料を拝見したところ、<b>現在のデモは「7/9にお伺いしたKPIの考え方」は反映できているものの、資料そのもののレイアウト・項目には届いていない部分が多くございました。</b>
-      特に <b>①全体の「チャネル5列 横並び」構成</b>、<b>②現行の週間営業報告書にある指標（3段階の目標／営業日進捗／BOTTOM10・増減額TOP10）</b>、
-      <b>③新規獲得・ロストの詳細項目（部屋数・使用商品・切替商品・業態など）</b>、<b>④営業社員別の新規獲得売上状況</b> が未反映です。
-      認識違いのまま作り込みを進めるのを避けるため、下表で<b>できている／一部／未反映</b>を包み隠さず整理いたしました。
-    </div>
-
-    <div class="alert" style="background:#eefaf1;border-color:#b7e0c4;border-left-color:#2e844a;color:#1a5c30">
-      <b style="color:#1a7f37">✅ 7/23 追記：下表で「一部のみ」「未反映」としていた箇所を反映した「反映版」を作成しました。</b>
-      <a href="r-overall.html" style="color:#0a6ab5;font-weight:700">① 全体</a> ／
-      <a href="r-team.html" style="color:#0a6ab5;font-weight:700">② チーム</a> ／
-      <a href="r-personal.html" style="color:#0a6ab5;font-weight:700">③ 個人</a>
-      　※ 数値・チェーン名はダミーです（いただいた資料は御社の実データのため公開ページには掲載しておりません）。
-    </div>
-
-    <div class="legend">
-      <span><span class="st ok">反映済</span> ご希望どおり実装できている</span>
-      <span><span class="st part">一部のみ</span> 考え方は入っているが資料と形が異なる</span>
-      <span><span class="st no">未反映</span> 現デモに存在しない（今回の宿題）</span>
+    <div class="score">
+      <div class="sc a"><div class="n">30</div><div class="l">✅ 反映済 — ご指摘どおり実装できています</div></div>
+      <div class="sc b"><div class="n">4</div><div class="l">🔶 要確認 — 実装しましたが、解釈が合っているかご確認ください</div></div>
+      <div class="sc c"><div class="n">1</div><div class="l">❌ 未反映 — 間に合っていません</div></div>
     </div>
 
     <!-- ============ 全体 ============ -->
     <h2>① 全体</h2>
-    <p class="src">いただいた資料：「パターン② セクション分割型（チャネル別に深掘り）／週間営業レポート」＋ 上部の手書きタブ構成</p>
+    <p class="src">資料：「パターン② セクション分割型（チャネル別に深掘り）／週間営業レポート」＋ 上部の手書きタブ構成</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:27%">資料で拝見したご希望</th><th style="width:38%">現在のデモの状態</th><th style="width:35%">判定・対応方針</th></tr>
-        <tr>
-          <td>画面上部を <b>ホーム(個人)／全体／東マ／JTB・ニシカワヤ／直販・特販</b> のタブで切り替える（手書き部分）</td>
-          <td>「全体／チーム／個人」の3ページ構成。チームページは東京マツシマを主として1枚にまとめている</td>
-          <td><span class="st part">一部のみ</span><br>タブの粒度が異なります。<b>チャネル単位で独立したページ</b>に分ける形へ組み替えます</td>
-        </tr>
-        <tr>
-          <td><b>全体・東京マツシマ・JTB商事・ニシカワヤ・直販の5列を横並び</b>にし、各列に 売上／前年同期比％／目標／達成率／前年度実績／売上推移グラフ を縦に積む</td>
-          <td>上部にKPIカード4枚、その下に「チャネル別の動き」を別セクションとして配置。<b>5列横並びの形にはなっていない</b></td>
-          <td><span class="st no">未反映</span><br>ここが最も見た目の差が大きい箇所です。<b>資料どおりの5列セクション分割型に作り替えます</b></td>
-        </tr>
-        <tr>
-          <td>売上推移グラフの単位（資料は週次、手書きで「<b>月</b>」と修正）</td>
-          <td>直近3ヶ月の推移として表示</td>
-          <td><span class="st ok">反映済</span><br>手書きのご指示どおり月次で表示しています</td>
-        </tr>
-        <tr>
-          <td>「今週の主な活動・トピックス」を<b>テキストで書けるように</b>（手書き「テキストで書き」）。区分は 物流・生産／商品生産／経理・事務／人事労務 など</td>
-          <td>「今週のトピックス・懸念」セクションはあるが、区分が資料と異なる</td>
-          <td><span class="st part">一部のみ</span><br>区分を資料に合わせます。なお<b>Salesforceの標準ダッシュボードには自由入力欄を直接置けない</b>ため、週報レコードに入力→ダッシュボードに表示する形になります（要ご相談）</td>
-        </tr>
+        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
+        <tr><td>全体・東京マツシマ・JTB商事・ニシカワヤ・直販の<b>5列を横並び</b>にする（セクション分割型）</td><td>①全体ページ冒頭「チャネル別サマリー」。5列を横に並べ、各列を縦に積む構成へ組み替え</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>各列に 売上／前年同期比％／目標／達成率／前年度実績</td><td>各列の数値ブロックに5項目とも表示。あわせて<b>前年差（金額）</b>も追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>売上推移グラフを「<b>月</b>」にする（手書き修正）</td><td>各列下部のミニ棒グラフを月次（5月／6月／7月）に変更。今年・前年の2本並べ</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>今週の主な活動・トピックスを「<b>テキストで書き</b>」（手書き）</td><td>「今週の主な活動・トピックス」セクションに区分ごとの入力欄を再現</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>上部タブを <b>ホーム(個人)／全体／東マ／JTB・ニシカワヤ／直販・特販</b> に（手書き）</td><td>全画面共通の上部タブを5つに変更。ただし東マ／JTB・ニシカワヤ／直販・特販は<b>同一のチーム画面内の移動</b>で、独立ページには分けていません</td><td><span class="st chk">🔶 要確認</span><br>チャネルごとに<b>完全に別ページ</b>にすべきかご確認ください</td></tr>
+        <tr><td>トピックスの区分（手書きチェック：物流・生産／商品生産／経理・事務／人事労務）</td><td>手書きの4区分＋資料印刷部分の区分（新商品・販促／メンテナンス）を<b>合わせて6区分で仮置き</b></td><td><span class="st chk">🔶 要確認</span><br>区分の数と名称を確定させてください</td></tr>
+        <tr><td>右上の手書き「入力」</td><td>トピックスを入力できるようにする、というご指示と解釈し、入力欄の形で再現</td><td><span class="st chk">🔶 要確認</span><br>解釈が合っているかご確認ください</td></tr>
+        <tr><td>使用客 売上状況（TOP20／その他）※7/9決定</td><td>「使用客 売上状況」セクション。TOP20とその他を左右に分け、増減を色で表示</td><td><span class="st ok">✅ 反映済</span></td></tr>
       </table>
     </div>
 
     <!-- ============ チーム ============ -->
     <h2>② チーム</h2>
-    <p class="src">いただいた資料：「東京マツシマ 週間営業報告書（6月20日現在）」「売上TOP20 同日営業日比較」「四半期目標・結果サマリー(4-6月)」「新規獲得状況」「ロストヒアリング」「新規獲得売上状況」</p>
+    <p class="src">資料：「東京マツシマ 週間営業報告書」「売上TOP20 同日営業日比較」「四半期目標・結果サマリー」「新規獲得状況」「ロストヒアリング」「新規獲得売上状況」</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:27%">資料で拝見したご希望</th><th style="width:38%">現在のデモの状態</th><th style="width:35%">判定・対応方針</th></tr>
-        <tr>
-          <td>売上（月累計）／前年比％／<b>前年差（金額）</b>／目標達成率（単月評価）／目標金額</td>
-          <td>当月売上・前年比・目標・達成率を表示</td>
-          <td><span class="st part">一部のみ</span><br><b>前年差（金額）</b>が抜けています。追加します</td>
-        </tr>
-        <tr>
-          <td><b>営業日進捗（20/22日・進捗率90.9%）</b></td>
-          <td>該当なし</td>
-          <td><span class="st no">未反映</span><br>「今どのくらいの日数を消化したか」の指標として追加します</td>
-        </tr>
-        <tr>
-          <td>月間目標を <b>評価／努力目標／最低目標の3段階</b>で表示（9,000万／8,800万／8,600万）</td>
-          <td>目標は1本のみ</td>
-          <td><span class="st no">未反映</span><br>3段階の目標ラインを持てるよう項目設計から見直します</td>
-        </tr>
-        <tr>
-          <td>月売上推移（前年比較）… 今年と前年を並べた棒グラフ</td>
-          <td>直近3ヶ月の推移グラフあり</td>
-          <td><span class="st ok">反映済</span></td>
-        </tr>
-        <tr>
-          <td>3ヵ月累計（当年度実績／当年度計画／前年実績／前年比）</td>
-          <td>該当なし</td>
-          <td><span class="st no">未反映</span><br>累計ブロックとして追加します</td>
-        </tr>
-        <tr>
-          <td>今週のトピックスを <b>プラス要因／リスク・課題</b> の2分類で記載</td>
-          <td>「今週のトピックス・懸念」1枠</td>
-          <td><span class="st part">一部のみ</span><br>2分類に分けます</td>
-        </tr>
-        <tr>
-          <td>売上TOP20（<b>同日営業日比較</b>）／売上TOP10／<b>売上BOTTOM10</b>／<b>増減額TOP10（前年差の棒グラフ・増減で色分け）</b></td>
-          <td>「トップ20とその他」の分割のみ</td>
-          <td><span class="st part">一部のみ</span><br><b>BOTTOM10と増減額TOP10が未反映</b>です。「落ちている先を見つける」用途として重要と理解しましたので追加します</td>
-        </tr>
-        <tr>
-          <td>四半期目標・結果サマリー（4-6月）… 月×（件数・金額）で 目標／結果／達成率 のマトリクス</td>
-          <td>該当なし</td>
-          <td><span class="st no">未反映</span><br>表形式で追加します</td>
-        </tr>
-        <tr>
-          <td>新規獲得状況（化粧品＋インバス統合）… チェーン名／施設名／<b>部屋数</b>／商品内容／年間見込金額／<b>使用商品</b>／<b>切替商品</b>／<b>業態</b>／状況</td>
-          <td>新規獲得状況はあるが、件数・金額・達成率のみ</td>
-          <td><span class="st no">未反映</span><br>部屋数・使用商品・切替商品・業態など<b>アメニティ商談ならではの項目</b>が抜けていました。商談項目の設計に直結するため、7/24で確定させたい箇所です</td>
-        </tr>
-        <tr>
-          <td>ロストヒアリング（ロスト案件一覧）… エリア／施設名／部屋数／詳細（失注理由）</td>
-          <td>ロストは表示対象に含めているのみ</td>
-          <td><span class="st part">一部のみ</span><br><b>失注理由のヒアリング内容</b>を残す形にします</td>
-        </tr>
-        <tr>
-          <td>新規獲得売上状況… <b>営業社員別</b>に 新規獲得売上(累計)／進捗率／見込金額(年間)／<b>3ヵ月以内成約見込み(件数・金額)</b></td>
-          <td>該当なし（個人ページに個人単位の表示はあり）</td>
-          <td><span class="st no">未反映</span><br>チームページに<b>メンバー横並びの一覧</b>として追加します</td>
-        </tr>
-        <tr>
-          <td>JTB・ニシカワヤを個別＋合算で見たい</td>
-          <td>「JTB・西川屋（ニシカワヤ）」セクションで個別＋合算を表示</td>
-          <td><span class="st ok">反映済</span></td>
-        </tr>
+        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
+        <tr><td>売上（月累計）・前年比</td><td>「今月サマリー」1枚目</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>前年差（金額）</b></td><td>「今月サマリー」2枚目に独立表示</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>目標達成率（単月評価）・目標金額</td><td>「今月サマリー」3枚目</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>営業日進捗</b>（◯/◯日・進捗率）</td><td>「今月サマリー」4枚目。達成率が日数進捗を上回っているかが一目で分かる形に</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>月売上推移（前年比較）</td><td>今年・前年を並べた棒グラフ</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>月間目標を<b>3段階</b>（評価／努力目標／最低目標）で表示</td><td>「月間目標（3段階）」カード。3本のバーで色分けし、当月実績を下に並記</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>3ヵ月累計</b>（当年度実績／当年度計画／前年実績／前年比）</td><td>「3ヵ月累計（全体）」セクションに4項目を横並び</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>トピックスを<b>プラス要因／リスク・課題</b>の2分類に</td><td>「今週のトピックス」を左右2枠に分割</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>売上TOP20（<b>同日営業日比較</b>）の合計・前年比・前年差・直販売上</td><td>「売上ランキング」冒頭のサマリー4枚</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>売上TOP10</td><td>ランキング左列</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>売上BOTTOM10</b>（前年比）</td><td>ランキング中央列</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>増減額TOP10</b>（前年差・増減で色分け）</td><td>ランキング右列。中央を0として、増加は青・減少は赤で左右に振る棒グラフ</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>四半期目標・結果サマリー（月×件数・金額で 目標／結果／達成率）</td><td>「四半期目標・結果サマリー（4-6月）」のマトリクス表</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>新規獲得状況に <b>部屋数／商品内容／年間見込金額／使用商品／切替商品／業態／状況</b></td><td>「新規獲得状況（化粧品＋インバス統合）」の表に9列すべて追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>ロストヒアリング（エリア／施設名／部屋数／<b>失注理由</b>）</td><td>「ロストヒアリング」セクション。失注理由をヒアリング文として記載できる形に</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>営業社員別</b>の新規獲得売上状況（累計／進捗率／年間見込／3ヵ月以内成約見込み）</td><td>「新規獲得売上状況（営業社員別）」。メンバー行＋合計行</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>レジャー／レジャー以外に分ける ※7/9決定</td><td>「レジャー ／ レジャー以外」セクション。区分ごとに 売上・前年比・前年差・目標・達成率＋合計行</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>JTB・ニシカワヤを個別＋合算 ※7/9決定</td><td>「JTB・ニシカワヤ（個別＋合算）」3カード</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>直販・特販をTOP20／その他で ※7/9決定</td><td>「直販・特販（TOP20 ／ その他）」セクション</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>付箋のご指摘「<b>サンプルがあってわかるといい</b>」</td><td>チーム画面にサンプルの状況を表示する枠を設けられておりません（個人画面には「サンプル追客」があります）</td><td><span class="st no">❌ 未反映</span><br>どの単位で何を見たいか（送付数／転換率／遅延件数 等）を明日お聞かせください</td></tr>
       </table>
     </div>
 
     <!-- ============ 個人 ============ -->
     <h2>③ 個人</h2>
-    <p class="src">いただいた資料：弊社デモ「個人ホーム」の印刷（2026/07/03）への赤入れ＋手書きの画面ラフ</p>
+    <p class="src">資料：弊社デモ「個人ホーム」の印刷（2026/07/03）への赤入れ＋手書きの画面ラフ</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:27%">資料で拝見したご希望</th><th style="width:38%">現在のデモの状態</th><th style="width:35%">判定・対応方針</th></tr>
-        <tr>
-          <td>対応アラート（期限漏れ・サンプル未対応）／本日のネクストアクション／サンプル追客待ち／担当見込み案件 の<b>4つの件数サマリー</b></td>
-          <td>個人ページに実装済み</td>
-          <td><span class="st ok">反映済</span><br>赤枠で囲んでいただいた構成をそのまま維持しています</td>
-        </tr>
-        <tr>
-          <td>個人の見込み案件（案件／チェーン・施設／年間見込／年度内／ステージ／確度）</td>
-          <td>実装済み。受注角度％・導入予定月も追加</td>
-          <td><span class="st ok">反映済</span></td>
-        </tr>
-        <tr>
-          <td>サンプル追客（送付先／品番／送付日／状況／追客遅延・転換）</td>
-          <td>実装済み</td>
-          <td><span class="st ok">反映済</span></td>
-        </tr>
-        <tr>
-          <td>個人ホームに売上数字は置かない</td>
-          <td>自分の管理項目のみに限定</td>
-          <td><span class="st ok">反映済</span></td>
-        </tr>
-        <tr>
-          <td>手書きラフ部分（複数名分を並べて見る想定と拝見しました）</td>
-          <td>個人ページは1名分のみ</td>
-          <td><span class="st no">未反映</span><br>恐れ入りますが手書き部分を正確に読み取れておりません。<b>「上長が複数名分をまとめて見る画面」というご要望</b>かどうか、7/24で直接ご確認させてください</td>
-        </tr>
+        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
+        <tr><td>4つの件数サマリー（対応アラート／本日のNA／サンプル追客待ち／担当見込み案件）</td><td>「今日の状況」。赤枠でご承認いただいた形をそのまま維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>対応アラート（期限漏れ・サンプル未対応）</td><td>「⚠ 対応アラート」表。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>ネクストアクション（ToDo）</td><td>「ネクストアクション」。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>個人の見込み案件＋<b>受注角度％・導入予定月</b></td><td>「個人の見込み案件」表に受注角度・導入予定月の列を追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>サンプル追客（送付先／品番／送付日／状況）</td><td>「サンプル追客」。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td>個人ホームに売上数字は置かない</td><td>自分の管理項目のみに限定。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><td><b>手書きのラフ部分</b>（複数名分を並べる想定と拝察）</td><td>「チームメンバー一覧（4名分）」を新規追加。メンバーごとのアラート数・NA数・追客待ち・見込み案件数・見込み合計を一覧に</td><td><span class="st chk">🔶 要確認</span><br><b>この解釈で合っているか</b>を最優先でご確認ください。違えばその場で作り直します</td></tr>
       </table>
     </div>
 
-    <h2>7/24 でご確認・ご決定いただきたいこと</h2>
+    <div class="dummy">
+      <b>⚠ 数値・チェーン名はすべてダミーです。</b>
+      いただいた資料は御社の実データ（実在するチェーン名・実売上額）のため、この公開ページおよび反映版の画面には一切掲載しておりません。
+      <b>レイアウトと項目の構成のみ</b>を資料どおりに再現しています。実データでの表示は、Salesforce上での項目設計が固まってからとなります。
+    </div>
+
+    <h2>7/24 でご決定いただきたいこと</h2>
     <div class="q">
-      <b>A. 認識合わせ（すぐ着手するために）</b>
+      <b>A. 上の「🔶 要確認」4件（解釈が合っているかの確認）</b>
       <ol>
-        <li>①全体を<b>資料どおりの「チャネル5列 横並び」</b>に作り替える方向で問題ないか</li>
-        <li>タブ構成を <b>ホーム(個人)／全体／東マ／JTB・ニシカワヤ／直販・特販</b> の5つにする理解で合っているか</li>
-        <li>個人ページの手書きラフは「上長が複数名分を見る画面」というご要望か</li>
+        <li>個人ページの手書きラフ＝「上長が複数名分を見る画面」という理解で合っているか</li>
+        <li>チャネル（東マ／JTB・ニシカワヤ／直販・特販）を<b>完全に別ページ</b>に分けるか</li>
+        <li>トピックスの区分の数と名称</li>
+        <li>手書き「入力」＝トピックスの入力欄、という理解で合っているか</li>
       </ol>
-      <b style="margin-top:14px">B. 項目設計に直結するため決めたいこと</b>
-      <ol start="4">
-        <li>新規獲得状況の項目（部屋数／使用商品／切替商品／業態）を商談のどこに持たせるか</li>
-        <li>月間目標の<b>3段階（評価／努力目標／最低目標）</b>を正式に持つか</li>
-        <li>「今週のトピックス」を週報レコードで入力する方式でよいか（標準ダッシュボードに自由入力欄は置けないため）</li>
-        <li>売上ランキングは TOP20／TOP10／BOTTOM10／増減額TOP10 のどれを標準表示にするか</li>
+      <b style="margin-top:14px">B. Salesforceの項目設計に直結するもの（画面が固まってから作ります）</b>
+      <ol start="5">
+        <li>新規獲得の <b>部屋数／使用商品／切替商品／業態</b> を、施設（取引先）側と商談側のどちらで持つか</li>
+        <li>月間目標の<b>3段階</b>（評価／努力目標／最低目標）を正式に持つか</li>
+        <li><b>レジャー／レジャー以外</b>の区分を施設属性・商談属性のどちらで持つか</li>
+        <li>「今週のトピックス」を<b>週報レコードに入力→ダッシュボードに表示</b>する方式でよいか（標準ダッシュボードに自由入力欄は置けないため）</li>
+        <li>売上ランキングの標準表示（TOP20／TOP10／BOTTOM10／増減額TOP10）</li>
+        <li><b>営業日カレンダー</b>（祝日・休業日）をどこで管理するか</li>
+        <li>見込みの<b>受注角度％</b>を標準の確度で持つか独自項目か／必須入力にする運用の可否</li>
+        <li>表示単位（万円／百万円）と会計基準（DHC 1-12月／HIG 4-3月）の初期表示</li>
+      </ol>
+      <b style="margin-top:14px">C. 未反映1件</b>
+      <ol start="13">
+        <li>チーム画面で<b>サンプルの何を見たいか</b>（送付数／転換率／遅延件数 など）</li>
       </ol>
     </div>
 
-    <div class="foot">← <a href="index.html">デザイン3案の一覧に戻る</a>　／　<a href="../index.html">HIG 営業デモ ホーム</a></div>
+    <div class="foot">← <a href="index.html">デザイン3案・反映版の一覧に戻る</a>　／　<a href="../index.html">HIG 営業デモ ホーム</a></div>
   </div>
 </body>
 </html>
