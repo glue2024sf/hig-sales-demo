@@ -15,8 +15,8 @@
     <a href="r-personal.html">ホーム(個人)</a>
     <a href="r-overall.html">全体</a>
     <a href="r-team.html" class="on">東マ</a>
-    <a href="r-team.html#jtb">JTB・ニシカワヤ</a>
-    <a href="r-team.html#direct">直販・特販</a>
+    <a href="r-jtb.html">JTB・ニシカワヤ</a>
+    <a href="r-direct.html">直販・特販</a>
   </nav>
   <a class="back" href="index.html">← 3案を比較</a>
 </div>
@@ -35,8 +35,8 @@
 
 <div class="toolbar">
   <span class="chip on">東京マツシマ</span>
-  <a class="chip" href="#jtb">JTB・ニシカワヤ</a>
-  <a class="chip" href="#direct">直販・特販</a>
+  <a class="chip" href="r-jtb.html">JTB・ニシカワヤ</a>
+  <a class="chip" href="r-direct.html">直販・特販</a>
   <span class="grow"></span>
   <span class="hint">いただいた「週間営業報告書」の項目を再現しています</span>
 </div>
@@ -364,55 +364,42 @@
     </div>
   </div>
 
-  <!-- ============ JTB・ニシカワヤ ============ -->
-  <div class="sec" id="jtb"><span class="bar"></span><h2>JTB・ニシカワヤ（個別＋合算）</h2><span class="note">将来の分離に備え、集計は最初から分けて保持</span></div>
-  <div class="grid g3">
-    <div class="card">
-      <div class="hd">JTB商事</div>
-      <div class="bd">
-        <div class="bd-box"><div class="k">当月売上</div><div class="v">¥33.0<small>M</small></div></div>
-        <div class="metric"><span class="name">達成率</span><span class="track"><span class="fill blue" style="width:73%"></span></span><span class="v">73.3%</span></div>
-        <p class="muted" style="margin:6px 0 0;font-size:11.5px">前年比 108.6%／前年差 +¥2.6M</p>
-      </div>
+  <!-- ============ サンプル状況 ============ -->
+  <div class="sec"><span class="bar"></span><h2>サンプル状況（チーム）<span class="newbadge">新規</span></h2><span class="note">付箋のご指摘「サンプルがあってわかるといい」に対応</span></div>
+  <div class="grid g4">
+    <div class="kpi">
+      <div class="label">今月の送付数</div>
+      <div class="val">18<small>件</small></div>
+      <div class="delta"><span class="up">▲ 前月比 +3件</span></div>
     </div>
-    <div class="card">
-      <div class="hd">ニシカワヤ</div>
-      <div class="bd">
-        <div class="bd-box"><div class="k">当月売上</div><div class="v">¥13.0<small>M</small></div></div>
-        <div class="metric"><span class="name">達成率</span><span class="track"><span class="fill blue" style="width:72%"></span></span><span class="v">72.2%</span></div>
-        <p class="muted" style="margin:6px 0 0;font-size:11.5px">前年比 110.2%／前年差 +¥1.2M</p>
-      </div>
+    <div class="kpi">
+      <div class="label">転換（受注につながった数）</div>
+      <div class="val">7<small>件</small></div>
+      <div class="delta"><span class="up">転換率 38.9%</span></div>
     </div>
-    <div class="card">
-      <div class="hd">合算（JTB＋ニシカワヤ）</div>
-      <div class="bd">
-        <div class="bd-box sum"><div class="k">当月売上</div><div class="v">¥46.0<small>M</small></div></div>
-        <div class="metric"><span class="name">達成率</span><span class="track"><span class="fill green" style="width:73%"></span></span><span class="v">73.0%</span></div>
-        <p class="muted" style="margin:6px 0 0;font-size:11.5px">前年比 109.0%／前年差 +¥3.8M</p>
-      </div>
+    <div class="kpi">
+      <div class="label">追客待ち</div>
+      <div class="val">6<small>件</small></div>
+      <div class="delta"><span class="flat">10営業日以内</span></div>
+    </div>
+    <div class="kpi">
+      <div class="label">追客遅延<span class="newbadge">要対応</span></div>
+      <div class="val">5<small>件</small></div>
+      <div class="delta"><span class="down">▼ 10営業日超</span></div>
     </div>
   </div>
-
-  <!-- ============ 直販・特販 ============ -->
-  <div class="sec" id="direct"><span class="bar"></span><h2>直販・特販（TOP20 ／ その他）</h2><span class="note">「主要客以外」の動向把握のため、その他ブロックを厚く</span></div>
-  <div class="usebox">
-    <div class="usecol up-t">
-      <div class="h"><span>TOP20 合計</span><span class="pos">+¥9.2M</span></div>
-      <div class="amt pos">¥62.4M</div>
-      <div class="rows">
-        <div class="r"><span>グランビューホテルズ</span><span class="pos">+¥6.0M</span></div>
-        <div class="r"><span>都ホテルチェーン</span><span class="pos">+¥3.0M</span></div>
-        <div class="r"><span>その他 TOP20（18社）</span><span class="pos">+¥0.2M</span></div>
-      </div>
-    </div>
-    <div class="usecol down-t">
-      <div class="h"><span>その他（主要客以外）</span><span class="neg">−¥1.6M</span></div>
-      <div class="amt neg">¥17.6M</div>
-      <div class="rows">
-        <div class="r"><span>小口・スポット計</span><span class="neg">−¥1.6M</span></div>
-        <div class="r muted"><span>要因</span><span>季節要因・失注が混在</span></div>
-        <div class="r muted"><span>アクション</span><span>個社別に追客を見直し</span></div>
-      </div>
+  <div class="card" style="margin-top:12px">
+    <div class="bd flush tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th>送付先</th><th>品番</th><th class="num">送付日</th><th class="num">経過</th><th>担当</th><th>状況</th></tr></thead>
+        <tbody>
+          <tr><td class="lk">サンリゾート沖縄</td><td>A95G</td><td class="num">5/29</td><td class="num">13日</td><td>櫻井</td><td><span class="pill red">追客遅延</span></td></tr>
+          <tr><td class="lk">ノースゲート金沢</td><td>OC-22</td><td class="num">6/10</td><td class="num">11日</td><td>井上</td><td><span class="pill red">追客遅延</span></td></tr>
+          <tr><td class="lk">シティイン新橋</td><td>NM-04</td><td class="num">6/28</td><td class="num">5日</td><td>高橋</td><td><span class="pill amber">追客待ち</span></td></tr>
+          <tr><td class="lk">グランビュー箱根</td><td>SG-07</td><td class="num">6/2</td><td class="num">—</td><td>櫻井</td><td><span class="pill green">転換</span></td></tr>
+          <tr><td class="lk">レイクサイド箱根</td><td>OG-11</td><td class="num">6/18</td><td class="num">—</td><td>井上</td><td><span class="pill green">転換</span></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
