@@ -42,6 +42,14 @@
   ol{ margin:0; padding-left:20px; }
   .dummy{ background:#fff8e6; border:1px solid #f0d9a0; border-left:4px solid #e0a800; border-radius:8px; padding:13px 16px; font-size:13px; line-height:1.8; color:#5c4a12; margin-top:14px; }
   .dummy b{ color:#8a6100; }
+  .fx{ display:inline-block; font-size:11px; font-weight:700; border-radius:4px; padding:2px 7px; white-space:nowrap; }
+  .fx.g{ background:#e6f4ea; color:#1a7f37; border:1px solid #b7e0c4; }
+  .fx.y{ background:#fff4e5; color:#a35b00; border:1px solid #f2d3a5; }
+  .fx.r{ background:#fdecec; color:#b3261e; border:1px solid #f3c2c0; }
+  .fx.b{ background:#eaf1fb; color:#1a4f8a; border:1px solid #bcd3ee; }
+  .fxn{ display:block; margin-top:4px; color:#5a6570; font-size:11px; line-height:1.6; }
+  .warn2{ background:#fdecec; border:1px solid #f3c2c0; border-left:4px solid #c23934; border-radius:8px; padding:14px 16px; font-size:13px; line-height:1.85; margin:16px 0; }
+  .warn2 b{ color:#b3261e; }
 </style>
 </head>
 <body>
@@ -56,7 +64,8 @@
         <b>反映できていないもの・解釈が合っているか自信がないものも、そのまま記載</b>しております。
       </div>
       <div class="links">
-        <a class="main" href="r-overall.html">① 全体を見る →</a>
+        <a class="main" href="r-overall.html">① 全体（全部乗せ）→</a>
+        <a href="r-overall-lite.html">① 全体（絞った版）</a>
         <a href="r-team.html">② 東京マツシマ</a>
         <a href="r-jtb.html">JTB・ニシカワヤ</a>
         <a href="r-direct.html">直販・特販</a>
@@ -70,20 +79,31 @@
       <div class="sc c" style="border-left-color:#2e844a"><div class="n" style="color:#1a7f37">0</div><div class="l">❌ 未反映 — <b>なし</b>（1件あった未反映も反映しました）</div></div>
     </div>
 
+    <div class="warn2">
+      <b>⚠ 「反映済」＝「Salesforce標準でそのまま作れる」ではありません。</b>
+      左の「状態」はデモ画面で再現できたかどうか、右の「Salesforceでの実現方式」は<b>実際に構築するときにどうなるか</b>です。
+      HTMLのデモは自由に描けてしまうため、この2つは必ず分けてご確認ください。<br>
+      <span class="fx g">🟢 標準</span> レポート／ダッシュボードの標準機能で実現　
+      <span class="fx y">🟡 標準で近似</span> 近づけられるが資料と完全同一にはならない　
+      <span class="fx b">🔵 運用＋項目</span> オブジェクト・項目の追加と入力運用が必要　
+      <span class="fx r">🔴 要LWC</span> <b>標準機能では作れず、追加開発が必要</b><br>
+      内訳：🟢 20件／🟡 8件／🔵 5件／<b>🔴 2件</b>。<b>🔴の2件（月間目標の3段階バー・増減額の左右振り分けバー）が、追加開発するかどうかのご判断が必要な箇所</b>です。
+    </div>
+
     <!-- ============ 全体 ============ -->
     <h2>① 全体</h2>
     <p class="src">資料：「パターン② セクション分割型（チャネル別に深掘り）／週間営業レポート」＋ 上部の手書きタブ構成</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
-        <tr><td>全体・東京マツシマ・JTB商事・ニシカワヤ・直販の<b>5列を横並び</b>にする（セクション分割型）</td><td>①全体ページ冒頭「チャネル別サマリー」。5列を横に並べ、各列を縦に積む構成へ組み替え</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>各列に 売上／前年同期比％／目標／達成率／前年度実績</td><td>各列の数値ブロックに5項目とも表示。あわせて<b>前年差（金額）</b>も追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>売上推移グラフを「<b>月</b>」にする（手書き修正）</td><td>各列下部のミニ棒グラフを月次（5月／6月／7月）に変更。今年・前年の2本並べ</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>今週の主な活動・トピックスを「<b>テキストで書き</b>」（手書き）</td><td>「今週の主な活動・トピックス」セクションに区分ごとの入力欄を再現</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>上部タブを <b>ホーム(個人)／全体／東マ／JTB・ニシカワヤ／直販・特販</b> に（手書き）</td><td>全画面共通の上部タブを5つに変更。<b>東マ／JTB・ニシカワヤ／直販・特販はそれぞれ独立したページ</b>に分割しました（r-team / r-jtb / r-direct）</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>トピックスの区分（手書きチェック：物流・生産／商品生産／経理・事務／人事労務）</td><td>手書きの4区分＋資料印刷部分の区分（新商品・販促／メンテナンス）を<b>合わせて6区分で仮置き</b></td><td><span class="st chk">🔶 要確認</span><br>区分の数と名称を確定させてください</td></tr>
-        <tr><td>右上の手書き「入力」</td><td>トピックスを入力できるようにする、というご指示と解釈し、入力欄の形で再現</td><td><span class="st chk">🔶 要確認</span><br>解釈が合っているかご確認ください</td></tr>
-        <tr><td>使用客 売上状況（TOP20／その他）※7/9決定</td><td>「使用客 売上状況」セクション。TOP20とその他を左右に分け、増減を色で表示</td><td><span class="st ok">✅ 反映済</span></td></tr>
+        <tr><th style="width:26%">いただいたご指摘</th><th style="width:36%">反映版のどこに入れたか</th><th style="width:16%">状態</th><th style="width:22%">Salesforceでの実現方式</th></tr>
+        <tr><td>全体・東京マツシマ・JTB商事・ニシカワヤ・直販の<b>5列を横並び</b>にする（セクション分割型）</td><td>①全体ページ冒頭「チャネル別サマリー」。5列を横に並べ、各列を縦に積む構成へ組み替え</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">ダッシュボードは12列グリッドのため5つ横並びは可能。ただし1列に数値6種＋グラフを積むには<b>コンポーネントを複数重ねる</b>必要があり、資料と完全同一の見た目にはなりません</span></td></tr>
+        <tr><td>各列に 売上／前年同期比％／目標／達成率／前年度実績</td><td>各列の数値ブロックに5項目とも表示。あわせて<b>前年差（金額）</b>も追加</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">標準のメトリックは1数値が基本。6指標の併記は<b>表形式レポート</b>で代替します</span></td></tr>
+        <tr><td>売上推移グラフを「<b>月</b>」にする（手書き修正）</td><td>各列下部のミニ棒グラフを月次（5月／6月／7月）に変更。今年・前年の2本並べ</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">標準の棒グラフ（前年比較）</span></td></tr>
+        <tr><td>今週の主な活動・トピックスを「<b>テキストで書き</b>」（手書き）</td><td>「今週の主な活動・トピックス」セクションに区分ごとの入力欄を再現</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx b">🔵 運用＋項目</span><br><span class="fxn">週報オブジェクトを追加し入力→レポートで表示</span></td></tr>
+        <tr><td>上部タブを <b>ホーム(個人)／全体／東マ／JTB・ニシカワヤ／直販・特販</b> に（手書き）</td><td>全画面共通の上部タブを5つに変更。<b>東マ／JTB・ニシカワヤ／直販・特販はそれぞれ独立したページ</b>に分割しました（r-team / r-jtb / r-direct）</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">Lightningアプリのタブ＋ダッシュボード5枚</span></td></tr>
+        <tr><td>トピックスの区分（手書きチェック：物流・生産／商品生産／経理・事務／人事労務）</td><td>手書きの4区分＋資料印刷部分の区分（新商品・販促／メンテナンス）を<b>合わせて6区分で仮置き</b></td><td><span class="st chk">🔶 要確認</span><br>区分の数と名称を確定させてください</td><td><span class="fx b">🔵 運用＋項目</span><br><span class="fxn">週報オブジェクトの選択リスト項目</span></td></tr>
+        <tr><td>右上の手書き「入力」</td><td>トピックスを入力できるようにする、というご指示と解釈し、入力欄の形で再現</td><td><span class="st chk">🔶 要確認</span><br>解釈が合っているかご確認ください</td><td><span class="fx b">🔵 運用＋項目</span><br><span class="fxn">週報オブジェクトの入力画面</span></td></tr>
+        <tr><td>使用客 売上状況（TOP20／その他）※7/9決定</td><td>「使用客 売上状況」セクション。TOP20とその他を左右に分け、増減を色で表示</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">TOP20の定義をフラグ項目で持つか、レポートの行数制限で出すかで実現方法が変わります</span></td></tr>
       </table>
     </div>
 
@@ -92,27 +112,27 @@
     <p class="src">資料：「東京マツシマ 週間営業報告書」「売上TOP20 同日営業日比較」「四半期目標・結果サマリー」「新規獲得状況」「ロストヒアリング」「新規獲得売上状況」</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
-        <tr><td>売上（月累計）・前年比</td><td>「今月サマリー」1枚目</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>前年差（金額）</b></td><td>「今月サマリー」2枚目に独立表示</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>目標達成率（単月評価）・目標金額</td><td>「今月サマリー」3枚目</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>営業日進捗</b>（◯/◯日・進捗率）</td><td>「今月サマリー」4枚目。達成率が日数進捗を上回っているかが一目で分かる形に</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>月売上推移（前年比較）</td><td>今年・前年を並べた棒グラフ</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>月間目標を<b>3段階</b>（評価／努力目標／最低目標）で表示</td><td>「月間目標（3段階）」カード。3本のバーで色分けし、当月実績を下に並記</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>3ヵ月累計</b>（当年度実績／当年度計画／前年実績／前年比）</td><td>「3ヵ月累計（全体）」セクションに4項目を横並び</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>トピックスを<b>プラス要因／リスク・課題</b>の2分類に</td><td>「今週のトピックス」を左右2枠に分割</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>売上TOP20（<b>同日営業日比較</b>）の合計・前年比・前年差・直販売上</td><td>「売上ランキング」冒頭のサマリー4枚</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>売上TOP10</td><td>ランキング左列</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>売上BOTTOM10</b>（前年比）</td><td>ランキング中央列</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>増減額TOP10</b>（前年差・増減で色分け）</td><td>ランキング右列。中央を0として、増加は青・減少は赤で左右に振る棒グラフ</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>四半期目標・結果サマリー（月×件数・金額で 目標／結果／達成率）</td><td>「四半期目標・結果サマリー（4-6月）」のマトリクス表</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>新規獲得状況に <b>部屋数／商品内容／年間見込金額／使用商品／切替商品／業態／状況</b></td><td>「新規獲得状況（化粧品＋インバス統合）」の表に9列すべて追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>ロストヒアリング（エリア／施設名／部屋数／<b>失注理由</b>）</td><td>「ロストヒアリング」セクション。失注理由をヒアリング文として記載できる形に</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>営業社員別</b>の新規獲得売上状況（累計／進捗率／年間見込／3ヵ月以内成約見込み）</td><td>「新規獲得売上状況（営業社員別）」。メンバー行＋合計行</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>レジャー／レジャー以外に分ける ※7/9決定</td><td>「レジャー ／ レジャー以外」セクション。区分ごとに 売上・前年比・前年差・目標・達成率＋合計行</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>JTB・ニシカワヤを個別＋合算 ※7/9決定</td><td>「JTB・ニシカワヤ（個別＋合算）」3カード</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>直販・特販をTOP20／その他で ※7/9決定</td><td>「直販・特販（TOP20 ／ その他）」セクション</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>付箋のご指摘「<b>サンプルがあってわかるといい</b>」</td><td>各チャネル画面に「サンプル状況」セクションを追加。<b>今月の送付数／転換（転換率）／追客待ち／追客遅延</b>の4指標＋明細表（送付先・品番・送付日・経過・担当・状況）</td><td><span class="st ok">✅ 反映済</span><br>見たい指標がこの4つで合っているかご確認ください</td></tr>
+        <tr><th style="width:26%">いただいたご指摘</th><th style="width:36%">反映版のどこに入れたか</th><th style="width:16%">状態</th><th style="width:22%">Salesforceでの実現方式</th></tr>
+        <tr><td>売上（月累計）・前年比</td><td>「今月サマリー」1枚目</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">標準のレポート集計</span></td></tr>
+        <tr><td><b>前年差（金額）</b></td><td>「今月サマリー」2枚目に独立表示</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">数式項目（当年実績−前年実績）を追加</span></td></tr>
+        <tr><td>目標達成率（単月評価）・目標金額</td><td>「今月サマリー」3枚目</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">数式項目（実績／目標）を追加</span></td></tr>
+        <tr><td><b>営業日進捗</b>（◯/◯日・進捗率）</td><td>「今月サマリー」4枚目。達成率が日数進捗を上回っているかが一目で分かる形に</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx b">🔵 運用＋項目</span><br><span class="fxn"><b>営業日カレンダー</b>を持つカスタムオブジェクトが必要（祝日・休業日は数式だけでは扱えません）</span></td></tr>
+        <tr><td>月売上推移（前年比較）</td><td>今年・前年を並べた棒グラフ</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">標準の棒グラフ</span></td></tr>
+        <tr><td>月間目標を<b>3段階</b>（評価／努力目標／最低目標）で表示</td><td>「月間目標（3段階）」カード。3本のバーで色分けし、当月実績を下に並記</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx r">🔴 要LWC</span><br><span class="fxn"><b>3本のバー＋実績の重ね表示は標準にありません。</b>ゲージ3つで近似するか、LWCで作ります</span></td></tr>
+        <tr><td><b>3ヵ月累計</b>（当年度実績／当年度計画／前年実績／前年比）</td><td>「3ヵ月累計（全体）」セクションに4項目を横並び</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">標準のレポート集計</span></td></tr>
+        <tr><td>トピックスを<b>プラス要因／リスク・課題</b>の2分類に</td><td>「今週のトピックス」を左右2枠に分割</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx b">🔵 運用＋項目</span><br><span class="fxn">週報オブジェクトに2項目</span></td></tr>
+        <tr><td>売上TOP20（<b>同日営業日比較</b>）の合計・前年比・前年差・直販売上</td><td>「売上ランキング」冒頭のサマリー4枚</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">「同日営業日ベース」の比較は日付ロジックの数式が必要</span></td></tr>
+        <tr><td>売上TOP10</td><td>ランキング左列</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポート（降順・行数制限）</span></td></tr>
+        <tr><td><b>売上BOTTOM10</b>（前年比）</td><td>ランキング中央列</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポート（昇順・行数制限）</span></td></tr>
+        <tr><td><b>増減額TOP10</b>（前年差・増減で色分け）</td><td>ランキング右列。中央を0として、増加は青・減少は赤で左右に振る棒グラフ</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx r">🔴 要LWC</span><br><span class="fxn"><b>標準の横棒グラフは負の値を左右に振り分けて表示できません。</b>LWCで作るか、増加／減少を2つの表に分けます</span></td></tr>
+        <tr><td>四半期目標・結果サマリー（月×件数・金額で 目標／結果／達成率）</td><td>「四半期目標・結果サマリー（4-6月）」のマトリクス表</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポートの<b>マトリックス形式</b></span></td></tr>
+        <tr><td>新規獲得状況に <b>部屋数／商品内容／年間見込金額／使用商品／切替商品／業態／状況</b></td><td>「新規獲得状況（化粧品＋インバス統合）」の表に9列すべて追加</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">商談または施設に項目追加＋レポート</span></td></tr>
+        <tr><td>ロストヒアリング（エリア／施設名／部屋数／<b>失注理由</b>）</td><td>「ロストヒアリング」セクション。失注理由をヒアリング文として記載できる形に</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">商談に失注理由の項目追加＋レポート</span></td></tr>
+        <tr><td><b>営業社員別</b>の新規獲得売上状況（累計／進捗率／年間見込／3ヵ月以内成約見込み）</td><td>「新規獲得売上状況（営業社員別）」。メンバー行＋合計行</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポートの担当者グルーピング</span></td></tr>
+        <tr><td>レジャー／レジャー以外に分ける ※7/9決定</td><td>「レジャー ／ レジャー以外」セクション。区分ごとに 売上・前年比・前年差・目標・達成率＋合計行</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">施設または商談に区分項目を追加＋レポート</span></td></tr>
+        <tr><td>JTB・ニシカワヤを個別＋合算 ※7/9決定</td><td>「JTB・ニシカワヤ（個別＋合算）」3カード</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポートのチャネル・グルーピング</span></td></tr>
+        <tr><td>直販・特販をTOP20／その他で ※7/9決定</td><td>「直販・特販（TOP20 ／ その他）」セクション</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">TOP20の定義次第（上と同じ論点）</span></td></tr>
+        <tr><td>付箋のご指摘「<b>サンプルがあってわかるといい</b>」</td><td>各チャネル画面に「サンプル状況」セクションを追加。<b>今月の送付数／転換（転換率）／追客待ち／追客遅延</b>の4指標＋明細表（送付先・品番・送付日・経過・担当・状況）</td><td><span class="st ok">✅ 反映済</span><br>見たい指標がこの4つで合っているかご確認ください</td><td><span class="fx g">🟢 標準</span><br><span class="fxn">サンプルオブジェクトのレポート集計</span></td></tr>
       </table>
     </div>
 
@@ -121,14 +141,14 @@
     <p class="src">資料：弊社デモ「個人ホーム」の印刷（2026/07/03）への赤入れ＋手書きの画面ラフ</p>
     <div class="tbl">
       <table>
-        <tr><th style="width:30%">いただいたご指摘</th><th style="width:44%">反映版のどこに入れたか</th><th style="width:26%">状態</th></tr>
-        <tr><td>4つの件数サマリー（対応アラート／本日のNA／サンプル追客待ち／担当見込み案件）</td><td>「今日の状況」。赤枠でご承認いただいた形をそのまま維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>対応アラート（期限漏れ・サンプル未対応）</td><td>「⚠ 対応アラート」表。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>ネクストアクション（ToDo）</td><td>「ネクストアクション」。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>個人の見込み案件＋<b>受注角度％・導入予定月</b></td><td>「個人の見込み案件」表に受注角度・導入予定月の列を追加</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>サンプル追客（送付先／品番／送付日／状況）</td><td>「サンプル追客」。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td>個人ホームに売上数字は置かない</td><td>自分の管理項目のみに限定。維持</td><td><span class="st ok">✅ 反映済</span></td></tr>
-        <tr><td><b>手書きのラフ部分</b>（複数名分を並べる想定と拝察）</td><td>「チームメンバー一覧（4名分）」を新規追加。メンバーごとのアラート数・NA数・追客待ち・見込み案件数・見込み合計を一覧に</td><td><span class="st chk">🔶 要確認</span><br><b>この解釈で合っているか</b>を最優先でご確認ください。違えばその場で作り直します</td></tr>
+        <tr><th style="width:26%">いただいたご指摘</th><th style="width:36%">反映版のどこに入れたか</th><th style="width:16%">状態</th><th style="width:22%">Salesforceでの実現方式</th></tr>
+        <tr><td>4つの件数サマリー（対応アラート／本日のNA／サンプル追客待ち／担当見込み案件）</td><td>「今日の状況」。赤枠でご承認いただいた形をそのまま維持</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポートの件数集計</span></td></tr>
+        <tr><td>対応アラート（期限漏れ・サンプル未対応）</td><td>「⚠ 対応アラート」表。維持</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx y">🟡 標準で近似</span><br><span class="fxn">期限超過の判定に数式項目が必要</span></td></tr>
+        <tr><td>ネクストアクション（ToDo）</td><td>「ネクストアクション」。維持</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">標準のToDo（ToDoコンポーネント）</span></td></tr>
+        <tr><td>個人の見込み案件＋<b>受注角度％・導入予定月</b></td><td>「個人の見込み案件」表に受注角度・導入予定月の列を追加</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">商談に受注角度・導入予定月の項目追加</span></td></tr>
+        <tr><td>サンプル追客（送付先／品番／送付日／状況）</td><td>「サンプル追客」。維持</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">サンプルオブジェクトのレポート</span></td></tr>
+        <tr><td>個人ホームに売上数字は置かない</td><td>自分の管理項目のみに限定。維持</td><td><span class="st ok">✅ 反映済</span></td><td><span class="fx g">🟢 標準</span><br><span class="fxn">ダッシュボードに載せないだけ</span></td></tr>
+        <tr><td><b>手書きのラフ部分</b>（複数名分を並べる想定と拝察）</td><td>「チームメンバー一覧（4名分）」を新規追加。メンバーごとのアラート数・NA数・追客待ち・見込み案件数・見込み合計を一覧に</td><td><span class="st chk">🔶 要確認</span><br><b>この解釈で合っているか</b>を最優先でご確認ください。違えばその場で作り直します</td><td><span class="fx g">🟢 標準</span><br><span class="fxn">レポートの担当者グルーピング</span></td></tr>
       </table>
     </div>
 
