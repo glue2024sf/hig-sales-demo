@@ -27,6 +27,12 @@
 .chcol .mini{ border-top:1px dotted #e5e5e5; padding-top:7px; }
 .chcol .mini .cap{ font-size:10px; color:#8a8886; margin-bottom:3px; }
 
+/* --- 3ヶ月平均（棒グラフ下） ------------------------------------------------ */
+.chcol .avg3{ border-top:1px dotted #e5e5e5; margin-top:6px; padding-top:6px; display:flex; flex-direction:column; gap:3px; }
+.chcol .avg3 .l{ display:flex; justify-content:space-between; font-size:11px; }
+.chcol .avg3 .l span:first-child{ color:#6b7684; }
+.chcol .avg3 .l span:last-child{ font-weight:700; font-variant-numeric:tabular-nums; color:#032d60; }
+
 /* --- 3段階目標 ------------------------------------------------------------ */
 .tiers{ display:flex; flex-direction:column; gap:9px; }
 .tier{ display:grid; grid-template-columns:86px 1fr 88px; align-items:center; gap:9px; font-size:12px; }
