@@ -49,6 +49,85 @@
     <b>レイアウトと項目の構成のみ</b>を資料どおりに再現しています。
   </div>
 
+  <!-- ============ 全体ページと同一の3区分ヘッダー ============ -->
+  <div class="sec"><span class="bar"></span><h2>サマリー（全体ページと共通レイアウト）<span class="newbadge">3区分に統一</span></h2><span class="note">月次・3ヶ月平均・年度累計の3区分。東京マツシマはレジャー／レジャー以外で分けて表示（7/24定例反映）</span></div>
+
+  <div class="ch5" style="grid-template-columns:repeat(3,1fr)">
+
+    <!-- 合計 -->
+    <div class="chcol total">
+      <div class="nm">東京マツシマ 合計</div>
+      <div class="bx">
+        <div class="p3">
+          <div class="pr">
+            <div class="pl">月次 <small>(7月)</small></div>
+            <div class="pv"><span class="cy">5,600<small>万円</small></span><span class="yy pos">昨対比 104.9% ▲</span></div>
+            <div class="ps">前年 5,340万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">3ヶ月平均</div>
+            <div class="pv"><span class="cy">5,066<small>万円</small></span><span class="yy pos">昨対比 104.8% ▲</span></div>
+            <div class="ps">前年 4,833万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">年度累計 <small>(4-7月)</small></div>
+            <div class="pv"><span class="cy">20,200<small>万円</small></span><span class="yy pos">昨対比 104.7% ▲</span></div>
+            <div class="ps">前年 19,300万円</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- レジャー -->
+    <div class="chcol">
+      <div class="nm">レジャー</div>
+      <div class="bx">
+        <div class="p3">
+          <div class="pr">
+            <div class="pl">月次 <small>(7月)</small></div>
+            <div class="pv"><span class="cy">2,100<small>万円</small></span><span class="yy pos">昨対比 112.3% ▲</span></div>
+            <div class="ps">前年 1,870万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">3ヶ月平均</div>
+            <div class="pv"><span class="cy">1,900<small>万円</small></span><span class="yy pos">昨対比 112.3% ▲</span></div>
+            <div class="ps">前年 1,692万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">年度累計 <small>(4-7月)</small></div>
+            <div class="pv"><span class="cy">7,575<small>万円</small></span><span class="yy pos">昨対比 112.3% ▲</span></div>
+            <div class="ps">前年 6,745万円</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- レジャー以外 -->
+    <div class="chcol">
+      <div class="nm">レジャー以外</div>
+      <div class="bx">
+        <div class="p3">
+          <div class="pr">
+            <div class="pl">月次 <small>(7月)</small></div>
+            <div class="pv"><span class="cy">3,500<small>万円</small></span><span class="yy pos">昨対比 100.9% ▲</span></div>
+            <div class="ps">前年 3,470万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">3ヶ月平均</div>
+            <div class="pv"><span class="cy">3,166<small>万円</small></span><span class="yy pos">昨対比 100.9% ▲</span></div>
+            <div class="ps">前年 3,138万円</div>
+          </div>
+          <div class="pr">
+            <div class="pl">年度累計 <small>(4-7月)</small></div>
+            <div class="pv"><span class="cy">12,625<small>万円</small></span><span class="yy pos">昨対比 100.9% ▲</span></div>
+            <div class="ps">前年 12,512万円</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <!-- ============ サマリー ============ -->
   <div class="sec"><span class="bar"></span><h2>今月サマリー<span class="newbadge">前年差・営業日進捗を追加</span></h2></div>
   <div class="grid g4">
@@ -412,7 +491,7 @@
     5. <b>営業日進捗</b>の営業日カレンダーをどこで管理するか（祝日・休業日の扱い）。
   </div>
 
-  <div class="memo">💡 <b>この画面の変更点</b>：前年差（金額）・営業日進捗・3段階目標・3ヵ月累計・売上BOTTOM10・増減額TOP10・四半期マトリクス・新規獲得の詳細項目・ロスト理由・営業社員別の新規獲得売上状況を新規追加し、トピックスを「プラス要因／リスク・課題」の2分類に変更しました。</div>
+  <div class="memo">💡 <b>この画面の変更点</b>：前年差（金額）・営業日進捗・3段階目標・3ヵ月累計・売上BOTTOM10・増減額TOP10・四半期マトリクス・新規獲得の詳細項目・ロスト理由・営業社員別の新規獲得売上状況を新規追加し、トピックスを「プラス要因／リスク・課題」の2分類に変更しました。<br>💡 <b>7/24追加</b>：冒頭に全体ページと同じ「月次／3ヶ月平均／年度累計」の3区分サマリーを追加し、東京マツシマを<b>レジャー／レジャー以外</b>で分けて表示しました（既存の「今月サマリー」「3ヵ月累計」セクションは変更せず残しています）。</div>
 
 </div>
 </body>
