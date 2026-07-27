@@ -28,11 +28,20 @@
 .chcol .mini .cap{ font-size:10px; color:#8a8886; margin-bottom:3px; }
 
 /* --- 3ヶ月平均（棒グラフ下） ------------------------------------------------ */
-.chcol .avg3{ border-top:1px dotted #e5e5e5; margin-top:6px; padding-top:6px; display:flex; flex-direction:column; gap:3px; }
-.chcol .avg3 .l{ display:flex; justify-content:space-between; font-size:11px; }
-.chcol .avg3 .l span:first-child{ color:#6b7684; }
-.chcol .avg3 .l span:last-child{ font-weight:700; font-variant-numeric:tabular-nums; color:#032d60; }
-.chcol .avg3 .l span.pos{ color:#2e844a; }
+/* --- 期間3区分（月次・3ヶ月平均・年度累計） -------------------------------- */
+.chcol .p3{ display:flex; flex-direction:column; gap:7px; }
+.chcol .p3 .pr{ border-top:1px dotted #e5e5e5; padding-top:6px; }
+.chcol .p3 .pr:first-child{ border-top:0; padding-top:0; }
+.chcol .p3 .pl{ font-size:10px; color:#6b7684; margin-bottom:1px; }
+.chcol .p3 .pl small{ color:#9aa4af; font-weight:600; }
+.chcol .p3 .pv{ display:flex; align-items:baseline; justify-content:space-between; gap:6px; }
+.chcol .p3 .pv .cy{ font-size:16px; font-weight:700; color:#032d60; font-variant-numeric:tabular-nums; letter-spacing:-.3px; }
+.chcol .p3 .pv .cy small{ font-size:10px; font-weight:600; color:#5a6570; margin-left:1px; }
+.chcol .p3 .ps{ font-size:10px; color:#8a8886; font-variant-numeric:tabular-nums; margin-top:1px; }
+/* 昨対比・増減％の文字色（マイナス＝赤・一律） */
+.yy{ font-size:11px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.yy.pos{ color:#2e844a; }
+.yy.neg{ color:#c23934; }
 
 /* --- 3段階目標 ------------------------------------------------------------ */
 .tiers{ display:flex; flex-direction:column; gap:9px; }
