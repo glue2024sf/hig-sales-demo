@@ -253,6 +253,10 @@ a{ color:var(--blue-d); }
 .usecol .rows .r{ display:flex; justify-content:space-between; padding:4px 0; border-top:1px dashed var(--line2); }
 .usecol.up-t{ border-top:3px solid var(--green); }
 .usecol.down-t{ border-top:3px solid var(--red); }
+/* 主要客TOP20 全幅表示（その他ブロック廃止） */
+.usebox1{ display:block; }
+.usebox1 .rows.g3{ display:grid; grid-template-columns:repeat(3,1fr); gap:0 26px; }
+@media(max-width:760px){ .usebox1 .rows.g3{ grid-template-columns:1fr; } }
 
 /* ---- 小道具 ---- */
 .tags{ display:flex; gap:6px; flex-wrap:wrap; }
