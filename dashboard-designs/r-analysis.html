@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分析（チャネル別構成比）| 反映版 | HIG</title>
+<link rel="stylesheet" href="a.css">
+<link rel="stylesheet" href="r.css">
+<style>
+  .anwrap{ max-width:1180px; margin:0 auto; padding:0 16px 40px; }
+  .anote{ background:#fff; border:1px solid #e3e8ee; border-left:5px solid #0176d3; border-radius:8px; padding:12px 15px; margin-bottom:16px; font-size:13px; line-height:1.8; }
+  .stack{ display:flex; height:34px; border-radius:6px; overflow:hidden; border:1px solid #e5e5e5; }
+  .stack > span{ display:flex; align-items:center; justify-content:center; color:#fff; font-size:11.5px; font-weight:700; white-space:nowrap; overflow:hidden; }
+  .c-mat{ background:#032d60; } .c-jtb{ background:#0176d3; } .c-nis{ background:#2e844a; } .c-dir{ background:#e08a2b; }
+  .lg{ display:flex; gap:16px; flex-wrap:wrap; margin:8px 0 0; font-size:12px; color:#3a4650; }
+  .lg i{ display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:5px; vertical-align:-1px; }
+  .antbl{ width:100%; border-collapse:collapse; font-size:12.5px; background:#fff; }
+  .antbl th,.antbl td{ border-bottom:1px solid #ecebea; padding:8px 10px; text-align:right; }
+  .antbl th{ background:#f3f6f9; color:#3a4650; font-weight:700; }
+  .antbl td:first-child,.antbl th:first-child{ text-align:left; }
+  .antbl .tot{ font-weight:700; background:#f7f9fb; }
+  .an2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media(max-width:820px){ .an2{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="appbar">
+  <div class="brand"><span class="dot">R</span><span>反映版</span><span class="sep">｜</span><span>希望レイアウト反映</span></div>
+  <nav>
+    <a href="r-personal.html">ホーム(個人)</a>
+    <a href="r-overall.html">全体</a>
+    <a href="r-analysis.html" class="on">分析</a>
+    <a href="r-team.html">東マ</a>
+    <a href="r-jtb.html">JTB・ニシカワヤ</a>
+    <a href="r-direct.html">直販</a>
+  </nav>
+  <a class="back" href="index.html">← 3案を比較</a>
+</div>
+
+<div class="pagehead">
+  <div class="row">
+    <div class="ic">🧮</div>
+    <div>
+      <div class="eyebrow">分析ビュー ・ チャネル別の構成を把握</div>
+      <h1>分析（チャネル別構成比）</h1>
+    </div>
+    <div class="grow"></div>
+    <div class="who">対象: 2026年7月<br><b>全チャネル構成分析</b></div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <span class="chip on">当月: 2026年7月</span>
+  <span class="chip group"><b class="sel">HIGベース(4-3月)</b><b class="off">DHCベース(1-12月)</b></span>
+  <span class="grow"></span>
+  <span class="hint">7/24決定：チャネル別の構成比は「全体（週報）」から分離し、この分析ページに集約</span>
+</div>
+
+<div class="anwrap">
+
+  <div class="anote">
+    <b style="color:#032d60">💬 このページについて</b>：週報（全体）はチャネル別の実額・昨対比に集中し、<b>構成比（各チャネルが全体の何％か）はこの分析ページ</b>で確認します。数値・チェーン名はすべてダミーです。金額は万円単位。
+  </div>
+
+  <div class="an2">
+    <!-- 年度累計 構成比 -->
+    <div>
+      <div class="sec"><span class="bar"></span><h2>年度累計 構成比（4-7月）</h2></div>
+      <div class="stack" role="img" aria-label="年度累計 チャネル別構成比">
+        <span class="c-dir" style="width:42.9%">直販 42.9%</span>
+        <span class="c-mat" style="width:31.7%">東マ 31.7%</span>
+        <span class="c-jtb" style="width:18.2%">JTB 18.2%</span>
+        <span class="c-nis" style="width:7.2%">7.2%</span>
+      </div>
+      <div class="lg">
+        <span><i class="c-mat"></i>東京マツシマ</span>
+        <span><i class="c-jtb"></i>JTB商事</span>
+        <span><i class="c-nis"></i>ニシカワヤ</span>
+        <span><i class="c-dir"></i>直販</span>
+      </div>
+      <table class="antbl" style="margin-top:12px">
+        <thead><tr><th>チャネル</th><th>年度累計</th><th>構成比</th><th>昨対比</th></tr></thead>
+        <tbody>
+          <tr><td>直販</td><td>27,400万円</td><td>42.9%</td><td class="yy pos">110.5%</td></tr>
+          <tr><td>東京マツシマ</td><td>20,200万円</td><td>31.7%</td><td class="yy pos">104.7%</td></tr>
+          <tr><td>JTB商事</td><td>11,600万円</td><td>18.2%</td><td class="yy pos">108.4%</td></tr>
+          <tr><td>ニシカワヤ</td><td>4,600万円</td><td>7.2%</td><td class="yy pos">110.0%</td></tr>
+          <tr class="tot"><td>全体</td><td>63,800万円</td><td>100.0%</td><td class="yy pos">108.2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 月次 構成比 -->
+    <div>
+      <div class="sec"><span class="bar"></span><h2>月次 構成比（当月・7月）</h2></div>
+      <div class="stack" role="img" aria-label="月次 チャネル別構成比">
+        <span class="c-dir" style="width:44.0%">直販 44.0%</span>
+        <span class="c-mat" style="width:30.8%">東マ 30.8%</span>
+        <span class="c-jtb" style="width:18.1%">JTB 18.1%</span>
+        <span class="c-nis" style="width:7.1%">7.1%</span>
+      </div>
+      <div class="lg">
+        <span><i class="c-mat"></i>東京マツシマ</span>
+        <span><i class="c-jtb"></i>JTB商事</span>
+        <span><i class="c-nis"></i>ニシカワヤ</span>
+        <span><i class="c-dir"></i>直販</span>
+      </div>
+      <table class="antbl" style="margin-top:12px">
+        <thead><tr><th>チャネル</th><th>当月(7月)</th><th>構成比</th><th>昨対比</th></tr></thead>
+        <tbody>
+          <tr><td>直販</td><td>8,000万円</td><td>44.0%</td><td class="yy pos">110.5%</td></tr>
+          <tr><td>東京マツシマ</td><td>5,600万円</td><td>30.8%</td><td class="yy pos">104.9%</td></tr>
+          <tr><td>JTB商事</td><td>3,300万円</td><td>18.1%</td><td class="yy pos">108.6%</td></tr>
+          <tr><td>ニシカワヤ</td><td>1,300万円</td><td>7.1%</td><td class="yy pos">110.2%</td></tr>
+          <tr class="tot"><td>全体</td><td>18,200万円</td><td>100.0%</td><td class="yy pos">108.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="memo" style="margin-top:18px">💡 <b>このページの位置づけ</b>：7/24定例で「チャネル別の構成比は分析ページへ」との方針に対応し、構成比（当月／年度累計）をここに集約しました。週報（全体）はチャネルごとの実額・昨対比に専念します。実データ表示はSalesforceの項目設計確定後です。</div>
+
+  <div style="margin-top:16px"><a class="back" href="r-overall.html">← 全体（週報）に戻る</a></div>
+
+</div>
+
+</body>
+</html>
