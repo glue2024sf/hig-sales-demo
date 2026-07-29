@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>営業ターゲット（案件・加重期待値）| 反映版 | HIG</title>
+<link rel="stylesheet" href="a.css">
+<link rel="stylesheet" href="r.css">
+<style>
+  .twrap{ max-width:1180px; margin:0 auto; padding:0 16px 40px; }
+  .tnote{ background:#fff; border:1px solid #e3e8ee; border-left:5px solid #0176d3; border-radius:8px; padding:12px 15px; margin-bottom:16px; font-size:13px; line-height:1.8; }
+  .angtbl{ width:100%; border-collapse:collapse; font-size:12.5px; background:#fff; }
+  .angtbl th,.angtbl td{ border-bottom:1px solid #ecebea; padding:8px 10px; text-align:right; }
+  .angtbl th{ background:#f3f6f9; color:#3a4650; font-weight:700; }
+  .angtbl td:first-child,.angtbl th:first-child{ text-align:left; }
+  .angtbl .tot{ font-weight:700; background:#f7f9fb; }
+  .angtbl .neg-r td{ background:#fff6f5; }
+  .angpill{ display:inline-block; min-width:38px; text-align:center; border-radius:4px; padding:1px 6px; font-weight:700; font-size:11px; color:#fff; }
+  .a100{ background:#032d60; } .a75{ background:#0176d3; } .a50{ background:#2e844a; } .a25{ background:#e08a2b; }
+</style>
+</head>
+<body>
+
+<div class="appbar">
+  <div class="brand"><span class="dot">R</span><span>反映版</span><span class="sep">｜</span><span>希望レイアウト反映</span></div>
+  <nav>
+    <a href="r-personal.html">ホーム(個人)</a>
+    <a href="r-overall.html">全体</a>
+    <a href="r-analysis.html">分析</a>
+    <a href="r-target.html" class="on">ターゲット</a>
+    <a href="r-team.html">東マ</a>
+    <a href="r-jtb.html">JTB・ニシカワヤ</a>
+    <a href="r-direct.html">直販</a>
+  </nav>
+  <a class="back" href="index.html">← 3案を比較</a>
+</div>
+
+<div class="pagehead">
+  <div class="row">
+    <div class="ic">🎯</div>
+    <div>
+      <div class="eyebrow">営業ターゲットダッシュボード ・ 未来の見込みを管理</div>
+      <h1>営業ターゲット（案件・加重期待値）</h1>
+    </div>
+    <div class="grow"></div>
+    <div class="who">対象: 2026年度<br><b>チーム年度目標 × パイプライン</b></div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <span class="chip on">年度: 2026(4-3月)</span>
+  <span class="grow"></span>
+  <span class="hint">7/24決定：営業ダッシュボードをタブに追加。角度×金額の加重期待値を自動集計し、目標との差分を表示</span>
+</div>
+
+<div class="twrap">
+
+  <div class="tnote">
+    <b style="color:#032d60">💬 このページについて</b>：チームごとの年度目標に対し、各案件の<b>成約角度（確度）×金額</b>で<b>加重期待値</b>を自動集計します。プラス案件・マイナス案件を分けて集計し、<b>目標との差分</b>を可視化。数値・チェーン名はすべてダミー、金額は万円単位です。
+  </div>
+
+  <!-- A2 チーム別 年度目標 -->
+  <div class="sec"><span class="bar"></span><h2>チーム別 年度目標 × 着地予測</h2><span class="note">受注済＋加重見込で着地を予測、目標との差を表示（マイナスは赤字）</span></div>
+  <div class="card" style="margin-bottom:18px">
+    <div class="bd flush tbl-scroll">
+      <table class="angtbl">
+        <thead><tr><th>チーム</th><th>年度目標</th><th>受注済</th><th>加重見込(＋)</th><th>着地予測</th><th>目標差</th></tr></thead>
+        <tbody>
+          <tr><td>東京マツシマ</td><td>24,000万円</td><td>20,200万円</td><td>＋3,200万円</td><td>23,400万円</td><td class="yy neg">−600万円</td></tr>
+          <tr><td>JTB・ニシカワヤ</td><td>16,000万円</td><td>12,000万円</td><td>＋2,800万円</td><td>14,800万円</td><td class="yy neg">−1,200万円</td></tr>
+          <tr><td>直販</td><td>33,000万円</td><td>27,400万円</td><td>＋4,500万円</td><td>31,900万円</td><td class="yy neg">−1,100万円</td></tr>
+          <tr class="tot"><td>全体</td><td>73,000万円</td><td>59,600万円</td><td>＋10,500万円</td><td>70,100万円</td><td class="yy neg">−2,900万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- A4 加重期待値（角度4段階） -->
+  <div class="sec"><span class="bar"></span><h2>加重期待値（角度4段階：100/75/50/25%）<span class="newbadge">自動集計</span></h2><span class="note">プラス案件は角度別に加重、マイナス案件（失注リスク）は差引。目標残との差分を算出</span></div>
+  <div class="card" style="margin-bottom:8px">
+    <div class="bd flush tbl-scroll">
+      <table class="angtbl">
+        <thead><tr><th>区分</th><th>角度</th><th>件数</th><th>金額</th><th>加重期待値</th></tr></thead>
+        <tbody>
+          <tr><td>受注確定</td><td><span class="angpill a100">100%</span></td><td>8件</td><td>5,200万円</td><td>5,200万円</td></tr>
+          <tr><td>内定</td><td><span class="angpill a75">75%</span></td><td>12件</td><td>6,800万円</td><td>5,100万円</td></tr>
+          <tr><td>営業済</td><td><span class="angpill a50">50%</span></td><td>18件</td><td>9,400万円</td><td>4,700万円</td></tr>
+          <tr><td>情報収集済</td><td><span class="angpill a25">25%</span></td><td>24件</td><td>11,200万円</td><td>2,800万円</td></tr>
+          <tr class="tot"><td>プラス案件 計</td><td>—</td><td>62件</td><td>32,600万円</td><td class="yy pos">＋17,800万円</td></tr>
+          <tr class="neg-r"><td>マイナス案件（失注リスク）</td><td>50%</td><td>5件</td><td>3,700万円</td><td class="yy neg">−1,850万円</td></tr>
+          <tr class="tot"><td>差引 加重期待値</td><td>—</td><td>—</td><td>—</td><td class="yy pos">＋15,950万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:18px"><div class="bd">
+    <div class="grid g4">
+      <div class="bd-box"><div class="k">目標残（年度）</div><div class="v">13,400<small>万円</small></div></div>
+      <div class="bd-box"><div class="k">差引 加重期待値</div><div class="v pos">15,950<small>万円</small></div></div>
+      <div class="bd-box sum"><div class="k">目標残との差分</div><div class="v pos">＋2,550<small>万円</small></div></div>
+      <div class="bd-box"><div class="k">達成確度</div><div class="v pos">見込みは目標超</div></div>
+    </div>
+    <p class="muted" style="margin:8px 0 0;font-size:11.5px">※ 加重期待値 ＝ Σ(案件金額 × 成約角度)。プラス案件からマイナス案件（失注リスク）の期待損失を差し引いて算出。</p>
+  </div></div>
+
+  <!-- A3 案件管理（角度別パイプライン） -->
+  <div class="sec"><span class="bar"></span><h2>案件管理（角度別パイプライン）</h2><span class="note">主要案件を角度・金額・担当・導入予定月で管理</span></div>
+  <div class="card">
+    <div class="bd flush tbl-scroll">
+      <table class="angtbl">
+        <thead><tr><th>案件</th><th>チーム</th><th>角度</th><th>金額</th><th>加重</th><th>担当</th><th>導入予定</th></tr></thead>
+        <tbody>
+          <tr><td>グランビューHD チェーン導入</td><td>東京マツシマ</td><td><span class="angpill a75">75%</span></td><td>2,400万円</td><td>1,800万円</td><td>櫻井</td><td>2026-04</td></tr>
+          <tr><td>沖縄 新規開業2件</td><td>JTB・ニシカワヤ</td><td><span class="angpill a50">50%</span></td><td>3,300万円</td><td>1,650万円</td><td>田村</td><td>2026-06</td></tr>
+          <tr><td>都ホテル 追加ロット</td><td>直販</td><td><span class="angpill a100">100%</span></td><td>1,200万円</td><td>1,200万円</td><td>三原</td><td>2026-05</td></tr>
+          <tr><td>ベイエリア 什器入替</td><td>直販</td><td><span class="angpill a25">25%</span></td><td>1,800万円</td><td>450万円</td><td>中村</td><td>2026-09</td></tr>
+          <tr class="neg-r"><td>グリーンパーク柏（失注リスク）</td><td>東京マツシマ</td><td>50%</td><td>1,200万円</td><td class="yy neg">−600万円</td><td>櫻井</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="memo" style="margin-top:18px">💡 <b>このタブの位置づけ（A1〜A5）</b>：営業ダッシュボードを新タブとして追加（A1）。チーム別年度目標（A2）と案件管理（A3）を持ち、角度×金額の加重期待値（A4：4段階 100/75/50/25%）を自動集計して目標差を表示します。<b>A5：角度の入力精度はマネージャー管理が前提</b>（心理的に高めに入りがちなため、レビューで補正）。実データ表示はSalesforceの項目設計確定後です。</div>
+
+  <div style="margin-top:16px"><a class="back" href="r-overall.html">← 全体（週報）に戻る</a></div>
+
+</div>
+
+</body>
+</html>

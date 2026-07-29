@@ -91,3 +91,15 @@
 .askbox b{ display:block; margin-bottom:5px; color:#032d60; }
 .two{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 @media(max-width:860px){ .two{ grid-template-columns:1fr; } }
+
+/* --- チーム/個人 3区分サマリー（月次・3ヶ月平均・年度累計） -------------- */
+.team3{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+@media(max-width:760px){ .team3{ grid-template-columns:1fr; } }
+.team3 .t3c{ border:1px solid #e5e5e5; border-radius:8px; padding:12px 14px; background:#fff; }
+.team3 .t3c.hl{ border-color:#0176d3; box-shadow:0 0 0 1px #0176d3 inset; }
+.team3 .t3l{ font-size:11px; color:#6b7684; font-weight:700; margin-bottom:4px; }
+.team3 .t3l small{ color:#9aa4af; font-weight:600; }
+.team3 .t3v{ font-size:24px; font-weight:700; color:#032d60; letter-spacing:-.5px; font-variant-numeric:tabular-nums; }
+.team3 .t3v small{ font-size:12px; font-weight:600; color:#5a6570; margin-left:2px; }
+.team3 .t3y{ font-size:12.5px; margin-top:3px; }
+.team3 .t3p{ font-size:11px; color:#8a8886; margin-top:2px; font-variant-numeric:tabular-nums; }
