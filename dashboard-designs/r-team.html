@@ -209,11 +209,11 @@
   </div>
 
   <!-- ============ 売上ランキング ============ -->
-  <div class="sec"><span class="bar"></span><h2>売上ランキング（TOP20 ／ BOTTOM10）<span class="newbadge">期間3区分で切替</span></h2><span class="note">7/24決定：月次・3ヶ月平均・年度累計の3区分で切替表示（下記は年度累計）</span><span class="grow"></span><span class="chip on" style="font-size:11px">年度累計</span><span class="chip" style="font-size:11px">3ヶ月平均</span><span class="chip" style="font-size:11px">月次</span></div>
+  <div class="sec"><span class="bar"></span><h2>売上ランキング（月次・3ヶ月平均・年度累計）<span class="newbadge">3区分を横並び</span></h2><span class="note">7/24決定：全体と同じく月次・3ヶ月平均・年度累計を横並び。各TOP10（施設×昨対比、マイナスは赤字）。BOTTOM10は下段に</span></div>
   <div class="card" style="margin-bottom:12px">
     <div class="bd">
       <div class="grid g4">
-        <div class="bd-box"><div class="k">合計売上（TOP20）</div><div class="v">20,820<small>万円</small></div></div>
+        <div class="bd-box"><div class="k">合計売上（TOP20・年度）</div><div class="v">20,820<small>万円</small></div></div>
         <div class="bd-box"><div class="k">昨対比（全体）</div><div class="v neg">87.9<small>%</small></div></div>
         <div class="bd-box"><div class="k">前年差</div><div class="v neg">−2,870<small>万円</small></div></div>
         <div class="bd-box"><div class="k">うち直販売上</div><div class="v pos">7,850万円 <small>110.5%</small></div></div>
@@ -223,66 +223,85 @@
 
   <div class="rank3">
     <div class="card rank">
-      <div class="hd">売上 TOP10</div>
+      <div class="hd">月次（7月）TOP10</div>
+      <div class="bd flush tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">当月</th><th class="num">昨対比</th></tr></thead>
+          <tbody>
+            <tr><td class="idx">1</td><td>グランビューホテルズ</td><td class="num">800万円</td><td class="num neg">98.4%</td></tr>
+            <tr><td class="idx">2</td><td>都ホテルチェーン</td><td class="num">740万円</td><td class="num pos">116.2%</td></tr>
+            <tr><td class="idx">3</td><td>ハーバーホテルズ</td><td class="num">510万円</td><td class="num neg">99.6%</td></tr>
+            <tr><td class="idx">4</td><td>ノースゲート金沢</td><td class="num">430万円</td><td class="num neg">94.8%</td></tr>
+            <tr><td class="idx">5</td><td>レイクサイド箱根</td><td class="num">400万円</td><td class="num neg">43.5%</td></tr>
+            <tr><td class="idx">6</td><td>サンリゾート沖縄</td><td class="num">280万円</td><td class="num neg">70.1%</td></tr>
+            <tr><td class="idx">7</td><td>シティイン新橋</td><td class="num">230万円</td><td class="num neg">67.9%</td></tr>
+            <tr><td class="idx">8</td><td>ブルーオーシャン札幌</td><td class="num">200万円</td><td class="num neg">60.0%</td></tr>
+            <tr><td class="idx">9</td><td>やまと温泉リゾート</td><td class="num">190万円</td><td class="num pos">105.4%</td></tr>
+            <tr><td class="idx">10</td><td>グリーンパーク柏</td><td class="num">140万円</td><td class="num neg">59.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card rank">
+      <div class="hd">3ヶ月平均 TOP10</div>
+      <div class="bd flush tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">3ヶ月平均</th><th class="num">昨対比</th></tr></thead>
+          <tbody>
+            <tr><td class="idx">1</td><td>グランビューホテルズ</td><td class="num">780万円</td><td class="num neg">98.4%</td></tr>
+            <tr><td class="idx">2</td><td>都ホテルチェーン</td><td class="num">720万円</td><td class="num pos">116.2%</td></tr>
+            <tr><td class="idx">3</td><td>ハーバーホテルズ</td><td class="num">500万円</td><td class="num neg">99.6%</td></tr>
+            <tr><td class="idx">4</td><td>ノースゲート金沢</td><td class="num">410万円</td><td class="num neg">94.8%</td></tr>
+            <tr><td class="idx">5</td><td>レイクサイド箱根</td><td class="num">390万円</td><td class="num neg">43.5%</td></tr>
+            <tr><td class="idx">6</td><td>サンリゾート沖縄</td><td class="num">270万円</td><td class="num neg">70.1%</td></tr>
+            <tr><td class="idx">7</td><td>シティイン新橋</td><td class="num">220万円</td><td class="num neg">67.9%</td></tr>
+            <tr><td class="idx">8</td><td>ブルーオーシャン札幌</td><td class="num">195万円</td><td class="num neg">60.0%</td></tr>
+            <tr><td class="idx">9</td><td>やまと温泉リゾート</td><td class="num">185万円</td><td class="num pos">105.4%</td></tr>
+            <tr><td class="idx">10</td><td>グリーンパーク柏</td><td class="num">135万円</td><td class="num neg">59.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card rank">
+      <div class="hd">年度累計 TOP10</div>
       <div class="bd flush tbl-scroll">
         <table class="tbl">
           <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">当年度</th><th class="num">昨対比</th></tr></thead>
           <tbody>
-            <tr><td class="idx">1</td><td>グランビューホテルズ</td><td class="num">3,090万円</td><td class="num pos">98.4%</td></tr>
+            <tr><td class="idx">1</td><td>グランビューホテルズ</td><td class="num">3,090万円</td><td class="num neg">98.4%</td></tr>
             <tr><td class="idx">2</td><td>都ホテルチェーン</td><td class="num">2,860万円</td><td class="num pos">116.2%</td></tr>
-            <tr><td class="idx">3</td><td>ハーバーホテルズ</td><td class="num">1,970万円</td><td class="num pos">99.6%</td></tr>
-            <tr><td class="idx">4</td><td>ノースゲート金沢</td><td class="num">1,640万円</td><td class="num pos">94.8%</td></tr>
+            <tr><td class="idx">3</td><td>ハーバーホテルズ</td><td class="num">1,970万円</td><td class="num neg">99.6%</td></tr>
+            <tr><td class="idx">4</td><td>ノースゲート金沢</td><td class="num">1,640万円</td><td class="num neg">94.8%</td></tr>
             <tr><td class="idx">5</td><td>レイクサイド箱根</td><td class="num">1,550万円</td><td class="num neg">43.5%</td></tr>
-            <tr><td class="idx">6</td><td>サンリゾート沖縄</td><td class="num">1,070万円</td><td class="num pos">70.1%</td></tr>
-            <tr><td class="idx">7</td><td>シティイン新橋</td><td class="num">880万円</td><td class="num pos">67.9%</td></tr>
-            <tr><td class="idx">8</td><td>ブルーオーシャン札幌</td><td class="num">770万円</td><td class="num pos">60.0%</td></tr>
+            <tr><td class="idx">6</td><td>サンリゾート沖縄</td><td class="num">1,070万円</td><td class="num neg">70.1%</td></tr>
+            <tr><td class="idx">7</td><td>シティイン新橋</td><td class="num">880万円</td><td class="num neg">67.9%</td></tr>
+            <tr><td class="idx">8</td><td>ブルーオーシャン札幌</td><td class="num">770万円</td><td class="num neg">60.0%</td></tr>
             <tr><td class="idx">9</td><td>やまと温泉リゾート</td><td class="num">740万円</td><td class="num pos">105.4%</td></tr>
-            <tr><td class="idx">10</td><td>グリーンパーク柏</td><td class="num">530万円</td><td class="num pos">59.4%</td></tr>
+            <tr><td class="idx">10</td><td>グリーンパーク柏</td><td class="num">530万円</td><td class="num neg">59.4%</td></tr>
           </tbody>
         </table>
       </div>
     </div>
+  </div>
 
-    <div class="card rank">
-      <div class="hd" style="color:#c23934">売上 BOTTOM10（昨対比）<span class="newbadge">新規</span></div>
-      <div class="bd flush tbl-scroll">
-        <table class="tbl">
-          <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">昨対比</th><th class="num">前年差</th></tr></thead>
-          <tbody>
-            <tr><td class="idx">1</td><td>シンフォニー相模</td><td class="num neg">145.1%</td><td class="num pos">+180万円</td></tr>
-            <tr><td class="idx">2</td><td>休暇村インズ</td><td class="num neg">100.0%</td><td class="num">±0</td></tr>
-            <tr><td class="idx">3</td><td>ルートサイド東海</td><td class="num neg">670.7%</td><td class="num pos">+240万円</td></tr>
-            <tr><td class="idx">4</td><td>D-i-C-E ホテルズ</td><td class="num neg">94.8%</td><td class="num neg">−40万円</td></tr>
-            <tr><td class="idx">5</td><td>ホスピタリティOP</td><td class="num neg">70.1%</td><td class="num neg">−460万円</td></tr>
-            <tr><td class="idx">6</td><td>タカラレーベン系</td><td class="num neg">33.8%</td><td class="num neg">−860万円</td></tr>
-            <tr><td class="idx">7</td><td>トスライ ホテルズ</td><td class="num neg">120.2%</td><td class="num pos">+250万円</td></tr>
-            <tr><td class="idx">8</td><td>萬国屋リゾート</td><td class="num neg">733.0%</td><td class="num pos">+410万円</td></tr>
-            <tr><td class="idx">9</td><td>CHIグループ</td><td class="num neg">31.4%</td><td class="num neg">−470万円</td></tr>
-            <tr><td class="idx">10</td><td>エムアンドエム</td><td class="num neg">184.7%</td><td class="num pos">+250万円</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="card rank">
-      <div class="hd">増減額 TOP10（前年差）<span class="newbadge">新規</span></div>
-      <div class="bd flush tbl-scroll">
-        <table class="tbl">
-          <thead><tr><th>施設名</th><th style="width:44%">増減</th><th class="num">前年差</th></tr></thead>
-          <tbody>
-            <tr><td>都ホテルチェーン</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:32%"></div></div></td><td class="num pos">+410万円</td></tr>
-            <tr><td>萬国屋リゾート</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:30%"></div></div></td><td class="num pos">+410万円</td></tr>
-            <tr><td>ルートサイド東海</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:19%"></div></div></td><td class="num pos">+240万円</td></tr>
-            <tr><td>トスライ ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:19%"></div></div></td><td class="num pos">+250万円</td></tr>
-            <tr><td>シンフォニー相模</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:14%"></div></div></td><td class="num pos">+180万円</td></tr>
-            <tr><td>D-i-C-E ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:4%"></div></div></td><td class="num neg">−40万円</td></tr>
-            <tr><td>ホスピタリティOP</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:36%"></div></div></td><td class="num neg">−460万円</td></tr>
-            <tr><td>CHIグループ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:37%"></div></div></td><td class="num neg">−470万円</td></tr>
-            <tr><td>タカラレーベン系</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:48%"></div></div></td><td class="num neg">−860万円</td></tr>
-            <tr><td>レイクサイド箱根</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:44%"></div></div></td><td class="num neg">−780万円</td></tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="sec"><span class="bar"></span><h2>売上 BOTTOM10（年度累計・昨対比）</h2><span class="note">昨対比が低い順（前年差つき）</span></div>
+  <div class="card">
+    <div class="bd flush tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">昨対比</th><th class="num">前年差</th></tr></thead>
+        <tbody>
+            <tr><td class="idx">1</td><td>タカラレーベン系</td><td class="num neg">33.8%</td><td class="num neg">−860万円</td></tr>
+            <tr><td class="idx">2</td><td>CHIグループ</td><td class="num neg">31.4%</td><td class="num neg">−470万円</td></tr>
+            <tr><td class="idx">3</td><td>レイクサイド箱根</td><td class="num neg">43.5%</td><td class="num neg">−780万円</td></tr>
+            <tr><td class="idx">4</td><td>ブルーオーシャン札幌</td><td class="num neg">60.0%</td><td class="num neg">−510万円</td></tr>
+            <tr><td class="idx">5</td><td>グリーンパーク柏</td><td class="num neg">59.4%</td><td class="num neg">−360万円</td></tr>
+            <tr><td class="idx">6</td><td>シティイン新橋</td><td class="num neg">67.9%</td><td class="num neg">−420万円</td></tr>
+            <tr><td class="idx">7</td><td>サンリゾート沖縄</td><td class="num neg">70.1%</td><td class="num neg">−460万円</td></tr>
+            <tr><td class="idx">8</td><td>ホスピタリティOP</td><td class="num neg">74.8%</td><td class="num neg">−300万円</td></tr>
+            <tr><td class="idx">9</td><td>ノースゲート金沢</td><td class="num neg">94.8%</td><td class="num neg">−90万円</td></tr>
+            <tr><td class="idx">10</td><td>ハーバーホテルズ</td><td class="num neg">99.6%</td><td class="num neg">−8万円</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
@@ -443,7 +462,7 @@
     5. <b>営業日進捗</b>の営業日カレンダーをどこで管理するか（祝日・休業日の扱い）。
   </div>
 
-  <div class="memo">💡 <b>この画面の変更点</b>：前年差（金額）・営業日進捗との対比・月次/3ヶ月平均/年度累計の3区分サマリー・売上BOTTOM10・増減額TOP10・四半期マトリクス・新規獲得の詳細項目・ロスト理由・営業社員別の新規獲得売上状況を反映し、トピックスを「プラス要因／リスク・課題」の2分類に変更しました（7/24定例で月間目標3段階は削除）。</div>
+  <div class="memo">💡 <b>この画面の変更点</b>：前年差（金額）・営業日進捗との対比・月次/3ヶ月平均/年度累計の3区分サマリー・売上ランキング(月次/3ヶ月/年度累計の横並び)・BOTTOM10・四半期マトリクス・新規獲得の詳細項目・ロスト理由・営業社員別の新規獲得売上状況を反映し、トピックスを「プラス要因／リスク・課題」の2分類に変更しました（7/24定例で月間目標3段階は削除）。</div>
 
 </div>
 </body>
