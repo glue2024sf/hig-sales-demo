@@ -38,10 +38,10 @@
 .chcol .p3 .pv .cy{ font-size:16px; font-weight:700; color:#032d60; font-variant-numeric:tabular-nums; letter-spacing:-.3px; }
 .chcol .p3 .pv .cy small{ font-size:10px; font-weight:600; color:#5a6570; margin-left:1px; }
 .chcol .p3 .ps{ font-size:10px; color:#8a8886; font-variant-numeric:tabular-nums; margin-top:1px; }
-/* 昨対比・増減％の文字色（マイナス＝赤・一律） */
+/* 昨対比・増減％の文字色（7/31決定：プラス＝青／マイナス＝赤） */
 .yy{ font-size:11px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
-.yy.pos{ color:#2e844a; }
-.yy.neg{ color:#c23934; }
+.yy.pos, .yoy.pos, .pos, .up, .kpi .delta .up{ color:#0a6ab5; }
+.yy.neg, .yoy.neg, .neg, .down, .kpi .delta .down{ color:#ba0517; }
 
 /* --- 3段階目標 ------------------------------------------------------------ */
 .tiers{ display:flex; flex-direction:column; gap:9px; }
@@ -82,6 +82,10 @@
 .qtbl tr.goal-r td{ background:#fbfcfd; }
 .qtbl tr.res-r td{ background:#fff; }
 .qtbl tr.rate-r td{ background:#fffdf5; font-weight:600; }
+
+/* --- チーム別トピックスの見出しラベル -------------------------------------- */
+.teamlbl{ display:inline-block; font-size:12.5px; font-weight:700; color:#032d60;
+  background:#eef4fa; border:1px solid #d6e4f2; border-radius:5px; padding:3px 11px; margin-bottom:6px; }
 
 /* --- 汎用 ------------------------------------------------------------------ */
 .newbadge{ display:inline-block; margin-left:6px; background:#2e844a; color:#fff; font-size:10px; font-weight:700; border-radius:3px; padding:1px 6px; vertical-align:middle; }
