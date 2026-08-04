@@ -50,55 +50,67 @@
     いただいた資料は御社の実データのため、この公開ページには掲載しておりません。<b>レイアウトと項目の構成のみ</b>を再現しています。
   </div>
 
-  <!-- サマリー（合算） -->
-  <div class="sec"><span class="bar"></span><h2>今月サマリー（合算）</h2></div>
-  <div class="grid g4">
-    <div class="kpi">
-      <div class="label">売上（7月累計）</div>
-      <div class="val">4,600<small>万円</small></div>
-      <div class="delta"><span class="up">▲ 昨対比 +9.0%</span></div>
-    </div>
-    <div class="kpi">
-      <div class="label">前年差</div>
-      <div class="val pos">+380<small>万円</small></div>
-      <div class="delta"><span class="flat">前年 4,220万円</span></div>
-    </div>
-    <div class="kpi">
-      <div class="label">目標達成率（単月評価）</div>
-      <div class="val">73.0<small>%</small></div>
-      <div class="delta"><span class="flat">目標 6,300万円</span></div>
-    </div>
-    <div class="kpi">
-      <div class="label">営業日進捗</div>
-      <div class="val">15<small>/22日</small></div>
-      <div class="delta"><span class="up">進捗率 68.2%（達成率が先行）</span></div>
+  <!-- 売上サマリー（全体のチャネルカードと同一部品に統一） -->
+  <div class="sec"><span class="bar"></span><h2>売上サマリー（直近3ヶ月累計・年度累計・年度内見込み）<span class="newbadge">7/31決定：チームは年度累計＋直近3ヶ月</span></h2><span class="note">7/31決定「<b>チームは年度累計＋直近3ヶ月、そのうえで年度内にどこまで積み上がるか</b>」に合わせ、<b>月次を外し</b>この3区分にしました（単月は振れ幅が大きいため。月次の動きは右のミニ推移と「営業社員別」の今月列で確認できます）。JTB・ニシカワヤ合算。カードの部品は全体ダッシュボードのチャネル別カードと共通。金額＝万円、昨対比は増減％表記。プラス＝青・マイナス＝赤</span></div>
+  <div class="chcol wide">
+    <div class="nm">JTB商事 ＋ ニシカワヤ（合算）</div>
+    <div class="bx">
+      <div class="p3">
+        <div class="pr">
+          <div class="pl">直近3ヶ月 累計 <small>(5-7月)</small></div>
+          <div class="pv"><span class="cy">12,200<small>万円</small></span><span class="yy pos">昨対比 +8.9% ▲</span></div>
+          <div class="ps">前年 11,200万円（前年差 +1,000万円）</div>
+        </div>
+        <div class="pr">
+          <div class="pl">年度累計 <small>(4-7月)</small></div>
+          <div class="pv"><span class="cy">16,200<small>万円</small></span><span class="yy pos">昨対比 +8.9% ▲</span></div>
+          <div class="ps">前年 14,880万円（前年差 +1,320万円）</div>
+        </div>
+        <div class="pr">
+          <div class="pl">年度内見込み <small>(4-3月・着地)</small></div>
+          <div class="pv"><span class="cy">48,600<small>万円</small></span><span class="yy pos">昨対比 +8.7% ▲</span></div>
+          <div class="ps">年度累計 16,200 ＋ 残8ヶ月見込 32,400万円／前年実績 44,700万円</div>
+        </div>
+      </div>
+      <div class="mini">
+        <div class="cap">売上推移（月次／万円・実績）</div>
+        <svg viewBox="0 0 150 62" width="100%" height="62" role="img" aria-label="JTB・ニシカワヤ合算 月次推移">
+          <g>
+            <rect x="10" y="29" width="12" height="27" fill="#032d60"/><rect x="23" y="32" width="12" height="24" fill="#c9ced6"/>
+            <rect x="58" y="25" width="12" height="31" fill="#032d60"/><rect x="71" y="30" width="12" height="26" fill="#c9ced6"/>
+            <rect x="106" y="21" width="12" height="35" fill="#032d60"/><rect x="119" y="27" width="12" height="29" fill="#c9ced6"/>
+          </g>
+          <g fill="#032d60" font-size="6.5" font-weight="700" text-anchor="middle">
+            <text x="22" y="27">3,500</text><text x="70" y="23">4,100</text><text x="118" y="19">4,600</text>
+          </g>
+          <g fill="#8a8886" font-size="8" text-anchor="middle">
+            <text x="22" y="61">5月</text><text x="70" y="61">6月</text><text x="118" y="61">7月</text>
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 
-  <!-- 売上サマリー 3区分（A-3・トップ/チームと統一） -->
-  <div class="sec"><span class="bar"></span><h2>売上サマリー（月次・3ヶ月平均・年度累計）<span class="newbadge">トップと統一</span></h2><span class="note">JTB・ニシカワヤ合算。金額＝万円、昨対比は増減％表記（例：+8.3％）。プラス＝青・マイナス＝赤</span></div>
-  <div class="card"><div class="bd">
-    <div class="team3">
-      <div class="t3c hl">
-        <div class="t3l">月次 <small>(7月)</small></div>
-        <div class="t3v">4,600<small>万円</small></div>
-        <div class="t3y yy pos">昨対比 +9.0% ▲</div>
-        <div class="t3p">前年 4,220万円</div>
+  <!-- 目標達成ペース（東マ・直販と同じ部品） -->
+  <div class="card" style="margin-top:16px">
+    <div class="hd">目標達成ペース（営業日進捗との対比）<span class="sub">当月目標 6,300万円 ／ 実績 4,600万円</span></div>
+    <div class="bd">
+      <div class="tiers">
+        <div class="tier res">
+          <span class="nm">売上達成率</span>
+          <span class="tr"><span class="fl" style="width:73.0%;background:#0176d3"></span></span>
+          <span class="amt">73.0%</span>
+        </div>
+        <div class="tier">
+          <span class="nm">営業日進捗</span>
+          <span class="tr"><span class="fl" style="width:68.2%;background:#c9ced6"></span></span>
+          <span class="amt">68.2%（15/22日）</span>
+        </div>
       </div>
-      <div class="t3c">
-        <div class="t3l">3ヶ月平均</div>
-        <div class="t3v">4,066<small>万円</small></div>
-        <div class="t3y yy pos">昨対比 +9.1% ▲</div>
-        <div class="t3p">前年 3,726万円</div>
-      </div>
-      <div class="t3c">
-        <div class="t3l">年度累計 <small>(4-7月)</small></div>
-        <div class="t3v">16,200<small>万円</small></div>
-        <div class="t3y yy pos">昨対比 +8.9% ▲</div>
-        <div class="t3p">前年 14,880万円</div>
-      </div>
+      <hr class="divi">
+      <p class="muted" style="margin:0;font-size:11.5px">売上達成率 <b>73.0%</b> が営業日進捗 <b>68.2%</b> を上回る → <span style="color:var(--green,#2e844a);font-weight:700">オンペース（先行）</span>。遅れる場合は赤で表示。</p>
     </div>
-  </div></div>
+  </div>
 
   <!-- 個別＋合算 -->
   <div class="sec"><span class="bar"></span><h2>個別 ＋ 合算</h2><span class="note">JTB商事とニシカワヤを個別に見つつ、合算でも確認できる形</span></div>
@@ -115,36 +127,7 @@
     </div>
   </div>
 
-  <!-- 月売上推移（3段階目標カードは7/24定例で削除） -->
-  <div style="margin-top:16px">
-    <div class="card">
-      <div class="hd">月売上推移（前年比較）<span class="sub">合算・今年 vs 前年</span></div>
-      <div class="bd">
-        <svg viewBox="0 0 500 200" width="100%" height="200" role="img" aria-label="月売上推移">
-          <g stroke="#ecebea" stroke-width="1">
-            <line x1="44" y1="30" x2="488" y2="30"/><line x1="44" y1="70" x2="488" y2="70"/>
-            <line x1="44" y1="110" x2="488" y2="110"/><line x1="44" y1="150" x2="488" y2="150"/>
-          </g>
-          <g fill="#8a8886" font-size="9" text-anchor="end">
-            <text x="38" y="34">6,000</text><text x="38" y="74">4,500</text>
-            <text x="38" y="114">3,000</text><text x="38" y="154">1,500</text>
-          </g>
-          <g>
-            <rect x="80"  y="72" width="34" height="98"  fill="#032d60"/><rect x="116" y="88" width="34" height="82" fill="#c9ced6"/>
-            <rect x="215" y="64" width="34" height="106" fill="#032d60"/><rect x="251" y="82" width="34" height="88" fill="#c9ced6"/>
-            <rect x="350" y="56" width="34" height="114" fill="#032d60"/><rect x="386" y="78" width="34" height="92" fill="#c9ced6"/>
-          </g>
-          <g fill="#8a8886" font-size="10" text-anchor="middle">
-            <text x="115" y="186">5月</text><text x="250" y="186">6月</text><text x="385" y="186">7月(途中)</text>
-          </g>
-        </svg>
-        <div class="legend">
-          <span class="it"><span class="sw" style="background:#032d60"></span>今年</span>
-          <span class="it"><span class="sw" style="background:#c9ced6"></span>前年</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- 月売上推移（前年比較）は 7/31 に上部の売上サマリーカードへ集約（重複解消） -->
 
   <div class="sec"><span class="bar"></span><h2>主要客 売上状況（TOP20）<span class="newbadge">全体と統一</span></h2><span class="note">7/24決定。TOP20を月次・3ヶ月平均・年度累計で横並び（全体と同じレイアウト）。金額＝万円、昨対比は増減％表記（例：+8.3％）。プラス＝青・マイナス＝赤</span></div>
   <div class="card">
@@ -194,70 +177,59 @@
     </div>
   </div>
 
-  <!-- ランキング -->
-  <div class="sec"><span class="bar"></span><h2>売上ランキング（同日営業日比較）</h2></div>
-  <div class="rank3">
-    <div class="card rank">
-      <div class="hd">売上 TOP10</div>
-      <div class="bd flush tbl-scroll">
-        <table class="tbl">
-          <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">当年度</th><th class="num">昨対比</th></tr></thead>
-          <tbody>
-            <tr><td class="idx">1</td><td>サンリゾート沖縄</td><td class="num">1,240万円</td><td class="num pos">+18.2%</td></tr>
-            <tr><td class="idx">2</td><td>やまと温泉リゾート</td><td class="num">980万円</td><td class="num pos">+5.4%</td></tr>
-            <tr><td class="idx">3</td><td>レイクサイド箱根</td><td class="num">720万円</td><td class="num neg">−11.9%</td></tr>
-            <tr><td class="idx">4</td><td>ノースゲート金沢</td><td class="num">560万円</td><td class="num pos">+12.0%</td></tr>
-            <tr><td class="idx">5</td><td>シティイン新橋</td><td class="num">410万円</td><td class="num neg">−7.6%</td></tr>
-          </tbody>
-        </table>
-      </div>
+  <!-- BOTTOM10（TOP20と同じ形に統一。売上TOP10はTOP20と重複するため削除） -->
+  <div class="sec"><span class="bar"></span><h2>売上 BOTTOM10（昨対比が低い順）<span class="newbadge">TOP20と同じ形に統一</span></h2><span class="note">7/31変更。TOP20と同じく<b>月次・3ヶ月平均・年度累計の横並び</b>に統一（並び順は年度累計の昨対比が低い順）。<b>「売上TOP10」は上のTOP20と重複するため削除</b>しました</span></div>
+  <div class="card">
+    <div class="bd flush tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr><th rowspan="2">売上 BOTTOM10</th><th class="num" colspan="2" style="text-align:center">月次（7月）</th><th class="num" colspan="2" style="text-align:center">3ヶ月平均</th><th class="num" colspan="2" style="text-align:center">年度累計</th></tr>
+          <tr><th class="num">今年</th><th class="num">昨対比</th><th class="num">今年</th><th class="num">昨対比</th><th class="num">今年</th><th class="num">昨対比</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="lk">トスライ ホテルズ</td><td class="num">38万円</td><td class="num neg">−60.4%</td><td class="num">37万円</td><td class="num neg">−59.6%</td><td class="num">150万円</td><td class="num neg">−58.8%</td></tr>
+          <tr><td class="lk">D-i-C-E ホテルズ</td><td class="num">63万円</td><td class="num neg">−37.8%</td><td class="num">62万円</td><td class="num neg">−37.0%</td><td class="num">250万円</td><td class="num neg">−36.2%</td></tr>
+          <tr><td class="lk">休暇村インズ</td><td class="num">60万円</td><td class="num neg">−29.1%</td><td class="num">58万円</td><td class="num neg">−28.3%</td><td class="num">240万円</td><td class="num neg">−27.5%</td></tr>
+          <tr><td class="lk">芦ノ湖ビューホテル</td><td class="num">185万円</td><td class="num neg">−13.5%</td><td class="num">180万円</td><td class="num neg">−12.7%</td><td class="num">720万円</td><td class="num neg">−11.9%</td></tr>
+          <tr><td class="lk">ビジネスイン品川</td><td class="num">105万円</td><td class="num neg">−9.2%</td><td class="num">102万円</td><td class="num neg">−8.4%</td><td class="num">410万円</td><td class="num neg">−7.6%</td></tr>
+          <tr><td class="lk">やんばるリゾート</td><td class="num">150万円</td><td class="num neg">−6.4%</td><td class="num">145万円</td><td class="num neg">−5.6%</td><td class="num">560万円</td><td class="num neg">−4.8%</td></tr>
+          <tr><td class="lk">コーラルビーチH</td><td class="num">180万円</td><td class="num neg">−2.9%</td><td class="num">175万円</td><td class="num neg">−2.1%</td><td class="num">690万円</td><td class="num neg">−1.3%</td></tr>
+          <tr style="background:#f7f9fb;font-weight:700"><td>BOTTOM10 合計（7社）</td><td class="num">781万円</td><td class="num neg">−18.5%</td><td class="num">759万円</td><td class="num neg">−17.7%</td><td class="num">3,020万円</td><td class="num neg">−16.9%</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="card rank">
-      <div class="hd" style="color:#c23934">売上 BOTTOM10（昨対比）</div>
-      <div class="bd flush tbl-scroll">
-        <table class="tbl">
-          <thead><tr><th class="idx">#</th><th>施設名</th><th class="num">昨対比</th><th class="num">前年差</th></tr></thead>
-          <tbody>
-            <tr><td class="idx">1</td><td>トスライ ホテルズ</td><td class="num neg">−58.8%</td><td class="num neg">−210万円</td></tr>
-            <tr><td class="idx">2</td><td>D-i-C-E ホテルズ</td><td class="num neg">−36.2%</td><td class="num neg">−140万円</td></tr>
-            <tr><td class="idx">3</td><td>休暇村インズ</td><td class="num neg">−27.5%</td><td class="num neg">−90万円</td></tr>
-            <tr><td class="idx">4</td><td>レイクサイド箱根</td><td class="num neg">−11.9%</td><td class="num neg">−100万円</td></tr>
-            <tr><td class="idx">5</td><td>シティイン新橋</td><td class="num neg">−7.6%</td><td class="num neg">−30万円</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="card rank">
-      <div class="hd">増減額 TOP10（前年差）</div>
-      <div class="bd flush tbl-scroll">
-        <table class="tbl">
-          <thead><tr><th>施設名</th><th style="width:44%">増減</th><th class="num">前年差</th></tr></thead>
-          <tbody>
-            <tr><td>サンリゾート沖縄</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:42%"></div></div></td><td class="num pos">+190万円</td></tr>
-            <tr><td>ノースゲート金沢</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:14%"></div></div></td><td class="num pos">+60万円</td></tr>
-            <tr><td>やまと温泉リゾート</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:11%"></div></div></td><td class="num pos">+50万円</td></tr>
-            <tr><td>休暇村インズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:20%"></div></div></td><td class="num neg">−90万円</td></tr>
-            <tr><td>D-i-C-E ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:31%"></div></div></td><td class="num neg">−140万円</td></tr>
-            <tr><td>トスライ ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:47%"></div></div></td><td class="num neg">−210万円</td></tr>
-          </tbody>
-        </table>
-      </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="hd">増減額 TOP10（前年差）<span class="sub">年度累計の増減額が大きい順</span></div>
+    <div class="bd flush tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th>施設名</th><th style="width:44%">増減</th><th class="num">前年差</th></tr></thead>
+        <tbody>
+          <tr><td>サンリゾート沖縄</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:42%"></div></div></td><td class="num pos">+190万円</td></tr>
+          <tr><td>ノースゲート金沢</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:14%"></div></div></td><td class="num pos">+60万円</td></tr>
+          <tr><td>やまと温泉リゾート</td><td><div class="dbar"><div class="mid"></div><div class="b p" style="width:11%"></div></div></td><td class="num pos">+50万円</td></tr>
+          <tr><td>休暇村インズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:20%"></div></div></td><td class="num neg">−90万円</td></tr>
+          <tr><td>D-i-C-E ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:31%"></div></div></td><td class="num neg">−140万円</td></tr>
+          <tr><td>トスライ ホテルズ</td><td><div class="dbar"><div class="mid"></div><div class="b n" style="width:47%"></div></div></td><td class="num neg">−210万円</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
   <!-- 四半期 -->
-  <div class="sec"><span class="bar"></span><h2>四半期目標・結果サマリー（4-6月）</h2></div>
+  <div class="sec"><span class="bar"></span><h2>四半期目標・結果サマリー（4-6月）<span class="newbadge">金額を大きく・金額→件数の縦並び</span></h2><span class="note">7/31変更。<b>金額を上・件数を下</b>の縦並びにし、各ブロック内は 目標→結果→達成率 の順。<b>結果（金額）を最も大きく表示</b>。達成率＝結果÷目標（100%以上＝青／100%未満＝赤）</span></div>
   <div class="card">
     <div class="bd flush tbl-scroll">
-      <table class="tbl qtbl">
-        <thead><tr><th></th><th></th><th class="mon">4月</th><th class="mon">5月</th><th class="mon">6月</th><th class="mon">合計</th></tr></thead>
+      <table class="tbl qtbl qtbl2">
+        <thead><tr><th></th><th></th><th class="mon">4月</th><th class="mon">5月</th><th class="mon">6月</th><th class="mon tot">合計</th></tr></thead>
         <tbody>
-          <tr class="goal-r"><td class="rowlbl" rowspan="2">目標</td><td>件数</td><td class="num">9</td><td class="num">8</td><td class="num">11</td><td class="num">28</td></tr>
-          <tr class="goal-r"><td>金額</td><td class="num">1,200万円</td><td class="num">1,100万円</td><td class="num">1,400万円</td><td class="num">3,700万円</td></tr>
-          <tr class="res-r"><td class="rowlbl" rowspan="2">結果</td><td>件数</td><td class="num">11</td><td class="num">7</td><td class="num">15</td><td class="num">33</td></tr>
-          <tr class="res-r"><td>金額</td><td class="num">1,320万円</td><td class="num">940万円</td><td class="num">1,580万円</td><td class="num">3,840万円</td></tr>
-          <tr class="rate-r"><td class="rowlbl" rowspan="2">達成率</td><td>件数</td><td class="num pos">122%</td><td class="num neg">88%</td><td class="num pos">136%</td><td class="num pos">118%</td></tr>
-          <tr class="rate-r"><td>金額</td><td class="num pos">110%</td><td class="num neg">85%</td><td class="num pos">113%</td><td class="num pos">104%</td></tr>
+          <tr class="amt-r goal-r"><td class="rowlbl amt" rowspan="3">金額</td><td>目標</td><td class="num">1,200<small>万円</small></td><td class="num">1,100<small>万円</small></td><td class="num">1,400<small>万円</small></td><td class="num tot">3,700<small>万円</small></td></tr>
+          <tr class="amt-r res-r"><td>結果</td><td class="num">1,320<small>万円</small></td><td class="num">940<small>万円</small></td><td class="num">1,580<small>万円</small></td><td class="num tot">3,840<small>万円</small></td></tr>
+          <tr class="amt-r rate-r"><td>達成率</td><td class="num rate pos">110.0%</td><td class="num rate neg">85.5%</td><td class="num rate pos">112.9%</td><td class="num rate tot pos">103.8%</td></tr>
+          <tr class="cnt-r goal-r"><td class="rowlbl" rowspan="3">件数</td><td>目標</td><td class="num">9件</td><td class="num">8件</td><td class="num">11件</td><td class="num tot">28件</td></tr>
+          <tr class="cnt-r res-r"><td>結果</td><td class="num">11件</td><td class="num">7件</td><td class="num">15件</td><td class="num tot">33件</td></tr>
+          <tr class="cnt-r rate-r"><td>達成率</td><td class="num rate pos">122.2%</td><td class="num rate neg">87.5%</td><td class="num rate pos">136.4%</td><td class="num rate tot pos">117.9%</td></tr>
         </tbody>
       </table>
     </div>
@@ -271,7 +243,7 @@
         <thead><tr><th>チェーン名</th><th>施設名</th><th class="num">部屋数</th><th>商品内容</th><th class="num">年間見込金額</th><th>使用商品</th><th>切替商品</th><th>業態</th><th>状況</th></tr></thead>
         <tbody>
           <tr><td>JTB商事</td><td class="lk">サンリゾート沖縄</td><td class="num">120</td><td>OG, OC, OCH</td><td class="num">920万円</td><td>リゾート</td><td class="muted">−</td><td><span class="pill green">リゾート</span></td><td>大浴場</td></tr>
-          <tr><td>JTB商事</td><td class="lk">レイクサイド箱根</td><td class="num">64</td><td>OC, OCH</td><td class="num">540万円</td><td>リゾート</td><td>他社Bシリーズ</td><td><span class="pill green">リゾート</span></td><td>部屋置き</td></tr>
+          <tr><td>JTB商事</td><td class="lk">芦ノ湖ビューホテル</td><td class="num">64</td><td>OC, OCH</td><td class="num">540万円</td><td>リゾート</td><td>他社Bシリーズ</td><td><span class="pill green">リゾート</span></td><td>部屋置き</td></tr>
           <tr><td>ニシカワヤ</td><td class="lk">やまと温泉リゾート</td><td class="num">88</td><td>クレンジング・パウダー</td><td class="num">680万円</td><td>大浴場</td><td class="muted">−</td><td><span class="pill green">温浴</span></td><td>大浴場</td></tr>
         </tbody>
       </table>
@@ -279,28 +251,60 @@
   </div>
 
   <!-- ロスト -->
-  <div class="sec"><span class="bar"></span><h2>ロストヒアリング（ロスト案件一覧）</h2></div>
+  <div class="sec"><span class="bar"></span><h2>ロストヒアリング（ロスト案件一覧）<span class="newbadge">年間・金額の大きい順</span></h2><span class="note">7/31変更。当月分だけでなく<b>今年度（4月〜）のロストを全件</b>表示し、<b>金額の大きい順</b>に並べます。「年間失注見込 合計」は<b>年間ロスト金額の合計</b>で算出（東マ・直販と統一）</span></div>
+  <div class="card" style="margin-bottom:12px">
+    <div class="bd">
+      <div class="grid g4">
+        <div class="bd-box"><div class="k">年間失注見込 合計<span class="newbadge">年間ロスト合計</span></div><div class="v neg">−2,590<small>万円</small></div></div>
+        <div class="bd-box"><div class="k">年間ロスト件数（4-7月）</div><div class="v">6<small>件</small></div></div>
+        <div class="bd-box"><div class="k">うち当月（7月）ロスト</div><div class="v neg">−800<small>万円</small></div></div>
+        <div class="bd-box"><div class="k">危険ステータス</div><div class="v neg">1<small>件</small></div></div>
+      </div>
+      <p class="muted" style="margin:8px 0 0;font-size:11.5px">※「年間失注見込 合計」＝今年度（4月〜）にロストした案件の年間金額の合計（＝下表の合計）。対象期間は年度（4-3月）で集計しています。</p>
+    </div>
+  </div>
   <div class="card">
     <div class="bd flush tbl-scroll">
       <table class="tbl">
-        <thead><tr><th>エリア</th><th>施設名</th><th class="num">部屋数</th><th>商品</th><th class="num">金額</th><th>詳細（失注理由のヒアリング）</th></tr></thead>
+        <thead><tr><th>ロスト月</th><th>エリア</th><th>施設名</th><th class="num">部屋数</th><th>商品</th><th class="num">金額（年間）</th><th>詳細（失注理由のヒアリング）</th></tr></thead>
         <tbody>
-          <tr><td>神奈川</td><td class="lk">トスライ ホテルズ</td><td class="num">140</td><td>OWセット</td><td class="num">800万円</td><td>グループ本部の一括購買方針に変更。個別提案の余地なし。<span class="pill red">危険</span></td></tr>
+          <tr><td>7月</td><td>神奈川</td><td class="lk">トスライ ホテルズ</td><td class="num">140</td><td>OWセット</td><td class="num">800万円</td><td>グループ本部の一括購買方針に変更。個別提案の余地なし。<span class="pill red">危険</span></td></tr>
+          <tr><td>6月</td><td>東京</td><td class="lk">D-i-C-E ホテルズ</td><td class="num">96</td><td>OCセット</td><td class="num">620万円</td><td>代理店経由の帳合変更。次年度の入札で再挑戦。</td></tr>
+          <tr><td>5月</td><td>長野</td><td class="lk">休暇村インズ</td><td class="num">88</td><td>NMセット</td><td class="num">430万円</td><td>施設改装に伴いアメニティ構成を全面見直し。</td></tr>
+          <tr><td>4月</td><td>京都</td><td class="lk">みやこ屋旅館連合</td><td class="num">60</td><td>OCHセット</td><td class="num">320万円</td><td>組合の共同購買へ切替。単価差が理由。</td></tr>
+          <tr><td>6月</td><td>沖縄</td><td class="lk">やんばるリゾート</td><td class="num">52</td><td>OVセット</td><td class="num">240万円</td><td>他社リゾート仕様の提案を採用。香り・容器の好み。</td></tr>
+          <tr><td>4月</td><td>東京</td><td class="lk">ビジネスイン品川</td><td class="num">44</td><td>OCセット</td><td class="num">180万円</td><td>稼働低下でコスト削減。対面提供へ変更。</td></tr>
+          <tr style="background:#f7f9fb;font-weight:700"><td colspan="5">年間ロスト 合計（6件）</td><td class="num neg">2,590万円</td><td class="muted">＝ 上部「年間失注見込 合計」</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
   <!-- 営業社員別 -->
-  <div class="sec"><span class="bar"></span><h2>新規獲得売上状況（営業社員別）</h2></div>
+  <div class="sec"><span class="bar"></span><h2>新規獲得売上状況（営業社員別）<span class="newbadge">4区分に変更</span></h2><span class="note">7/31変更。表示項目を <b>①年度の累計結果 ②直近3ヶ月の結果（7月なら5-7月） ③今月の結果 ④年度内にどこまで見込みがあるか（年度内見込金額）</b> の4区分に変更（東マ・直販と統一）。金額＝万円</span></div>
   <div class="card">
     <div class="bd flush tbl-scroll">
       <table class="tbl">
-        <thead><tr><th>営業社員</th><th class="num">新規獲得売上（累計）</th><th class="num">進捗率</th><th class="num">見込金額（年間）</th><th class="num">3ヵ月以内 成約見込み</th></tr></thead>
+        <thead><tr><th>営業社員</th><th class="num">年度累計 結果<small>（4-7月）</small></th><th class="num">直近3ヶ月 結果<small>（5-7月）</small></th><th class="num">今月 結果<small>（7月）</small></th><th class="num">年度内見込金額<small>（4-3月・着地見込）</small></th></tr></thead>
         <tbody>
-          <tr><td class="lk">田村</td><td class="num">3,100万円<span class="muted">（目標 7,000万円）</span></td><td class="num">44.3%</td><td class="num">8,600万円<span class="pos">（達成率 122.9%）</span></td><td class="num">1,400万円<span class="muted">（5件）</span></td></tr>
-          <tr><td class="lk">佐久間</td><td class="num">1,900万円<span class="muted">（目標 4,800万円）</span></td><td class="num">39.6%</td><td class="num">5,500万円<span class="pos">（達成率 114.6%）</span></td><td class="num">900万円<span class="muted">（3件）</span></td></tr>
-          <tr style="background:#f7f9fb;font-weight:700"><td>合計</td><td class="num">5,000万円<span class="muted">（目標 11,800万円）</span></td><td class="num">42.4%</td><td class="num">14,100万円<span class="pos">（達成率 119.5%）</span></td><td class="num">2,300万円<span class="muted">（8件）</span></td></tr>
+          <tr><td class="lk">田村</td><td class="num">3,100万円<span class="muted">（年度目標 7,000万円・進捗率 44.3%）</span></td><td class="num">2,400万円<span class="muted">（月平均 800万円）</span></td><td class="num">850万円</td><td class="num">8,600万円<span class="pos">（年度目標比 122.9%）</span><span class="muted">うち3ヵ月以内 1,400万円（5件）</span></td></tr>
+          <tr><td class="lk">佐久間</td><td class="num">1,900万円<span class="muted">（年度目標 4,800万円・進捗率 39.6%）</span></td><td class="num">1,450万円<span class="muted">（月平均 483万円）</span></td><td class="num">520万円</td><td class="num">5,500万円<span class="pos">（年度目標比 114.6%）</span><span class="muted">うち3ヵ月以内 900万円（3件）</span></td></tr>
+          <tr style="background:#f7f9fb;font-weight:700"><td>合計</td><td class="num">5,000万円<span class="muted">（年度目標 11,800万円・進捗率 42.4%）</span></td><td class="num">3,850万円<span class="muted">（月平均 1,283万円）</span></td><td class="num">1,370万円</td><td class="num">14,100万円<span class="pos">（年度目標比 119.5%）</span><span class="muted">うち3ヵ月以内 2,300万円（8件）</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============ メンバー別ランキング（7/31決定：全社ランキングを廃止しチーム単位に） ============ -->
+  <div class="sec"><span class="bar"></span><h2>メンバー別ランキング（チーム内）<span class="newbadge">7/31決定：チーム単位に変更</span></h2><span class="note">7/31決定「<b>全社の個人ランキングは廃止し、ランキングはチーム単位で見る</b>」に対応。JTB・ニシカワヤは代理店チャネルのため<b>他チームとは並べません</b>。並びは<b>年度累計の降順</b>、軸はチームビューと同じ<b>年度累計・直近3ヶ月・年度内見込み</b>。金額＝万円、昨対比はプラス＝青・マイナス＝赤</span></div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="bd flush tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th class="num">順位</th><th>メンバー</th><th class="num">年度累計<small>（4-7月）</small></th><th class="num">昨対比</th><th class="num">直近3ヶ月<small>（5-7月）</small></th><th class="num">年度内見込金額<small>（4-3月・着地見込）</small></th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td class="lk">田村</td><td class="num">3,100万円</td><td class="num pos">+7.2%</td><td class="num">2,400万円</td><td class="num">8,600万円</td></tr>
+          <tr><td class="num">2</td><td class="lk">佐久間</td><td class="num">1,900万円</td><td class="num neg">−1.9%</td><td class="num">1,450万円</td><td class="num">5,500万円</td></tr>
+          <tr style="background:#f7f9fb;font-weight:700"><td class="num">—</td><td>チーム合計（2名）</td><td class="num">5,000万円</td><td class="num pos">+3.5%</td><td class="num">3,850万円</td><td class="num">14,100万円</td></tr>
         </tbody>
       </table>
     </div>
@@ -315,7 +319,7 @@
     <div class="kpi"><div class="label">追客遅延</div><div class="val">2<small>件</small></div><div class="delta"><span class="down">▼ 10営業日超</span></div></div>
   </div>
 
-  <div class="memo">💡 <b>この画面について</b>：手書きのタブ構成に合わせ、JTB・ニシカワヤを<b>独立したページ</b>として分離しました。ご要望の「個別＋合算」は上部の表で個別行＋合算行として表示しています。将来JTBとニシカワヤを分ける場合も、集計を分けて保持しているためページを2つに割るだけで対応できます。</div>
+  <div class="memo">💡 <b>この画面について</b>：手書きのタブ構成に合わせ、JTB・ニシカワヤを<b>独立したページ</b>として分離しました。ご要望の「個別＋合算」は上部の表で個別行＋合算行として表示しています。将来JTBとニシカワヤを分ける場合も、集計を分けて保持しているためページを2つに割るだけで対応できます。<br><b>7/31変更</b>：東マ・直販と同じく、①売上サマリーを1枚に集約（今月サマリー／3区分／月売上推移の重複を解消）②BOTTOM10をTOP20と同じ形に統一（重複する売上TOP10は削除）③四半期は金額→件数の縦並び・結果金額を強調 ④ロストは年間の全件を金額の大きい順・年間失注見込＝年間ロスト合計 ⑤営業社員別を「年度累計／直近3ヶ月／今月／年度内見込金額」の4区分に変更しました。<br><b>8/4 追加反映</b>：⑥<b>メンバー別ランキング（チーム内）を追加</b>（「全社ランキングは廃止＝チーム単位で見る」に対応）⑦<b>売上サマリーを「直近3ヶ月累計・年度累計・年度内見込み」に変更</b>（月次を削除・3ヶ月"平均"→"累計"）⑧<b>東マと重複していた顧客名</b>（ビジネスイン品川／芦ノ湖ビューホテル）をJTB固有に整理しました。</div>
 
 </div>
 </body>
