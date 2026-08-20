@@ -3,7 +3,7 @@
 (function () {
   var page = document.body.getAttribute('data-page') || '';
   var nav = [
-    { key: 'home', label: 'ホーム', href: 'index.html' },
+    { key: 'home', label: 'ホーム', href: 'home.html' },
     {
       key: 'dash', label: 'ダッシュボード', href: 'dashboard-weekly.html',
       menu: [

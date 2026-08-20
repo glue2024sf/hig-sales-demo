@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ホーム | HIG 営業デモ</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="home">
+<div class="wrap">
+
+  <div class="page-head">
+    <div class="icon">🏠</div>
+    <div>
+      <div class="eyebrow">ホーム</div>
+      <h1>おはようございます</h1>
+    </div>
+    <div class="actions">
+      <a class="btn" href="activity-input.html">活動を記録</a>
+      <a class="btn primary" href="opportunity.html">商談を新規</a>
+    </div>
+  </div>
+
+  <div class="demo-note">⚠️ レビュー用デモ画面です。数値・チェーン名はすべてダミーです。御社（DHCブランドのホテルアメニティ販売）のチャネル・TOP147・品番体系を前提に作成しています。気づいた点はスクショに赤字でFBをお願いします。</div>
+
+  <!-- サマリ -->
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="kpi"><div class="label">今月 売上（全チャネル・税抜）</div><div class="val">¥182.4<small>M</small></div><div class="delta up">▲ 前年同月 +8.2%</div></div>
+    <div class="kpi"><div class="label">月次累計 / 目標</div><div class="val">73<small>%</small></div><div class="delta flat">HIGベース(4-3月)</div></div>
+    <div class="kpi"><div class="label">進行中 見込（年間）</div><div class="val">¥412<small>M</small></div><div class="delta up">▲ 32件</div></div>
+    <div class="kpi"><div class="label">要対応アラート</div><div class="val" style="color:var(--red)">7<small>件</small></div><div class="delta down">▼ 追客漏れ含む</div></div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <!-- チャネル別売上 -->
+    <div class="card">
+      <div class="hd">売上（チャネル別 / 当月）<span class="sub">単位: 百万円・税抜</span></div>
+      <div class="bd">
+        <div class="bar"><span class="name">直販</span><span class="track"><span class="fill" style="width:88%"></span></span><span class="v">¥80M</span></div>
+        <div class="bar"><span class="name">東京マツシマ</span><span class="track"><span class="fill a" style="width:62%"></span></span><span class="v">¥56M</span></div>
+        <div class="bar"><span class="name">JTB商事</span><span class="track"><span class="fill p" style="width:36%"></span></span><span class="v">¥33M</span></div>
+        <div class="bar"><span class="name">ニシカワヤ</span><span class="track"><span class="fill g" style="width:15%"></span></span><span class="v">¥13M</span></div>
+        <div class="legend"><span class="muted">「特販」はチャネル横断チーム（出荷データ上の項目は現状なし ※要確認）</span></div>
+      </div>
+    </div>
+    <!-- ネクストアクション -->
+    <div class="card">
+      <div class="hd">今日のネクストアクション</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <tr><td><span class="pill red">期限切れ</span></td><td class="lk">グランビューホテルズ — 内定フォロー</td><td class="muted">6/16期限</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">やまと温泉リゾート — 提案訪問</td><td class="muted">14:00</td></tr>
+          <tr><td><span class="pill amber">本日</span></td><td class="lk">サンリゾート — サンプル追客TEL</td><td class="muted">16:00</td></tr>
+          <tr><td><span class="pill blue">明日</span></td><td class="lk">都ホテルチェーン — 価格交渉</td><td class="muted">10:30</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:16px">
+    <!-- アラート -->
+    <div class="card">
+      <div class="hd">⚠️ アラート（追客・ロスト予兆）</div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>内容</th><th>対象</th><th class="num">経過</th></tr></thead>
+          <tbody>
+            <tr><td>サンプル送付後 未追客（10営業日超）</td><td class="lk"><a href="sample-follow.html">サンリゾート 沖縄</a></td><td class="num">13日</td></tr>
+            <tr><td>内定後 動きなし</td><td class="lk"><a href="opportunity.html">グランビューホテルズ_2026春</a></td><td class="num">18日</td></tr>
+            <tr><td>ロスト予兆（発注なし&ヒアリング済）</td><td class="lk"><a href="account-detail.html">都ホテル 名古屋</a></td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- サンプル追客 -->
+    <div class="card">
+      <div class="hd">サンプル追客<span class="sub"><a href="sample-follow.html">一覧へ</a></span></div>
+      <div class="bd" style="padding:0">
+        <table class="tbl">
+          <thead><tr><th>送付先（施設）</th><th>担当</th><th>状況</th></tr></thead>
+          <tbody>
+            <tr><td class="lk">サンリゾート 沖縄</td><td>三原</td><td><span class="pill red">追客遅延</span></td></tr>
+            <tr><td class="lk">やまと温泉 草津</td><td>櫻井</td><td><span class="pill amber">追客中</span></td></tr>
+            <tr><td class="lk">グランビュー箱根</td><td>田村</td><td><span class="pill green">転換</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- オブジェクト ランチャー -->
+  <div class="section-title">オブジェクト（リストビューへ）</div>
+  <div class="grid g4" style="margin-bottom:16px">
+    <a class="kpi" href="attack-list.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon lg" style="background:#d8623a">🎯</span><div><div class="val" style="font-size:16px">アタックリスト</div><div class="label">100万↑ 重点開拓・消し込み</div></div></a>
+    <a class="kpi" href="accounts.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-acct lg">🏢</span><div><div class="val" style="font-size:16px">取引先</div><div class="label">チェーン⇄施設 二層</div></div></a>
+    <a class="kpi" href="contacts.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-contact lg">👤</span><div><div class="val" style="font-size:16px">取引先責任者</div><div class="label">本社/施設キーマン</div></div></a>
+    <a class="kpi" href="opportunities.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-opp lg">💼</span><div><div class="val" style="font-size:16px">商談</div><div class="label">7ステージ</div></div></a>
+    <a class="kpi" href="activities.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-act lg">📋</span><div><div class="val" style="font-size:16px">活動</div><div class="label">ToDo・行動</div></div></a>
+    <a class="kpi" href="sample-follow.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-sample lg">🧴</span><div><div class="val" style="font-size:16px">サンプル</div><div class="label">統合・追客・転換</div></div></a>
+    <a class="kpi" href="products.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon o-prod lg">📦</span><div><div class="val" style="font-size:16px">商品（品番）</div><div class="label">記号体系</div></div></a>
+    <a class="kpi" href="mapping.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon" style="background:#0176d3;width:42px;height:42px;border-radius:8px;font-size:22px">🔗</span><div><div class="val" style="font-size:16px">対応表 整備</div><div class="label">名寄せ 60%</div></div></a>
+    <a class="kpi" href="approval.html" style="display:flex;align-items:center;gap:12px"><span class="obj-icon" style="background:#9aa5b1;width:42px;height:42px;border-radius:8px;font-size:22px">✅</span><div><div class="val" style="font-size:16px">承認</div><div class="label">価格・大型案件</div></div></a>
+  </div>
+
+  <div class="section-title">ダッシュボード</div>
+  <div class="grid g5">
+    <a class="kpi" href="dashboard-weekly.html"><div class="val" style="font-size:18px">📊 週報</div><div class="label">毎週全員</div></a>
+    <a class="kpi" href="dashboard-team.html"><div class="val" style="font-size:18px">👥 営業チーム</div><div class="label">売上/ロスト</div></a>
+    <a class="kpi" href="dashboard-personal.html"><div class="val" style="font-size:18px">🧑 個人</div><div class="label">見込・新規</div></a>
+    <a class="kpi" href="dashboard-quarter.html"><div class="val" style="font-size:18px">📈 四半期・経営</div><div class="label">集計軸・粗利</div></a>
+    <a class="kpi" href="dashboard-shipping.html"><div class="val" style="font-size:18px">🚚 出荷・売上</div><div class="label">Tシステム</div></a>
+  </div>
+
+  <div class="section-title" style="margin-top:16px">分析・管理</div>
+  <div class="grid g5">
+    <a class="kpi" href="reports.html"><div class="val" style="font-size:18px">📑 レポート</div><div class="label">集計の土台</div></a>
+    <a class="kpi" href="targets.html"><div class="val" style="font-size:18px">🎯 目標(予算)管理</div><div class="label">月次×チャネル×担当</div></a>
+    <a class="kpi" href="map.html"><div class="val" style="font-size:18px">🗺️ エリア・地図</div><div class="label">都道府県・浸透率</div></a>
+    <a class="kpi" href="data-import.html"><div class="val" style="font-size:18px">🔄 データ取込</div><div class="label">Tシステム連携</div></a>
+    <a class="kpi" href="pricebook.html"><div class="val" style="font-size:18px">¥ 価格表・改定</div><div class="label">チェーン別・履歴</div></a>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
