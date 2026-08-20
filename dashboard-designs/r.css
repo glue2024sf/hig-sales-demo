@@ -27,6 +27,9 @@
 .chcol .mini{ border-top:1px dotted #e5e5e5; padding-top:7px; }
 .chcol .mini .cap{ font-size:10px; color:#8a8886; margin-bottom:3px; }
 .chcol .mini svg{ display:block; width:100%; height:auto; }
+/* 棒グラフ下の昨対比。7/31決定#2: プラス＝青／マイナス＝赤 */
+.chcol .mini text.yp{ fill:#0a6ab5; }
+.chcol .mini text.yn{ fill:#ba0517; }
 
 /* --- 3ヶ月平均（棒グラフ下） ------------------------------------------------ */
 /* --- 期間3区分（月次・3ヶ月平均・年度累計） -------------------------------- */

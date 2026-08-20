@@ -88,13 +88,13 @@
 <div class="toolbar">
   <span class="chip on">年度: 2026(4-3月)</span>
   <span class="grow"></span>
-  <span class="hint">7/24決定：営業ダッシュボードをタブに追加。角度×金額の加重期待値を自動集計し、目標との差分を表示</span>
+  <span class="hint">7/24決定：営業ダッシュボードをタブに追加。受注角度×金額の加重期待値を自動集計し、目標との差分を表示</span>
 </div>
 
 <div class="twrap">
 
   <div class="tnote">
-    <b style="color:#032d60">💬 このページについて</b>：チームごとの年度目標に対し、各案件の<b>成約角度（確度）×金額</b>で<b>加重期待値</b>を自動集計します。プラス案件・マイナス案件を分けて集計し、<b>目標との差分</b>を可視化。数値・チェーン名はすべてダミー、金額は万円単位です。
+    <b style="color:#032d60">💬 このページについて</b>：チームごとの年度目標に対し、各案件の<b>受注角度×金額</b>で<b>加重期待値</b>を自動集計します。プラス案件・マイナス案件を分けて集計し、<b>目標との差分</b>を可視化。数値・チェーン名はすべてダミー、金額は万円単位です。
   </div>
 
   <!-- サマリー（最上部） -->
@@ -106,7 +106,7 @@
       <div class="bd-box sum"><div class="k">目標残との差分</div><div class="v pos">＋2,550<small>万円</small></div></div>
       <div class="bd-box"><div class="k">達成確度</div><div class="v pos">見込みは目標超</div></div>
     </div>
-    <p class="muted" style="margin:8px 0 0;font-size:11.5px">※ 加重期待値 ＝ Σ(案件金額 × 成約角度)。プラス案件からマイナス案件（失注リスク）の期待損失を差し引いて算出。目標残 ＝ 年度目標 − 受注済。</p>
+    <p class="muted" style="margin:8px 0 0;font-size:11.5px">※ 加重期待値 ＝ Σ(案件金額 × 成約受注角度)。プラス案件からマイナス案件（ロストリスク）の期待損失を差し引いて算出。目標残 ＝ 年度目標 − 受注済。</p>
   </div></div>
 
   <!-- A2 チーム別 年度目標 -->
@@ -126,19 +126,19 @@
     </div>
   </div>
 
-  <!-- A4 加重期待値（角度4段階） -->
-  <div class="sec"><span class="bar"></span><h2>加重期待値（角度4段階：100/75/50/25%）<span class="newbadge">自動集計</span></h2><span class="note">案件総額ではなく<b>年度内見込金額</b>を角度で加重。マイナス案件（失注リスク）は差引し、目標残との差分を算出</span></div>
+  <!-- A4 加重期待値（受注角度4段階） -->
+  <div class="sec"><span class="bar"></span><h2>加重期待値（受注角度4段階：100/75/50/25%）<span class="newbadge">自動集計</span></h2><span class="note">案件総額ではなく<b>年度内見込</b>を受注角度で加重。マイナス案件（ロストリスク）は差引し、目標残との差分を算出</span></div>
   <div class="card" style="margin-bottom:8px">
     <div class="bd flush tbl-scroll">
       <table class="angtbl">
-        <thead><tr><th>区分</th><th>角度</th><th>件数</th><th>年度内見込金額</th><th>加重期待値</th></tr></thead>
+        <thead><tr><th>区分</th><th>受注角度</th><th>件数</th><th>年度内見込</th><th>加重期待値</th></tr></thead>
         <tbody>
           <tr><td>受注確定</td><td><span class="angpill a100">100%</span></td><td>8件</td><td>5,200万円</td><td>5,200万円</td></tr>
           <tr><td>内定</td><td><span class="angpill a75">75%</span></td><td>12件</td><td>6,800万円</td><td>5,100万円</td></tr>
           <tr><td>営業済</td><td><span class="angpill a50">50%</span></td><td>18件</td><td>9,400万円</td><td>4,700万円</td></tr>
           <tr><td>情報収集済</td><td><span class="angpill a25">25%</span></td><td>24件</td><td>11,200万円</td><td>2,800万円</td></tr>
           <tr class="tot"><td>プラス案件 計</td><td>—</td><td>62件</td><td>32,600万円</td><td class="yy pos">＋17,800万円</td></tr>
-          <tr class="neg-r"><td>マイナス案件（失注リスク）</td><td>50%</td><td>5件</td><td>3,700万円</td><td class="yy neg">−1,850万円</td></tr>
+          <tr class="neg-r"><td>マイナス案件（ロストリスク）</td><td>50%</td><td>5件</td><td>3,700万円</td><td class="yy neg">−1,850万円</td></tr>
           <tr class="tot"><td>差引 加重期待値</td><td>—</td><td>—</td><td>—</td><td class="yy pos">＋15,950万円</td></tr>
         </tbody>
       </table>
@@ -146,14 +146,14 @@
   </div>
 
   <!-- A4-2 チャネル別 加重期待値 -->
-  <div class="sec"><span class="bar"></span><h2>チャネル別 加重期待値<span class="newbadge">チャネル4区分</span></h2><span class="note">同じ角度4段階の集計をチャネルごとに表示。4枚の合計が上の全体表と一致（単位：万円）</span></div>
+  <div class="sec"><span class="bar"></span><h2>チャネル別 加重期待値<span class="newbadge">チャネル4区分</span></h2><span class="note">同じ受注角度4段階の集計をチャネルごとに表示。4枚の合計が上の全体表と一致（単位：万円）</span></div>
   <div class="chwe" style="margin-bottom:18px">
 
     <div class="card">
       <div class="hd"><span class="cdot" style="background:#0176d3"></span>東京マツシマ<span class="sub">18件</span></div>
       <div class="bd flush">
         <table class="chtbl">
-          <thead><tr><th>角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
+          <thead><tr><th>受注角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
           <tbody>
             <tr><td><span class="angpill a100">100%</span></td><td>2件</td><td>1,500</td><td>1,500</td></tr>
             <tr><td><span class="angpill a75">75%</span></td><td>4件</td><td>2,100</td><td>1,575</td></tr>
@@ -175,7 +175,7 @@
       <div class="hd"><span class="cdot" style="background:#2e844a"></span>JTB商事<span class="sub">14件</span></div>
       <div class="bd flush">
         <table class="chtbl">
-          <thead><tr><th>角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
+          <thead><tr><th>受注角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
           <tbody>
             <tr><td><span class="angpill a100">100%</span></td><td>2件</td><td>1,100</td><td>1,100</td></tr>
             <tr><td><span class="angpill a75">75%</span></td><td>3件</td><td>1,400</td><td>1,050</td></tr>
@@ -197,7 +197,7 @@
       <div class="hd"><span class="cdot" style="background:#e08a2b"></span>ニシカワヤ<span class="sub">7件</span></div>
       <div class="bd flush">
         <table class="chtbl">
-          <thead><tr><th>角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
+          <thead><tr><th>受注角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
           <tbody>
             <tr><td><span class="angpill a100">100%</span></td><td>1件</td><td>400</td><td>400</td></tr>
             <tr><td><span class="angpill a75">75%</span></td><td>1件</td><td>500</td><td>375</td></tr>
@@ -219,7 +219,7 @@
       <div class="hd"><span class="cdot" style="background:#032d60"></span>直販<span class="sub">23件</span></div>
       <div class="bd flush">
         <table class="chtbl">
-          <thead><tr><th>角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
+          <thead><tr><th>受注角度</th><th>件数</th><th>年度内見込</th><th>加重</th></tr></thead>
           <tbody>
             <tr><td><span class="angpill a100">100%</span></td><td>3件</td><td>2,200</td><td>2,200</td></tr>
             <tr><td><span class="angpill a75">75%</span></td><td>4件</td><td>2,800</td><td>2,100</td></tr>
@@ -239,12 +239,12 @@
 
   </div>
 
-  <!-- A3 案件管理（角度別パイプライン）＋ A：金額/担当者フィルタ ＋ B：Next Action日付欄 -->
-  <div class="sec"><span class="bar"></span><h2>案件管理（角度別パイプライン）<span class="newbadge">8/4追加：絞り込み・Next Action日</span></h2><span class="note">7/31決定を反映。<b>①金額（◯万円以上／以下）と担当者で絞り込み</b>、<b>②デフォルトの並び順は金額（案件総額）の降順</b>、<b>③初期表示は100万円以上</b>（現行のExcel運用に合わせています。条件を変えれば小口案件も表示できます）。<b>④Next Action日をカレンダー形式で直接入力</b>（ToDoを別途発行しない簡易方式）。案件総額と「年度内見込金額」を分けて管理し、加重は年度内見込金額×角度で算出</span></div>
+  <!-- A3 案件管理（受注角度別パイプライン）＋ A：金額/担当者フィルタ ＋ B：Next Action日付欄 -->
+  <div class="sec"><span class="bar"></span><h2>案件管理（受注角度別パイプライン）<span class="newbadge">8/4追加：絞り込み・Next Action日</span></h2><span class="note">7/31決定を反映。<b>①金額（◯万円以上／以下）と担当者で絞り込み</b>、<b>②デフォルトの並び順は年間見込の降順</b>、<b>③初期表示は100万円以上</b>（現行のExcel運用に合わせています。条件を変えれば小口案件も表示できます）。<b>④Next Action日をカレンダー形式で直接入力</b>（ToDoを別途発行しない簡易方式）。案件総額と「年度内見込」を分けて管理し、加重は年度内見込×受注角度で算出</span></div>
   <div class="card">
     <div class="fbar">
       <div class="fgrp">
-        <label for="f-amt">金額（案件総額）で絞り込み</label>
+        <label for="f-amt">年間見込で絞り込み</label>
         <div class="frow">
           <input type="number" id="f-amt" value="100" step="50" min="0" aria-label="金額のしきい値（万円）">
           <span>万円</span>
@@ -275,8 +275,8 @@
         <label for="f-sort">並び順</label>
         <div class="frow">
           <select id="f-sort">
-            <option value="amt" selected>金額（案件総額）降順</option>
-            <option value="fy">年度内見込金額 降順</option>
+            <option value="amt" selected>年間見込 降順</option>
+            <option value="fy">年度内見込 降順</option>
             <option value="w">加重（年度内）降順</option>
             <option value="na">Next Action日 昇順</option>
             <option value="due">導入予定 昇順</option>
@@ -294,13 +294,13 @@
     </div>
     <div class="bd flush tbl-scroll">
       <table class="angtbl">
-        <thead><tr><th>案件</th><th>チーム</th><th>角度</th><th>金額（案件総額）</th><th>年度内見込金額</th><th>加重（年度内）</th><th>担当</th><th>導入予定</th><th>Next Action日</th><th>次アクション（メモ）</th></tr></thead>
+        <thead><tr><th>案件</th><th>チーム</th><th>受注角度</th><th>年間見込</th><th>年度内見込</th><th>加重（年度内）</th><th>担当</th><th>導入予定</th><th>Next Action日</th><th>次アクション（メモ）</th></tr></thead>
         <tbody id="opp-body">
           <tr class="opp" data-amt="3300" data-fy="2400" data-w="1200" data-own="田村" data-due="2026-06" data-na="2026-08-07"><td>沖縄 新規開業2件</td><td>JTB商事</td><td><span class="angpill a50">50%</span></td><td>3,300万円</td><td>2,400万円</td><td>1,200万円</td><td>田村</td><td>2026-06</td><td class="na-cell"><input type="date" value="2026-08-07"></td><td class="namemo">現地合同商談（開業スケジュールの確認）</td></tr>
           <tr class="opp" data-amt="2400" data-fy="2400" data-w="1800" data-own="櫻井" data-due="2026-04" data-na="2026-08-06"><td>グランビューHD チェーン導入</td><td>東京マツシマ</td><td><span class="angpill a75">75%</span></td><td>2,400万円</td><td>2,400万円</td><td>1,800万円</td><td>櫻井</td><td>2026-04</td><td class="na-cell"><input type="date" value="2026-08-06"></td><td class="namemo">本部へ最終見積を提出</td></tr>
           <tr class="opp" data-amt="1800" data-fy="1100" data-w="275" data-own="中村" data-due="2026-09" data-na="2026-08-20"><td>ベイエリア 什器入替</td><td>直販</td><td><span class="angpill a25">25%</span></td><td>1,800万円</td><td>1,100万円</td><td>275万円</td><td>中村</td><td>2026-09</td><td class="na-cell"><input type="date" value="2026-08-20"></td><td class="namemo">什器サンプルの持ち込み</td></tr>
           <tr class="opp" data-amt="1200" data-fy="1200" data-w="1200" data-own="三原" data-due="2026-05" data-na="2026-08-04"><td>都ホテル 追加ロット</td><td>直販</td><td><span class="angpill a100">100%</span></td><td>1,200万円</td><td>1,200万円</td><td>1,200万円</td><td>三原</td><td>2026-05</td><td class="na-cell na-today"><input type="date" value="2026-08-04"><span class="natag today">本日</span></td><td class="namemo">発注書の受領・納品日の確定</td></tr>
-          <tr class="opp neg-r" data-amt="1200" data-fy="800" data-w="-400" data-own="櫻井" data-due="9999-99" data-na="2026-07-30"><td>グリーンパーク柏（失注）</td><td>東京マツシマ</td><td>50%</td><td>1,200万円</td><td>800万円</td><td class="yy neg">−400万円</td><td>櫻井</td><td>—</td><td class="na-cell na-over"><input type="date" value="2026-07-30"><span class="natag over">期限切れ 5日</span></td><td class="namemo">失注理由のヒアリング（未実施）</td></tr>
+          <tr class="opp neg-r" data-amt="1200" data-fy="800" data-w="-400" data-own="櫻井" data-due="9999-99" data-na="2026-07-30"><td>グリーンパーク柏（ロスト）</td><td>東京マツシマ</td><td>50%</td><td>1,200万円</td><td>800万円</td><td class="yy neg">−400万円</td><td>櫻井</td><td>—</td><td class="na-cell na-over"><input type="date" value="2026-07-30"><span class="natag over">期限切れ 5日</span></td><td class="namemo">ロスト理由のヒアリング（未実施）</td></tr>
           <tr class="opp" data-amt="900" data-fy="900" data-w="675" data-own="佐久間" data-due="2026-07" data-na="2026-08-12"><td>やまと温泉リゾート 温浴深耕</td><td>ニシカワヤ</td><td><span class="angpill a75">75%</span></td><td>900万円</td><td>900万円</td><td>675万円</td><td>佐久間</td><td>2026-07</td><td class="na-cell"><input type="date" value="2026-08-12"></td><td class="namemo">追加ラインの提案書を提出</td></tr>
           <tr class="opp" data-amt="760" data-fy="760" data-w="380" data-own="井上" data-due="2026-10" data-na="2026-08-18"><td>ハーバーホテルズ 大浴場リニューアル</td><td>東京マツシマ</td><td><span class="angpill a50">50%</span></td><td>760万円</td><td>760万円</td><td>380万円</td><td>井上</td><td>2026-10</td><td class="na-cell"><input type="date" value="2026-08-18"></td><td class="namemo">改装スケジュールの確認</td></tr>
           <tr class="opp" data-amt="540" data-fy="320" data-w="80" data-own="高橋" data-due="2026-11" data-na=""><td>ノースゲート金沢 通年切替</td><td>東京マツシマ</td><td><span class="angpill a25">25%</span></td><td>540万円</td><td>320万円</td><td>80万円</td><td>高橋</td><td>2026-11</td><td class="na-cell na-none"><input type="date" value=""><span class="natag none">未設定</span></td><td class="namemo muted">—</td></tr>
@@ -314,12 +314,12 @@
       </table>
     </div>
     <div class="bd" style="padding-top:10px">
-      <p class="muted" style="margin:0 0 6px;font-size:11.5px">※ <b>年度内見込金額</b> ＝ 案件総額のうち、導入予定月から2026年度（4-3月）内に売上計上される見込みの金額。複数拠点・段階導入の案件は翌年度分を除外します（例：沖縄 新規開業2件 3,300万円のうち年度内は2,400万円）。<b>加重（年度内）＝ 年度内見込金額 × 角度</b>で、上の加重期待値セクションと同じ基準です。合計行は<b>絞り込み結果に連動</b>して再計算されます。</p>
+      <p class="muted" style="margin:0 0 6px;font-size:11.5px">※ <b>年度内見込</b> ＝ 案件総額のうち、導入予定月から2026年度（4-3月）内に売上計上される見込みの金額。複数拠点・段階導入の案件は翌年度分を除外します（例：沖縄 新規開業2件 3,300万円のうち年度内は2,400万円）。<b>加重（年度内）＝ 年度内見込 × 受注角度</b>で、上の加重期待値セクションと同じ基準です。合計行は<b>絞り込み結果に連動</b>して再計算されます。</p>
       <p class="muted" style="margin:0;font-size:11.5px">※ <b>Next Action日</b> はToDoを別途発行せず、この欄に日付を入れるだけの運用です（工数を増やさないため）。<b>今日より前＝赤（期限切れ）／今日＝オレンジ／未設定＝赤枠の点線</b>で表示し、チームMTGで「今日より先の日付が全案件に入っているか」を確認できます。デモの基準日は <b>2026-08-04</b>、商談の録音・議事録AIから自動で下書きされる想定です。</p>
     </div>
   </div>
 
-  <div class="memo" style="margin-top:18px">💡 <b>このタブの位置づけ（A1〜A5）</b>：営業ダッシュボードを新タブとして追加（A1）。チーム別年度目標（A2）と案件管理（A3）を持ち、角度×金額の加重期待値（A4：4段階 100/75/50/25%）を自動集計して目標差を表示します。<b>A5：角度の入力精度はマネージャー管理が前提</b>（心理的に高めに入りがちなため、レビューで補正）。実データ表示はSalesforceの項目設計確定後です。<br>
+  <div class="memo" style="margin-top:18px">💡 <b>このタブの位置づけ（A1〜A5）</b>：営業ダッシュボードを新タブとして追加（A1）。チーム別年度目標（A2）と案件管理（A3）を持ち、受注角度×金額の加重期待値（A4：4段階 100/75/50/25%）を自動集計して目標差を表示します。<b>A5：受注角度の入力精度はマネージャー管理が前提</b>（心理的に高めに入りがちなため、レビューで補正）。実データ表示はSalesforceの項目設計確定後です。<br>
   <b>8/4追加（7/31決定の未実装分）</b>：<b>A6 案件リストの絞り込み</b>（金額の◯万円以上／以下・担当者）と<b>デフォルト並び順＝金額降順・初期表示100万円以上</b>を実装。<b>A7 Next Action日をカレンダー形式で直接入力</b>できるようにし、期限切れ・本日・未設定を色分けしました。このページの絞り込みはデモ用の簡易実装で、Salesforceでは<b>リストビューのフィルタ条件＋並び順</b>（および必要なら検索条件のロック）で同じ挙動になります。</div>
 
   <div style="margin-top:16px"><a class="back" href="r-overall.html">← 全体（週報）に戻る</a></div>
