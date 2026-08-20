@@ -26,6 +26,7 @@
 
 .chcol .mini{ border-top:1px dotted #e5e5e5; padding-top:7px; }
 .chcol .mini .cap{ font-size:10px; color:#8a8886; margin-bottom:3px; }
+.chcol .mini svg{ display:block; width:100%; height:auto; }
 
 /* --- 3ヶ月平均（棒グラフ下） ------------------------------------------------ */
 /* --- 期間3区分（月次・3ヶ月平均・年度累計） -------------------------------- */
@@ -47,7 +48,7 @@
    .chcol の markup をそのまま使い、1ページ1枚のときだけ横並びに展開する          */
 .chcol.wide{ margin-bottom:0; }
 .chcol.wide > .nm{ text-align:left; padding:9px 14px; font-size:13px; }
-.chcol.wide > .bx{ display:grid; grid-template-columns:repeat(3,1fr) 1.25fr; gap:0; padding:14px 16px; }
+.chcol.wide > .bx{ display:grid; grid-template-columns:repeat(4,1fr) 1.4fr; gap:0; padding:14px 16px; }
 .chcol.wide .p3{ display:contents; }
 .chcol.wide .p3 .pr{ border-top:0; border-left:1px dotted #e5e5e5; padding:2px 16px; }
 .chcol.wide .p3 .pr:first-child{ border-left:0; padding-left:0; }
